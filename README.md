@@ -4,6 +4,9 @@ Vigila https://www.inmoparadise.com/for-sale/ cada 6 horas y detecta:
 
 - **pisos nuevos** (referencia que no estaba en el snapshot anterior)
 - **bajadas de precio** (misma referencia, precio menor que la última vez)
+- **cambios de estado "reservado"** (el sitio marca los pisos reservados
+  con el texto "Reserved" superpuesto a la foto, tanto en el listado como
+  en la ficha)
 
 ## Cómo funciona
 
@@ -28,7 +31,12 @@ Vigila https://www.inmoparadise.com/for-sale/ cada 6 horas y detecta:
    `GITHUB_TOKEN`/`GITHUB_REPOSITORY` no están en el entorno (por
    ejemplo, en una ejecución local sin configurar), ese paso se omite
    sin fallar el resto.
-4. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
+4. Cada piso guarda además un campo `reservado` (true/false). Si un
+   piso ya conocido pasa a reservado (o deja de estarlo) sin que haya
+   cambio de precio, no se crea issue ni evento nuevo: simplemente se
+   actualiza ese campo en todas sus filas de Supabase, para que
+   `encaja-web` deje de ofrecerlo a los compradores.
+5. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
    ejecuta cada 6 horas, con permiso `issues: write`, y commitea
    `data/snapshot_latest.json` si cambió.
 
