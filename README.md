@@ -18,9 +18,20 @@ Vigila https://www.inmoparadise.com/for-sale/ cada 6 horas y detecta:
    `agente`, `fecha`, más `referencia`, `precio_anterior`,
    `bajada_pct`, `origen` y `url` para dar más contexto).
    Se guardan como máximo los últimos 500 eventos.
-4. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
-   ejecuta cada 6 horas y commitea `data/snapshot_latest.json` y
-   `data/pisos.json` si algo cambió.
+4. Por cada evento detectado, crea además un GitHub Issue en este
+   mismo repositorio (usando el `GITHUB_TOKEN` que ya provee el
+   workflow, sin secretos adicionales):
+   - `[Piso nuevo] Zona - Precio`
+   - `[Bajada] Zona - Precio anterior -> Precio nuevo`
+
+   con zona, tipo, precio, características y el link a la ficha en
+   el cuerpo. Si `GITHUB_TOKEN`/`GITHUB_REPOSITORY` no están en el
+   entorno (por ejemplo, en una ejecución local), este paso se omite
+   sin fallar.
+5. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
+   ejecuta cada 6 horas, con permiso `issues: write` para crear esos
+   issues, y commitea `data/snapshot_latest.json` y `data/pisos.json`
+   si algo cambió.
 
 ## Lado de Encaja
 

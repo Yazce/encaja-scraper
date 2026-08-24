@@ -10,11 +10,16 @@ Scraper de https://www.inmoparadise.com/for-sale/
   mismo formato que usa la lista "pisos" de la app Encaja, para que
   Encaja pueda leer ese JSON (via raw.githubusercontent.com) y
   importarlo sin necesitar ninguna API de storage.
+- Por cada cambio detectado, crea un GitHub Issue en este mismo
+  repositorio usando GITHUB_TOKEN (ya lo provee el workflow, no hace
+  falta ningun secreto nuevo). Si GITHUB_TOKEN/GITHUB_REPOSITORY no
+  estan presentes (p.ej. ejecucion local), simplemente se omite.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import time
 import uuid
@@ -209,6 +214,57 @@ def piso_event(item: Listing, origen: str, precio_anterior: int | None = None) -
     }
 
 
+def fmt_money(n: int | None) -> str:
+    return f"{n:,}".replace(",", ".") + " €" if n is not None else "—"
+
+
+def issue_title(event: dict) -> str:
+    zona = event["zona"] or "Sin zona"
+    if event["origen"] == "nuevo":
+        return f"[Piso nuevo] {zona} - {fmt_money(event['precio'])}"
+    return (
+        f"[Bajada] {zona} - "
+        f"{fmt_money(event['precio_anterior'])} -> {fmt_money(event['precio'])}"
+    )
+
+
+def issue_body(event: dict) -> str:
+    lineas = [
+        f"**Zona:** {event['zona'] or '—'}",
+        f"**Tipo:** {event['tipo'] or '—'}",
+        f"**Precio:** {fmt_money(event['precio'])}",
+    ]
+    if event["origen"] == "bajada_precio":
+        extra = f"**Precio anterior:** {fmt_money(event['precio_anterior'])}"
+        if event.get("bajada_pct"):
+            extra += f" ({event['bajada_pct']})"
+        lineas.append(extra)
+    lineas.append(f"**Características:** {event['caract']}")
+    lineas.append(f"**Ficha:** {event['url']}")
+    return "\n\n".join(lineas)
+
+
+def create_github_issue(event: dict) -> None:
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if not token or not repo:
+        return
+
+    resp = requests.post(
+        f"https://api.github.com/repos/{repo}/issues",
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        },
+        json={"title": issue_title(event), "body": issue_body(event)},
+        timeout=REQUEST_TIMEOUT,
+    )
+    if resp.status_code >= 300:
+        print(f"No se pudo crear el issue para {event['referencia']}: "
+              f"{resp.status_code} {resp.text}")
+
+
 def detect_changes(previous: dict[str, dict], current: dict[str, Listing]) -> list[dict]:
     events: list[dict] = []
 
@@ -244,6 +300,12 @@ def main() -> None:
         print(f"{len(events)} cambio(s) detectado(s): "
               f"{sum(1 for e in events if e['origen'] == 'nuevo')} nuevos, "
               f"{sum(1 for e in events if e['origen'] == 'bajada_precio')} bajadas de precio.")
+
+        for event in events:
+            try:
+                create_github_issue(event)
+            except requests.RequestException as e:
+                print(f"Error creando issue para {event['referencia']}: {e}")
     else:
         print("Sin cambios respecto al snapshot anterior.")
 
