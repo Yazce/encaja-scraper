@@ -62,6 +62,7 @@ class Listing:
     banos: str | None
     m2: str | None
     url: str
+    reservado: bool = False
 
 
 def fetch_page(pag: int) -> str:
@@ -104,6 +105,17 @@ def field_from_lista_datos(card, label: str) -> str | None:
     return None
 
 
+def is_reservado(card) -> bool:
+    """El sitio marca los pisos reservados con el texto "Reserved" junto a
+    una imagen fondo_gestionada.svg superpuesta a la foto (tanto en el
+    listado como en la ficha). Se detecta por texto, con la imagen como
+    respaldo, para no depender de una clase CSS concreta."""
+    texto = card.get_text(" ", strip=True)
+    if re.search(r"\breserved\b", texto, re.IGNORECASE):
+        return True
+    return card.select_one('img[src*="fondo_gestionada"]') is not None
+
+
 def parse_card(card) -> Listing | None:
     referencia = field_from_lista_datos(card, "Reference")
     if not referencia:
@@ -135,6 +147,7 @@ def parse_card(card) -> Listing | None:
         banos=field_from_lista_datos(card, "Bathrooms"),
         m2=field_from_lista_datos(card, "Surface"),
         url=url,
+        reservado=is_reservado(card),
     )
 
 
@@ -210,6 +223,7 @@ def piso_event(item: Listing, origen: str, precio_anterior: int | None = None) -
         "agente": AGENTE_BOT,
         "origen": origen,
         "url": item.url,
+        "reservado": item.reservado,
         "fecha": datetime.now(timezone.utc).isoformat(),
     }
 
@@ -287,8 +301,37 @@ def insert_piso_supabase(event: dict) -> None:
               f"{resp.status_code} {resp.text}")
 
 
-def detect_changes(previous: dict[str, dict], current: dict[str, Listing]) -> list[dict]:
+def update_reservado_supabase(referencia: str, reservado: bool) -> None:
+    """Actualiza el campo reservado en TODAS las filas ya guardadas para esa
+    referencia (puede haber mas de una fila si hubo evento de 'nuevo' y
+    luego de 'bajada_precio'), para que ninguna quede desactualizada."""
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        return
+
+    resp = requests.patch(
+        f"{url.rstrip('/')}/rest/v1/pisos",
+        params={"referencia": f"eq.{referencia}"},
+        headers={
+            "apikey": key,
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal",
+        },
+        json={"reservado": reservado},
+        timeout=REQUEST_TIMEOUT,
+    )
+    if resp.status_code >= 300:
+        print(f"No se pudo actualizar 'reservado' para {referencia}: "
+              f"{resp.status_code} {resp.text}")
+
+
+def detect_changes(
+    previous: dict[str, dict], current: dict[str, Listing]
+) -> tuple[list[dict], list[tuple[str, bool]]]:
     events: list[dict] = []
+    reservado_updates: list[tuple[str, bool]] = []
 
     for referencia, item in current.items():
         prev = previous.get(referencia)
@@ -300,7 +343,13 @@ def detect_changes(previous: dict[str, dict], current: dict[str, Listing]) -> li
         if item.precio is not None and prev_precio is not None and item.precio < prev_precio:
             events.append(piso_event(item, "bajada_precio", precio_anterior=prev_precio))
 
-    return events
+        # Un piso ya conocido puede pasar a reservado (o dejar de estarlo)
+        # sin que haya cambio de precio ni sea "nuevo": lo detectamos y
+        # actualizamos aparte, sin generar issue de GitHub por esto.
+        if item.reservado != bool(prev.get("reservado", False)):
+            reservado_updates.append((referencia, item.reservado))
+
+    return events, reservado_updates
 
 
 def main() -> None:
@@ -311,7 +360,7 @@ def main() -> None:
 
     current_listings = scrape_all()
 
-    events = detect_changes(previous_listings, current_listings)
+    events, reservado_updates = detect_changes(previous_listings, current_listings)
 
     if events:
         print(f"{len(events)} cambio(s) detectado(s): "
@@ -329,6 +378,17 @@ def main() -> None:
                 print(f"Error creando issue para {event['referencia']}: {e}")
     else:
         print("Sin cambios respecto al snapshot anterior.")
+
+    if reservado_updates:
+        pasan_a_reservado = sum(1 for _, r in reservado_updates if r)
+        print(f"{len(reservado_updates)} piso(s) cambian de estado 'reservado' "
+              f"({pasan_a_reservado} pasan a reservados, "
+              f"{len(reservado_updates) - pasan_a_reservado} dejan de estarlo).")
+        for referencia, reservado in reservado_updates:
+            try:
+                update_reservado_supabase(referencia, reservado)
+            except requests.RequestException as e:
+                print(f"Error actualizando 'reservado' para {referencia}: {e}")
 
     new_snapshot = {
         "fecha": datetime.now(timezone.utc).isoformat(),
