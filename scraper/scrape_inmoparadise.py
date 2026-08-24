@@ -4,16 +4,17 @@ Scraper de https://www.inmoparadise.com/for-sale/
 - Recorre el listado y su paginación (?pag=N).
 - Extrae de cada ficha: referencia, precio actual, precio anterior,
   % de bajada, zona, tipo, habitaciones, banos, m2 y URL.
-- Guarda un snapshot en data/snapshot_latest.json.
+- Guarda un snapshot en data/snapshot_latest.json (uso interno, solo
+  para comparar contra la siguiente ejecucion).
 - Compara contra el snapshot anterior para detectar pisos nuevos y
-  bajadas de precio, y anade esos eventos a data/pisos.json en el
-  mismo formato que usa la lista "pisos" de la app Encaja, para que
-  Encaja pueda leer ese JSON (via raw.githubusercontent.com) y
-  importarlo sin necesitar ninguna API de storage.
-- Por cada cambio detectado, crea un GitHub Issue en este mismo
-  repositorio usando GITHUB_TOKEN (ya lo provee el workflow, no hace
-  falta ningun secreto nuevo). Si GITHUB_TOKEN/GITHUB_REPOSITORY no
-  estan presentes (p.ej. ejecucion local), simplemente se omite.
+  bajadas de precio. Por cada cambio:
+  - inserta una fila en la tabla "pisos" de Supabase (la misma base
+    de datos que usa la app Encaja), usando SUPABASE_URL y
+    SUPABASE_SERVICE_ROLE_KEY.
+  - crea un GitHub Issue en este mismo repositorio usando
+    GITHUB_TOKEN (ya lo provee el workflow).
+  Si esas variables de entorno no estan presentes (p.ej. ejecucion
+  local sin configurar), cada paso se omite sin fallar el resto.
 """
 
 from __future__ import annotations
@@ -43,12 +44,10 @@ HEADERS = {
 CRAWL_DELAY_SECONDS = 6
 REQUEST_TIMEOUT = 20
 AGENTE_BOT = "Inmoparadise (auto)"
-MAX_EVENTOS_GUARDADOS = 500
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
 SNAPSHOT_PATH = DATA_DIR / "snapshot_latest.json"
-PISOS_PATH = DATA_DIR / "pisos.json"
 
 
 @dataclass
@@ -169,13 +168,6 @@ def load_snapshot() -> dict:
         return json.load(f)
 
 
-def load_pisos() -> list[dict]:
-    if not PISOS_PATH.exists():
-        return []
-    with PISOS_PATH.open("r", encoding="utf-8") as f:
-        return json.load(f)
-
-
 def build_caract(item: Listing, extra: str = "") -> str:
     partes = []
     if item.habitaciones:
@@ -191,12 +183,20 @@ def build_caract(item: Listing, extra: str = "") -> str:
     return " · ".join(partes)
 
 
+def compute_bajada_pct(precio: int | None, precio_anterior: int | None) -> str | None:
+    if not precio or not precio_anterior or precio_anterior <= 0:
+        return None
+    return str(round((1 - precio / precio_anterior) * 100))
+
+
 def piso_event(item: Listing, origen: str, precio_anterior: int | None = None) -> dict:
+    bajada_pct = None
     extra = ""
     if origen == "bajada_precio" and precio_anterior:
+        bajada_pct = compute_bajada_pct(item.precio, precio_anterior)
         extra = f"bajada de {precio_anterior:,}€ a {item.precio:,}€".replace(",", ".")
-        if item.bajada_pct:
-            extra += f" ({item.bajada_pct})"
+        if bajada_pct:
+            extra += f" (-{bajada_pct}%)"
 
     return {
         "id": f"ip-{item.referencia}-{origen}-{item.precio}-{uuid.uuid4().hex[:6]}",
@@ -205,7 +205,7 @@ def piso_event(item: Listing, origen: str, precio_anterior: int | None = None) -
         "tipo": item.tipo,
         "precio": item.precio,
         "precio_anterior": precio_anterior,
-        "bajada_pct": item.bajada_pct if origen == "bajada_precio" else None,
+        "bajada_pct": bajada_pct,
         "caract": build_caract(item, extra),
         "agente": AGENTE_BOT,
         "origen": origen,
@@ -237,7 +237,7 @@ def issue_body(event: dict) -> str:
     if event["origen"] == "bajada_precio":
         extra = f"**Precio anterior:** {fmt_money(event['precio_anterior'])}"
         if event.get("bajada_pct"):
-            extra += f" ({event['bajada_pct']})"
+            extra += f" (-{event['bajada_pct']}%)"
         lineas.append(extra)
     lineas.append(f"**Características:** {event['caract']}")
     lineas.append(f"**Ficha:** {event['url']}")
@@ -262,6 +262,28 @@ def create_github_issue(event: dict) -> None:
     )
     if resp.status_code >= 300:
         print(f"No se pudo crear el issue para {event['referencia']}: "
+              f"{resp.status_code} {resp.text}")
+
+
+def insert_piso_supabase(event: dict) -> None:
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        return
+
+    resp = requests.post(
+        f"{url.rstrip('/')}/rest/v1/pisos",
+        headers={
+            "apikey": key,
+            "Authorization": f"Bearer {key}",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal",
+        },
+        json=event,
+        timeout=REQUEST_TIMEOUT,
+    )
+    if resp.status_code >= 300:
+        print(f"No se pudo guardar en Supabase el piso {event['referencia']}: "
               f"{resp.status_code} {resp.text}")
 
 
@@ -292,16 +314,15 @@ def main() -> None:
     events = detect_changes(previous_listings, current_listings)
 
     if events:
-        pisos = load_pisos()
-        pisos = events + pisos  # los mas recientes primero
-        pisos = pisos[:MAX_EVENTOS_GUARDADOS]
-        with PISOS_PATH.open("w", encoding="utf-8") as f:
-            json.dump(pisos, f, ensure_ascii=False, indent=2)
         print(f"{len(events)} cambio(s) detectado(s): "
               f"{sum(1 for e in events if e['origen'] == 'nuevo')} nuevos, "
               f"{sum(1 for e in events if e['origen'] == 'bajada_precio')} bajadas de precio.")
 
         for event in events:
+            try:
+                insert_piso_supabase(event)
+            except requests.RequestException as e:
+                print(f"Error guardando en Supabase {event['referencia']}: {e}")
             try:
                 create_github_issue(event)
             except requests.RequestException as e:

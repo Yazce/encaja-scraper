@@ -10,43 +10,42 @@ Vigila https://www.inmoparadise.com/for-sale/ cada 6 horas y detecta:
 1. `scraper/scrape_inmoparadise.py` recorre el listado y su paginación
    (`?pag=N`), respetando el `Crawl-delay: 6` de `robots.txt`.
 2. Guarda el estado completo actual en `data/snapshot_latest.json`
-   (usado solo para comparar en la siguiente ejecución).
-3. Compara contra el snapshot anterior y, si hay pisos nuevos o
-   bajadas de precio, añade esos eventos al principio de
-   `data/pisos.json` (mismo formato de ítem que usa la lista "pisos"
-   de la app Encaja: `id`, `zona`, `tipo`, `precio`, `caract`,
-   `agente`, `fecha`, más `referencia`, `precio_anterior`,
-   `bajada_pct`, `origen` y `url` para dar más contexto).
-   Se guardan como máximo los últimos 500 eventos.
-4. Por cada evento detectado, crea además un GitHub Issue en este
-   mismo repositorio (usando el `GITHUB_TOKEN` que ya provee el
-   workflow, sin secretos adicionales):
-   - `[Piso nuevo] Zona - Precio`
-   - `[Bajada] Zona - Precio anterior -> Precio nuevo`
+   (uso interno, solo para comparar en la siguiente ejecución — no lo
+   lee ninguna otra app).
+3. Compara contra el snapshot anterior y, por cada piso nuevo o
+   bajada de precio detectada:
+   - inserta una fila directamente en la tabla `pisos` de Supabase
+     (la misma base de datos que usa la web de Encaja en
+     [`encaja-web`](https://github.com/Yazce/encaja-web)), usando
+     `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY`.
+   - crea un GitHub Issue en este repositorio (usando el
+     `GITHUB_TOKEN` que ya provee el workflow, sin secretos
+     adicionales):
+     - `[Piso nuevo] Zona - Precio`
+     - `[Bajada] Zona - Precio anterior -> Precio nuevo`
 
-   con zona, tipo, precio, características y el link a la ficha en
-   el cuerpo. Si `GITHUB_TOKEN`/`GITHUB_REPOSITORY` no están en el
-   entorno (por ejemplo, en una ejecución local), este paso se omite
-   sin fallar.
-5. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
-   ejecuta cada 6 horas, con permiso `issues: write` para crear esos
-   issues, y commitea `data/snapshot_latest.json` y `data/pisos.json`
-   si algo cambió.
+   Si `SUPABASE_URL`/`SUPABASE_SERVICE_ROLE_KEY` o
+   `GITHUB_TOKEN`/`GITHUB_REPOSITORY` no están en el entorno (por
+   ejemplo, en una ejecución local sin configurar), ese paso se omite
+   sin fallar el resto.
+4. El workflow de GitHub Actions (`.github/workflows/scrape.yml`) lo
+   ejecuta cada 6 horas, con permiso `issues: write`, y commitea
+   `data/snapshot_latest.json` si cambió.
 
-## Lado de Encaja
+## Configurar los secretos de Supabase
 
-Encaja (el Artifact de Claude) no tiene una API externa a la que este
-script pueda escribir directamente, así que el contrato es este JSON:
-Encaja debe leer periódicamente
+En este repo de GitHub → **Settings** → **Secrets and variables** →
+**Actions** → **New repository secret**, añade:
 
-```
-https://raw.githubusercontent.com/<usuario>/<repo>/main/data/pisos.json
-```
+- `SUPABASE_URL` → el Project URL de tu proyecto de Supabase
+  (Project Settings → API).
+- `SUPABASE_SERVICE_ROLE_KEY` → la clave **service_role** (no la
+  `anon`) del mismo sitio. Esta clave sí es sensible — solo debe
+  vivir aquí, como secreto de GitHub Actions, nunca en el código del
+  frontend.
 
-y, para cada evento cuyo `id` todavía no tenga en su propia lista de
-"pisos" (storage), añadirlo. Como `origen` puede ser `"nuevo"` o
-`"bajada_precio"`, Encaja puede usarlo para decidir el texto/aviso que
-muestra.
+`GITHUB_TOKEN` no hace falta configurarlo: lo genera GitHub
+automáticamente en cada ejecución del workflow.
 
 ## Uso local
 
@@ -54,6 +53,10 @@ muestra.
 pip install -r requirements.txt
 python scraper/scrape_inmoparadise.py
 ```
+
+Sin `SUPABASE_URL`/`SUPABASE_SERVICE_ROLE_KEY` en el entorno, la
+ejecución local sigue funcionando (actualiza el snapshot local y
+solo omite la escritura en Supabase y la creación de issues).
 
 ## Publicar en GitHub y activar el cron
 
@@ -67,7 +70,7 @@ git push -u origin main
 ```
 
 En GitHub, en la pestaña **Actions** del repo, comprueba que el
-workflow "Scrape Inmoparadise" está habilitado (en repos nuevos a
-veces hay que activarlo con un clic la primera vez). A partir de ahí
-se ejecuta solo cada 6 horas; también se puede lanzar a mano desde
-Actions → Scrape Inmoparadise → Run workflow.
+workflow está habilitado (a veces hay que activarlo con un clic la
+primera vez en repos nuevos). A partir de ahí se ejecuta solo cada
+6 horas; también se puede lanzar a mano desde Actions → Scrape
+Inmoparadise → Run workflow.
