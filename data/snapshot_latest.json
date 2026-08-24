@@ -1,19 +1,7 @@
 {
-  "fecha": "2026-08-24T09:48:19.869115+00:00",
+  "fecha": "2026-08-24T12:54:11.019361+00:00",
   "total_pisos": 108,
   "listings": {
-    "2537": {
-      "referencia": "2537",
-      "precio": 169950,
-      "precio_anterior": 175000,
-      "bajada_pct": "- 3%",
-      "zona": "Juan XXIII",
-      "tipo": "Flat",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "87 m2",
-      "url": "https://www.inmoparadise.com/ficha/flat/alicante/juan-xxiii/10473/29856254/en/"
-    },
     "2559": {
       "referencia": "2559",
       "precio": 119950,
@@ -25,6 +13,18 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/flat/alicante/ciudad-elegida/10473/30022170/en/"
+    },
+    "2537": {
+      "referencia": "2537",
+      "precio": 169950,
+      "precio_anterior": 175000,
+      "bajada_pct": "- 3%",
+      "zona": "Juan XXIII",
+      "tipo": "Flat",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/flat/alicante/juan-xxiii/10473/29856254/en/"
     },
     "2524": {
       "referencia": "2524",
