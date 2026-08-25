@@ -1,12 +1,17 @@
 # encaja-scraper
 
-Vigila https://www.inmoparadise.com/for-sale/ cada 6 horas y detecta:
+Vigila la versión en español de https://www.inmoparadise.com/for-sale/
+(`/for-sale/es`) cada 6 horas y detecta:
 
 - **pisos nuevos** (referencia que no estaba en el snapshot anterior)
 - **bajadas de precio** (misma referencia, precio menor que la última vez)
 - **cambios de estado "reservado"** (el sitio marca los pisos reservados
-  con el texto "Reserved" superpuesto a la foto, tanto en el listado como
+  con el texto "Reservado" superpuesto a la foto, tanto en el listado como
   en la ficha)
+
+El scraper lee la versión española del sitio (no la `/en/`), así que
+`tipo` y `características` (habitaciones, baños, superficie) llegan ya
+en español, sin necesidad de traducir nada a mano.
 
 ## Cómo funciona
 
