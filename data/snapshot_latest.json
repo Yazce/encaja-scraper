@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-08-25T12:51:22.879770+00:00",
+  "fecha": "2026-08-25T18:42:26.066581+00:00",
   "total_pisos": 12,
   "listings": {
+    "2558": {
+      "referencia": "2558",
+      "precio": 260000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 79m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "79 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30021750/es/",
+      "reservado": false
+    },
     "2559": {
       "referencia": "2559",
       "precio": 119950,
@@ -104,19 +117,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
-      "reservado": false
-    },
-    "2558": {
-      "referencia": "2558",
-      "precio": 260000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 79m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "79 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30021750/es/",
       "reservado": false
     },
     "2515": {
