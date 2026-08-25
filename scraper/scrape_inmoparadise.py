@@ -33,7 +33,7 @@ import requests
 from bs4 import BeautifulSoup
 
 SITE_ROOT = "https://www.inmoparadise.com/"
-BASE_URL = SITE_ROOT + "for-sale/"
+BASE_URL = SITE_ROOT + "for-sale/es"  # version en español (tipo/caract. salen ya traducidos)
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -106,18 +106,21 @@ def field_from_lista_datos(card, label: str) -> str | None:
 
 
 def is_reservado(card) -> bool:
-    """El sitio marca los pisos reservados con el texto "Reserved" junto a
-    una imagen fondo_gestionada.svg superpuesta a la foto (tanto en el
-    listado como en la ficha). Se detecta por texto, con la imagen como
-    respaldo, para no depender de una clase CSS concreta."""
+    """El sitio marca los pisos reservados con el texto "Reservado" (en la
+    version en ingles aparecia "Reserved") junto a una imagen
+    fondo_gestionada.svg superpuesta a la foto (tanto en el listado como en
+    la ficha). Se detecta por texto, con la imagen como respaldo, para no
+    depender de una clase CSS concreta."""
     texto = card.get_text(" ", strip=True)
+    if re.search(r"\breservad[oa]\b", texto, re.IGNORECASE):
+        return True
     if re.search(r"\breserved\b", texto, re.IGNORECASE):
         return True
     return card.select_one('img[src*="fondo_gestionada"]') is not None
 
 
 def parse_card(card) -> Listing | None:
-    referencia = field_from_lista_datos(card, "Reference")
+    referencia = field_from_lista_datos(card, "Referencia")
     if not referencia:
         return None
 
@@ -143,9 +146,9 @@ def parse_card(card) -> Listing | None:
         bajada_pct=bajada_pct,
         zona=zona,
         tipo=tipo,
-        habitaciones=field_from_lista_datos(card, "Bedrooms"),
-        banos=field_from_lista_datos(card, "Bathrooms"),
-        m2=field_from_lista_datos(card, "Surface"),
+        habitaciones=field_from_lista_datos(card, "Habitaciones"),
+        banos=field_from_lista_datos(card, "Baños"),
+        m2=field_from_lista_datos(card, "Superficie"),
         url=url,
         reservado=is_reservado(card),
     )
@@ -359,6 +362,14 @@ def main() -> None:
     previous_listings: dict[str, dict] = snapshot.get("listings", {})
 
     current_listings = scrape_all()
+
+    if not current_listings:
+        print(
+            "La pagina no devolvio ningun piso (posible cambio en el HTML del "
+            "sitio o fallo de red). No se toca el snapshot ni se procesa nada, "
+            "para no marcar como 'desaparecidos' los pisos ya conocidos."
+        )
+        return
 
     events, reservado_updates = detect_changes(previous_listings, current_listings)
 
