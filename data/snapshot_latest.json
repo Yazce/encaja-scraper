@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-08-26T06:53:51.203363+00:00",
+  "fecha": "2026-08-26T12:56:16.037586+00:00",
   "total_pisos": 12,
   "listings": {
+    "2560": {
+      "referencia": "2560",
+      "precio": 209950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "95 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30050672/es/",
+      "reservado": false
+    },
+    "2482": {
+      "referencia": "2482",
+      "precio": 239950,
+      "precio_anterior": 249000,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Altozano",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "5",
+      "banos": "2",
+      "m2": "125 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29393007/es/",
+      "reservado": true
+    },
+    "2557": {
+      "referencia": "2557",
+      "precio": 185000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona San Gabriel",
+      "tipo": "Adosado en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
+      "reservado": false
+    },
     "2558": {
       "referencia": "2558",
       "precio": 260000,
@@ -106,19 +145,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/27474319/es/",
       "reservado": false
     },
-    "2557": {
-      "referencia": "2557",
-      "precio": 185000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona San Gabriel",
-      "tipo": "Adosado en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
-      "reservado": false
-    },
     "2515": {
       "referencia": "2515",
       "precio": 280000,
@@ -131,32 +157,6 @@
       "m2": "121 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/29718682/es/",
       "reservado": true
-    },
-    "2552": {
-      "referencia": "2552",
-      "precio": 169950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 91m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "91 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29937917/es/",
-      "reservado": false
-    },
-    "2542": {
-      "referencia": "2542",
-      "precio": 215000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de San Blas, Superficie Construida 97m2, 3 Habitaciones, 2 Baños.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "97 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-blas/10473/29890130/es/",
-      "reservado": false
     }
   }
 }
