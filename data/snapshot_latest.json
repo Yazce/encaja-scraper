@@ -1,12 +1,25 @@
 {
-  "fecha": "2026-08-27T21:56:47.922759+00:00",
+  "fecha": "2026-08-28T10:09:43.001004+00:00",
   "total_pisos": 12,
   "listings": {
-    "2538": {
-      "referencia": "2538",
-      "precio": 390000,
+    "2556": {
+      "referencia": "2556",
+      "precio": 189000,
       "precio_anterior": null,
       "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "114 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/29975344/es/",
+      "reservado": false
+    },
+    "2538": {
+      "referencia": "2538",
+      "precio": 379950,
+      "precio_anterior": 390000,
+      "bajada_pct": "- 3%",
       "zona": "Zona Paus",
       "tipo": "Piso en Alicante",
       "habitaciones": "3",
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "85 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29643484/es/",
-      "reservado": false
-    },
-    "2507": {
-      "referencia": "2507",
-      "precio": 259950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "146 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29638178/es/",
       "reservado": false
     }
   }
