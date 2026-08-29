@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-08-29T06:08:15.637793+00:00",
+  "fecha": "2026-08-29T16:22:50.592560+00:00",
   "total_pisos": 12,
   "listings": {
+    "2110": {
+      "referencia": "2110",
+      "precio": 165000,
+      "precio_anterior": 175000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "86 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/26236605/es/",
+      "reservado": false
+    },
     "2561": {
       "referencia": "2561",
       "precio": 143000,
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "82 m2",
       "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/campoamor/10473/29827572/es/",
-      "reservado": false
-    },
-    "2252": {
-      "referencia": "2252",
-      "precio": 305000,
-      "precio_anterior": 325000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
       "reservado": false
     }
   }
