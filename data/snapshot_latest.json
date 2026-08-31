@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-08-31T13:00:26.296612+00:00",
+  "fecha": "2026-08-31T22:37:26.665977+00:00",
   "total_pisos": 12,
   "listings": {
+    "1705": {
+      "referencia": "1705",
+      "precio": 419000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "104 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/22800279/es/",
+      "reservado": false
+    },
+    "2538": {
+      "referencia": "2538",
+      "precio": 379950,
+      "precio_anterior": 390000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Paus",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "119 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/29863886/es/",
+      "reservado": false
+    },
     "2080": {
       "referencia": "2080",
       "precio": 269950,
@@ -80,19 +106,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/29975344/es/",
       "reservado": false
     },
-    "2538": {
-      "referencia": "2538",
-      "precio": 379950,
-      "precio_anterior": 390000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Paus",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "119 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/29863886/es/",
-      "reservado": false
-    },
     "2552": {
       "referencia": "2552",
       "precio": 169950,
@@ -143,19 +156,6 @@
       "banos": "2",
       "m2": "94 m2",
       "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
-      "reservado": false
-    },
-    "2560": {
-      "referencia": "2560",
-      "precio": 207000,
-      "precio_anterior": 209950,
-      "bajada_pct": "- 1%",
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "95 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30050672/es/",
       "reservado": false
     }
   }
