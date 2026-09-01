@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-01T11:18:01.349476+00:00",
+  "fecha": "2026-09-01T16:15:07.272119+00:00",
   "total_pisos": 12,
   "listings": {
+    "2331": {
+      "referencia": "2331",
+      "precio": 205000,
+      "precio_anterior": 220000,
+      "bajada_pct": "- 7%",
+      "zona": "Zona San nicolas de bari - Benisaudet",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "105 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-nicolas-de-bari-benisaudet/10473/28165819/es/",
+      "reservado": false
+    },
+    "2455": {
+      "referencia": "2455",
+      "precio": 207500,
+      "precio_anterior": 219000,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "123 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29220888/es/",
+      "reservado": false
+    },
     "2562": {
       "referencia": "2562",
       "precio": 174900,
@@ -130,32 +156,6 @@
       "banos": "1",
       "m2": "91 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29937917/es/",
-      "reservado": false
-    },
-    "2551": {
-      "referencia": "2551",
-      "precio": 99950,
-      "precio_anterior": 105000,
-      "bajada_pct": "- 5%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Juan XXIII, Superficie Construida 82m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "82 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/29935958/es/",
-      "reservado": false
-    },
-    "2549": {
-      "referencia": "2549",
-      "precio": 154950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Ciudad de Asís",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "60 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/29935833/es/",
       "reservado": false
     }
   }
