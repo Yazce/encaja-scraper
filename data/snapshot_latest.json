@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-01T04:05:47.653541+00:00",
+  "fecha": "2026-09-01T11:18:01.349476+00:00",
   "total_pisos": 12,
   "listings": {
+    "2562": {
+      "referencia": "2562",
+      "precio": 174900,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "76 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30106470/es/",
+      "reservado": false
+    },
+    "2556": {
+      "referencia": "2556",
+      "precio": 179000,
+      "precio_anterior": 189000,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "114 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/29975344/es/",
+      "reservado": false
+    },
     "1705": {
       "referencia": "1705",
       "precio": 419000,
@@ -93,19 +119,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/nou-alacant/10473/30067265/es/",
       "reservado": false
     },
-    "2556": {
-      "referencia": "2556",
-      "precio": 189000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "114 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/29975344/es/",
-      "reservado": false
-    },
     "2552": {
       "referencia": "2552",
       "precio": 169950,
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "60 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/29935833/es/",
-      "reservado": false
-    },
-    "2543": {
-      "referencia": "2543",
-      "precio": 318000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona - Sant Vicent del Raspeig - Sol y Luz",
-      "tipo": "Ático Dúplex en San Vicente del Raspeig",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "94 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
       "reservado": false
     }
   }
