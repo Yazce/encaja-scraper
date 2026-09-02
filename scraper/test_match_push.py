@@ -56,12 +56,18 @@ if presupuesto and evento["precio"] and evento["precio"] > presupuesto:
     print("El precio no encaja, no se manda nada.")
     sys.exit(0)
 
-print("Encaja. Buscando suscripciones del dueno de PEPITO...")
-subs = np._supabase_get(
-    SUPA_URL, SUPA_KEY, "push_subscriptions",
-    {"select": "id,owner_id,endpoint,p256dh,auth", "owner_id": f"eq.{comprador['owner_id']}"},
-)
-print(f"{len(subs)} suscripcion(es) encontrada(s) para ese dueno.")
+print("Encaja. Buscando suscripciones del dueno de PEPITO + administradoras...")
+owner_ids = {comprador.get("owner_id"), *np.ADMIN_OWNER_IDS} - {None}
+subs_por_id: dict[str, dict] = {}
+for oid in owner_ids:
+    encontradas = np._supabase_get(
+        SUPA_URL, SUPA_KEY, "push_subscriptions",
+        {"select": "id,owner_id,endpoint,p256dh,auth", "owner_id": f"eq.{oid}"},
+    )
+    for s in encontradas:
+        subs_por_id[s["id"]] = s
+subs = list(subs_por_id.values())
+print(f"{len(subs)} suscripcion(es) encontrada(s) (dueno + administradoras).")
 
 precio_fmt = f"{evento['precio']:,}".replace(",", ".") + " EUR"
 payload = json.dumps({
