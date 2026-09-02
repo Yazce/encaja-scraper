@@ -161,7 +161,9 @@ def notify_matching_compradores(events: list[dict]) -> None:
                     f"{(' · ' + tipo_evento) if tipo_evento else ''} · {_fmt_money(precio_evento)}"
                 ),
                 "tag": f"encaja-match-{comprador['id']}-{event['id']}",
-                "url": "/",
+                # Al pinchar el aviso, que lleve directo a ese comprador en
+                # vez de abrir la portada de la app.
+                "url": f"/?comprador={comprador['id']}",
             }, ensure_ascii=False)
 
             for sub in destinatarios.values():
