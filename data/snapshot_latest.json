@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-02T03:27:47.073384+00:00",
+  "fecha": "2026-09-02T16:10:41.573705+00:00",
   "total_pisos": 12,
   "listings": {
+    "2123": {
+      "referencia": "2123",
+      "precio": 129950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/26299538/es/",
+      "reservado": false
+    },
+    "2563": {
+      "referencia": "2563",
+      "precio": 117000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Colonia Santa Isabel",
+      "tipo": "Piso en San Vicente del Raspeig",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "61 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
+      "reservado": false
+    },
     "2455": {
       "referencia": "2455",
       "precio": 207500,
@@ -130,32 +156,6 @@
       "banos": "2",
       "m2": "114 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/29975344/es/",
-      "reservado": false
-    },
-    "1705": {
-      "referencia": "1705",
-      "precio": 419000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "104 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/22800279/es/",
-      "reservado": false
-    },
-    "2538": {
-      "referencia": "2538",
-      "precio": 379950,
-      "precio_anterior": 390000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Paus",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "119 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/29863886/es/",
       "reservado": false
     }
   }
