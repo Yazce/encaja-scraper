@@ -1,11 +1,11 @@
 """
 Script de prueba puntual: manda un aviso push a TODAS las suscripciones
 guardadas en push_subscriptions, para comprobar de principio a fin que el
-envío funciona (incluye probar que llega aunque el móvil esté bloqueado).
+envio funciona (incluye probar que llega aunque el movil este bloqueado).
 
-No se ejecuta automáticamente — solo a mano, disparando el workflow
-"Test push notification" desde la pestaña Actions de GitHub. No forma
-parte del flujo normal del scraper (esa lógica vive en notify_push.py).
+No se ejecuta automaticamente - solo a mano, disparando el workflow
+"Test push notification" desde la pestana Actions de GitHub. No forma
+parte del flujo normal del scraper (esa logica vive en notify_push.py).
 """
 
 from __future__ import annotations
@@ -53,6 +53,11 @@ def main() -> None:
                 data=payload,
                 vapid_private_key=vapid_private_key,
                 vapid_claims={"sub": "mailto:encaja@inmoparadise.com"},
+                # Urgencia alta: si no se indica, Android puede retrasar la
+                # entrega para ahorrar bateria cuando el movil lleva un rato
+                # sin usarse, aunque el envio se confirme OK aqui.
+                headers={"Urgency": "high"},
+                ttl=60 * 60 * 24,
             )
             print(f"OK: aviso enviado a suscripcion {sub['id']}")
         except WebPushException as e:

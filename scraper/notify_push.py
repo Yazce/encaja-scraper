@@ -175,6 +175,11 @@ def notify_matching_compradores(events: list[dict]) -> None:
                         data=payload,
                         vapid_private_key=vapid_private,
                         vapid_claims={"sub": VAPID_CLAIMS_SUB},
+                        # Urgencia alta: si no se indica, Android puede retrasar
+                        # la entrega para ahorrar batería cuando el movil lleva
+                        # un rato sin usarse, aunque el envio se confirme OK.
+                        headers={"Urgency": "high"},
+                        ttl=60 * 60 * 24,
                     )
                     enviados += 1
                 except WebPushException as e:

@@ -89,6 +89,8 @@ for sub in subs:
             data=payload,
             vapid_private_key=VAPID_PRIVATE,
             vapid_claims={"sub": np.VAPID_CLAIMS_SUB},
+            headers={"Urgency": "high"},
+            ttl=60 * 60 * 24,
         )
         print(f"OK: aviso enviado a suscripcion {sub['id']}")
         enviados += 1
