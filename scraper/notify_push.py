@@ -19,6 +19,10 @@ scraper.
 La lógica de "encaja o no encaja" (zona / tipo / presupuesto) es la misma
 que usa la web en computeMatches(), para que un piso que aparecería como
 coincidencia en Encaja sea también el que dispara el aviso aquí.
+
+Además del dueño del comprador, SIEMPRE se avisa también a las cuentas
+administradoras (yacelly y Giga), para que puedan supervisar que todo se
+gestiona y detectar problemas, aunque el comprador no sea suyo.
 """
 
 from __future__ import annotations
@@ -37,6 +41,14 @@ except ImportError:  # por si se ejecuta en un entorno sin la dependencia
 
 VAPID_CLAIMS_SUB = "mailto:encaja@inmoparadise.com"
 REQUEST_TIMEOUT = 20
+
+# Cuentas administradoras: reciben SIEMPRE el aviso de cualquier
+# coincidencia, sea o no suyo el comprador, para poder supervisar que se
+# gestiona todo correctamente.
+ADMIN_OWNER_IDS = {
+    "c45a217c-5588-4856-99e8-3407a13b2557",  # yacelly@inmoparadise.local
+    "8df7c3b7-e0f1-4b08-ba07-5063d03fba58",  # gigagiga717@gmail.com (Giga)
+}
 
 
 def _norm(s: str | None) -> str:
@@ -132,8 +144,14 @@ def notify_matching_compradores(events: list[dict]) -> None:
             if presupuesto and precio_evento and precio_evento > presupuesto:
                 continue
 
-            owner_subs = subs_por_owner.get(comprador.get("owner_id")) or []
-            if not owner_subs:
+            # El dueño del comprador + las cuentas administradoras (sin
+            # repetir suscripciones si el dueño ya es una de ellas).
+            owner_ids = {comprador.get("owner_id"), *ADMIN_OWNER_IDS} - {None}
+            destinatarios: dict[str, dict] = {}
+            for oid in owner_ids:
+                for sub in subs_por_owner.get(oid) or []:
+                    destinatarios[sub["id"]] = sub
+            if not destinatarios:
                 continue
 
             payload = json.dumps({
@@ -146,7 +164,7 @@ def notify_matching_compradores(events: list[dict]) -> None:
                 "url": "/",
             }, ensure_ascii=False)
 
-            for sub in owner_subs:
+            for sub in destinatarios.values():
                 subscription_info = {
                     "endpoint": sub["endpoint"],
                     "keys": {"p256dh": sub["p256dh"], "auth": sub["auth"]},
