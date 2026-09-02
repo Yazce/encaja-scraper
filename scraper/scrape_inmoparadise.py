@@ -32,6 +32,8 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+from notify_push import notify_matching_compradores
+
 SITE_ROOT = "https://www.inmoparadise.com/"
 BASE_URL = SITE_ROOT + "for-sale/es"  # version en español (tipo/caract. salen ya traducidos)
 HEADERS = {
@@ -387,6 +389,11 @@ def main() -> None:
                 create_github_issue(event)
             except requests.RequestException as e:
                 print(f"Error creando issue para {event['referencia']}: {e}")
+
+        try:
+            notify_matching_compradores(events)
+        except Exception as e:
+            print(f"Error mandando avisos push: {e}")
     else:
         print("Sin cambios respecto al snapshot anterior.")
 
