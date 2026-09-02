@@ -74,7 +74,7 @@ payload = json.dumps({
     "title": "Encaja - nueva coincidencia",
     "body": f"{comprador['nombre']} encaja con {evento['zona']} - {evento['tipo']} - {precio_fmt}",
     "tag": f"encaja-match-{comprador['id']}-{evento['id']}",
-    "url": "/",
+    "url": f"/?comprador={comprador['id']}",
 }, ensure_ascii=False)
 
 enviados = 0
