@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-04T08:21:32.214683+00:00",
+  "fecha": "2026-09-04T15:28:37.154852+00:00",
   "total_pisos": 12,
   "listings": {
+    "1555": {
+      "referencia": "1555",
+      "precio": 179950,
+      "precio_anterior": 185000,
+      "bajada_pct": "- 3%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Carolinas bajas, Superficie Construida 90m2, 4 Habitaciones, 2 Baños.",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "90 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/21912903/es/",
+      "reservado": false
+    },
     "2564": {
       "referencia": "2564",
       "precio": 285000,
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/26299538/es/",
-      "reservado": false
-    },
-    "2538": {
-      "referencia": "2538",
-      "precio": 379950,
-      "precio_anterior": 390000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Paus",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "119 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/29863886/es/",
       "reservado": false
     }
   }
