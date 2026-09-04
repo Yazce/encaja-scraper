@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-04T01:57:57.734744+00:00",
+  "fecha": "2026-09-04T08:21:32.214683+00:00",
   "total_pisos": 12,
   "listings": {
+    "2564": {
+      "referencia": "2564",
+      "precio": 285000,
+      "precio_anterior": 289950,
+      "bajada_pct": "- 2%",
+      "zona": "Zona Pla del bon repos",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "110 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30130695/es/",
+      "reservado": false
+    },
     "2565": {
       "referencia": "2565",
       "precio": 190000,
@@ -91,19 +104,6 @@
       "banos": "2",
       "m2": "115 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-blas/10473/29890130/es/",
-      "reservado": false
-    },
-    "2564": {
-      "referencia": "2564",
-      "precio": 289950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Pla del bon repos",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "110 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30130695/es/",
       "reservado": false
     },
     "2455": {
