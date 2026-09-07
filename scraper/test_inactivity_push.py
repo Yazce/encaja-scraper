@@ -1,11 +1,14 @@
 """
-Prueba puntual del aviso de inactividad: manda UN ejemplo, con datos
-inventados (no toca ningun cliente real), solo a la cuenta de Yacelly, para
-ver como queda el aviso y el mensaje de WhatsApp antes de esperar a que
-salte de verdad con un cliente real.
+Prueba puntual del aviso de inactividad: manda UN aviso de ejemplo, solo a
+la cuenta de Yacelly, para comprobar que funciona el camino completo: el
+aviso lleva a la ficha de un contacto real dentro de Encaja (no manda
+ningun WhatsApp por su cuenta - eso solo pasa si ella misma toca el boton
+"WhatsApp" ya dentro de la ficha).
 
-No se ejecuta automaticamente - solo a mano, disparando el workflow
-"Test inactivity push" desde la pestana Actions de GitHub.
+Usa el primer contacto real que tenga Yacelly (no modifica nada suyo, solo
+lee su nombre e id para construir el enlace). No se ejecuta
+automaticamente - solo a mano, disparando el workflow "Test inactivity
+push" desde la pestana Actions de GitHub.
 """
 
 from __future__ import annotations
@@ -13,11 +16,9 @@ from __future__ import annotations
 import json
 import os
 import sys
-from urllib.parse import quote
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-import notify_inactivity as ni  # reutiliza _mensaje_comprador, _mensaje_vendedor
 import notify_push as np  # reutiliza _supabase_get, VAPID_CLAIMS_SUB
 
 from pywebpush import webpush, WebPushException
@@ -28,23 +29,17 @@ VAPID_PRIVATE = os.environ["VAPID_PRIVATE_KEY"]
 
 YACELLY_OWNER_ID = "c45a217c-5588-4856-99e8-3407a13b2557"
 
-# Datos de ejemplo (inventados, no son un cliente real) para ver el
-# mensaje completo con pisos incluidos, tal y como le llegaria a una
-# comercial de verdad.
-PISOS_EJEMPLO = [
-    {"zona": "Babel", "tipo": "Piso", "precio": 145000, "url": "https://www.inmoparadise.com/ficha/ejemplo-1"},
-    {"zona": "Ciudad Elegida", "tipo": "Piso", "precio": 155000, "url": "https://www.inmoparadise.com/ficha/ejemplo-2"},
-]
+compradores = np._supabase_get(
+    SUPA_URL, SUPA_KEY, "compradores",
+    {"select": "id,nombre", "owner_id": f"eq.{YACELLY_OWNER_ID}", "limit": "1"},
+)
+if not compradores:
+    print("Yacelly todavia no tiene ningun contacto propio, no se puede probar el enlace a una ficha real.")
+    sys.exit(0)
 
-texto = ni._mensaje_comprador("Cliente de Ejemplo", 15, "Babel", PISOS_EJEMPLO)
-# Numero personal de Yaz, solo para esta prueba: asi al tocar "Enviar"
-# se ve el mensaje real en WhatsApp sin arriesgarse a escribirle a un
-# cliente de verdad.
-wa_url = f"https://wa.me/34684139915?text={quote(texto)}"
-
-print("Mensaje de ejemplo que se mandaria por WhatsApp:\n")
-print(texto)
-print(f"\nEnlace de WhatsApp: {wa_url}")
+c = compradores[0]
+print(f"Usando el contacto real '{c['nombre']}' (id {c['id']}) solo para construir el enlace de prueba.")
+print("Esto NO le manda nada: el aviso solo abre su ficha en Encaja, y ahi hay que tocar el boton WhatsApp a mano.")
 
 subs = np._supabase_get(
     SUPA_URL, SUPA_KEY, "push_subscriptions",
@@ -54,9 +49,9 @@ print(f"\n{len(subs)} suscripcion(es) de Yacelly encontrada(s).")
 
 payload = json.dumps({
     "title": "Encaja — recordatorio (EJEMPLO de prueba)",
-    "body": "Hace 15 días que no contactas con Cliente de Ejemplo",
+    "body": f"Hace 15 días que no contactas con {c['nombre']}. Toca para abrir su ficha y mandarle WhatsApp.",
     "tag": "encaja-inactividad-ejemplo",
-    "url": wa_url,
+    "url": f"/?comprador={c['id']}",
 }, ensure_ascii=False)
 
 enviados = 0

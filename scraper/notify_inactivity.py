@@ -164,14 +164,18 @@ def notify_stale_contacts() -> None:
                 candidatos = [p for p in candidatos if not p.get("precio") or p["precio"] <= c["presupuesto"]]
             texto = _mensaje_comprador(c["nombre"], dias, c.get("zona"), candidatos)
 
-        tel = "".join(ch for ch in (c.get("telefono") or "") if ch.isdigit() or ch == "+")
-        wa_url = f"https://wa.me/{tel.lstrip('+')}?text={requests.utils.quote(texto)}"
-
+        # El aviso lleva a la ficha del contacto dentro de Encaja (igual que
+        # el aviso de coincidencia de piso), no directo a un enlace de
+        # WhatsApp: un enlace de WhatsApp abierto automáticamente al pinchar
+        # el aviso (sin que la persona lo toque ella misma dentro de una
+        # página) no abre la app en Android, se queda en la web. Dentro de
+        # la ficha hay un botón "WhatsApp" con el mensaje ya listo — al
+        # tocarlo ella misma sí abre la app de verdad.
         payload = json.dumps({
             "title": "Encaja — recordatorio",
-            "body": f"Hace {dias} días que no contactas con {c['nombre']}",
+            "body": f"Hace {dias} días que no contactas con {c['nombre']}. Toca para abrir su ficha y mandarle WhatsApp.",
             "tag": f"encaja-inactividad-{c['id']}",
-            "url": wa_url,
+            "url": f"/?comprador={c['id']}",
         }, ensure_ascii=False)
 
         enviado_a_alguien = False
