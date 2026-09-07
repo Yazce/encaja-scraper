@@ -5,14 +5,11 @@ tocar "WhatsApp" sin arriesgarse a escribirle a un cliente de verdad- y
 calcula los dias sin contacto igual que hace notify_inactivity.py de
 verdad, a partir de ultimo_contacto/fecha guardados en la base (PEPITO
 esta puesto como si llevara ~15 dias sin contacto, para simular el aviso
-de "dos semanas sin hablar").
-
-El mensaje que se manda -y el que generara tambien el boton "WhatsApp" de
-su ficha- es solo un "¿sigues buscando/vendiendo?": la idea de este aviso
-es que la comercial compruebe si el cliente sigue interesado, no ofrecerle
-pisos de forma automatica (eso lo hace aparte el aviso de coincidencia,
-test_match_push.py / notify_push.py, cuando entra una vivienda nueva que
-le encaja).
+de "dos semanas sin hablar"). El mensaje que se manda -y el que generara
+tambien el boton "WhatsApp" de su ficha- pregunta si sigue buscando y, si
+hay pisos activos que encajen con lo que pedia, los incluye ya en el
+mismo mensaje (misma logica que usa el boton, con los mismos limites de
+zona/tipo/presupuesto).
 
 No se ejecuta automaticamente - solo a mano, disparando el workflow
 "Test inactivity push" desde la pestana Actions de GitHub.
@@ -28,7 +25,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(__file__))
 
 import notify_inactivity as ni  # reutiliza _mensaje_comprador, _mensaje_vendedor, _dias_desde
-import notify_push as np  # reutiliza _supabase_get, ADMIN_OWNER_IDS, VAPID_CLAIMS_SUB
+import notify_push as np  # reutiliza _supabase_get, _zona_matches, ADMIN_OWNER_IDS, VAPID_CLAIMS_SUB
 
 from pywebpush import webpush, WebPushException
 
@@ -60,12 +57,26 @@ if dias_sin_contacto is None:
 dias = int(dias_sin_contacto)
 print(f"Dias sin contacto (simulados en la base): {dias}")
 
+# Pisos activos, igual que en el aviso real, para poder ofrecer coincidencias.
+try:
+    pisos = np._supabase_get(
+        SUPA_URL, SUPA_KEY, "pisos",
+        {"select": "id,zona,tipo,precio,caract,url,reservado", "reservado": "eq.false"},
+    )
+except Exception:
+    pisos = []
+
 if c.get("rol") == "vendedor":
     texto = ni._mensaje_vendedor(c["nombre"], dias, c.get("zona"))
 else:
-    texto = ni._mensaje_comprador(c["nombre"], dias)
+    candidatos = [p for p in pisos if np._zona_matches(p.get("zona"), c.get("zona"))]
+    if c.get("tipo"):
+        candidatos = [p for p in candidatos if not p.get("tipo") or p["tipo"] == c["tipo"]]
+    if c.get("presupuesto"):
+        candidatos = [p for p in candidatos if not p.get("precio") or p["precio"] <= c["presupuesto"]]
+    texto = ni._mensaje_comprador(c["nombre"], dias, c.get("zona"), candidatos)
 
-print("\nMensaje que se generaria (el mismo que usa el boton WhatsApp de su ficha - solo pregunta si sigue buscando, no ofrece pisos):\n")
+print("\nMensaje que se generaria (el mismo que usa el boton WhatsApp de su ficha):\n")
 print(texto)
 
 print("\nBuscando suscripciones del dueno de PEPITO + administradoras (igual que el aviso real)...")
