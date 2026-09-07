@@ -33,6 +33,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from notify_push import notify_matching_compradores
+from notify_inactivity import notify_stale_contacts
 
 SITE_ROOT = "https://www.inmoparadise.com/"
 BASE_URL = SITE_ROOT + "for-sale/es"  # version en español (tipo/caract. salen ya traducidos)
@@ -407,6 +408,11 @@ def main() -> None:
                 update_reservado_supabase(referencia, reservado)
             except requests.RequestException as e:
                 print(f"Error actualizando 'reservado' para {referencia}: {e}")
+
+    try:
+        notify_stale_contacts()
+    except Exception as e:
+        print(f"Error mandando avisos de inactividad: {e}")
 
     new_snapshot = {
         "fecha": datetime.now(timezone.utc).isoformat(),
