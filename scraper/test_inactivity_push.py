@@ -37,9 +37,10 @@ PISOS_EJEMPLO = [
 ]
 
 texto = ni._mensaje_comprador("Cliente de Ejemplo", 15, "Babel", PISOS_EJEMPLO)
-# Numero de prueba a proposito (no es un cliente real, para no mandar
-# nada a nadie de verdad si se llega a tocar el enlace).
-wa_url = f"https://wa.me/34600000000?text={quote(texto)}"
+# Numero personal de Yaz, solo para esta prueba: asi al tocar "Enviar"
+# se ve el mensaje real en WhatsApp sin arriesgarse a escribirle a un
+# cliente de verdad.
+wa_url = f"https://wa.me/34684139915?text={quote(texto)}"
 
 print("Mensaje de ejemplo que se mandaria por WhatsApp:\n")
 print(texto)
