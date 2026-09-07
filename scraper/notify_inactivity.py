@@ -4,6 +4,13 @@ cuando lleva UMBRAL_DIAS sin contactar con uno de sus clientes activos, con
 un mensaje de WhatsApp ya redactado y listo para tocar "Enviar" (nunca se
 manda solo, hace falta que la persona lo confirme desde su móvil).
 
+Este aviso es solo un "¿sigues interesado?": comprueba si el cliente sigue
+buscando/vendiendo, no ofrece viviendas de forma automática (eso ya lo hace
+aparte el aviso de coincidencia, notify_push.py, cuando entra un piso nuevo
+que le encaja). Así la comercial decide a mano qué ofrecerle según lo que
+responda, en vez de mandar de oficio una lista de pisos que puede estar
+desactualizada.
+
 Solo mira los contactos con estado = 'activo': la bolsa de contactos
 "Importados" (estado sin_revisar, sin repartir aún entre el equipo) queda
 fuera a propósito, para no generar miles de avisos de golpe.
@@ -33,11 +40,10 @@ except ImportError:
     webpush = None
     WebPushException = Exception
 
-import notify_push as np  # reutiliza _supabase_get, _delete_subscription, _zona_matches, _fmt_money, ADMIN_OWNER_IDS, VAPID_CLAIMS_SUB
+import notify_push as np  # reutiliza _supabase_get, _delete_subscription, ADMIN_OWNER_IDS, VAPID_CLAIMS_SUB
 
 REQUEST_TIMEOUT = 20
 UMBRAL_DIAS = 14
-MAX_PISOS_POR_AVISO = 3
 
 
 def _supabase_patch(url: str, key: str, table: str, match: dict, data: dict) -> None:
@@ -67,22 +73,11 @@ def _dias_desde(iso: str | None, ahora: datetime) -> float | None:
     return (ahora - dt).total_seconds() / 86400
 
 
-def _mensaje_comprador(nombre: str, dias: int, zona_busca: str | None, pisos: list[dict]) -> str:
-    saludo = f"Hola {nombre}, soy de Inmoparadise 👋 Hace {dias} días que no hablamos, ¿sigues buscando piso?"
-    if not pisos:
-        return f"{saludo} Cuéntame cómo lo llevas, a ver si te puedo ayudar en algo."
-    lineas = [f"{saludo} Mira, tengo estas viviendas que pueden encajarte:", ""]
-    for i, p in enumerate(pisos[:MAX_PISOS_POR_AVISO], start=1):
-        linea = f"{i}) {p.get('zona') or 'Sin zona'}"
-        if p.get("tipo"):
-            linea += f" · {p['tipo']}"
-        linea += f" — {np._fmt_money(p.get('precio'))}"
-        lineas.append(linea)
-        if p.get("url"):
-            lineas.append(p["url"])
-        lineas.append("")
-    lineas.append("¿Te sigue interesando alguna, o ha cambiado lo que buscas?")
-    return "\n".join(lineas)
+def _mensaje_comprador(nombre: str, dias: int) -> str:
+    return (
+        f"Hola {nombre}, soy de Inmoparadise 👋 Hace {dias} días que no hablamos, "
+        f"¿sigues buscando piso? Cuéntame cómo lo llevas, a ver si te puedo ayudar en algo."
+    )
 
 
 def _mensaje_vendedor(nombre: str, dias: int, zona: str | None) -> str:
@@ -125,16 +120,6 @@ def notify_stale_contacts() -> None:
     for s in subs:
         subs_por_owner.setdefault(s["owner_id"], []).append(s)
 
-    # Pisos activos (no reservados), para poder ofrecer coincidencias a
-    # quien busca comprar — misma idea que notify_push.py.
-    try:
-        pisos = np._supabase_get(
-            supa_url, supa_key, "pisos",
-            {"select": "id,zona,tipo,precio,caract,url,reservado", "reservado": "eq.false"},
-        )
-    except requests.RequestException:
-        pisos = []
-
     avisados = 0
     for c in contactos:
         referencia = c.get("ultimo_contacto") or c.get("fecha")
@@ -157,20 +142,16 @@ def notify_stale_contacts() -> None:
         if c.get("rol") == "vendedor":
             texto = _mensaje_vendedor(c["nombre"], dias, c.get("zona"))
         else:
-            candidatos = [p for p in pisos if np._zona_matches(p.get("zona"), c.get("zona"))]
-            if c.get("tipo"):
-                candidatos = [p for p in candidatos if not p.get("tipo") or p["tipo"] == c["tipo"]]
-            if c.get("presupuesto"):
-                candidatos = [p for p in candidatos if not p.get("precio") or p["precio"] <= c["presupuesto"]]
-            texto = _mensaje_comprador(c["nombre"], dias, c.get("zona"), candidatos)
+            texto = _mensaje_comprador(c["nombre"], dias)
 
         # El aviso lleva a la ficha del contacto dentro de Encaja (igual que
         # el aviso de coincidencia de piso), no directo a un enlace de
         # WhatsApp: un enlace de WhatsApp abierto automáticamente al pinchar
         # el aviso (sin que la persona lo toque ella misma dentro de una
         # página) no abre la app en Android, se queda en la web. Dentro de
-        # la ficha hay un botón "WhatsApp" con el mensaje ya listo — al
-        # tocarlo ella misma sí abre la app de verdad.
+        # la ficha hay un botón "WhatsApp" con el mensaje ya listo (el mismo
+        # "¿sigues buscando/vendiendo?" de arriba, texto) — al tocarlo ella
+        # misma sí abre la app de verdad.
         payload = json.dumps({
             "title": "Encaja — recordatorio",
             "body": f"Hace {dias} días que no contactas con {c['nombre']}. Toca para abrir su ficha y mandarle WhatsApp.",
