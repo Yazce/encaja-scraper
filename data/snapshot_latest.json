@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-07T16:51:15.871048+00:00",
+  "fecha": "2026-09-07T22:25:02.635698+00:00",
   "total_pisos": 12,
   "listings": {
+    "1705": {
+      "referencia": "1705",
+      "precio": 415000,
+      "precio_anterior": 419000,
+      "bajada_pct": "- 1%",
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "104 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/22800279/es/",
+      "reservado": false
+    },
     "2563": {
       "referencia": "2563",
       "precio": 117000,
@@ -143,19 +156,6 @@
       "banos": "2",
       "m2": "171 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28143126/es/",
-      "reservado": false
-    },
-    "2562": {
-      "referencia": "2562",
-      "precio": 174900,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "76 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30106470/es/",
       "reservado": false
     }
   }
