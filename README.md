@@ -45,6 +45,17 @@ en español, sin necesidad de traducir nada a mano.
    ejecuta cada 6 horas, con permiso `issues: write`, y commitea
    `data/snapshot_latest.json` si cambió.
 
+## Avisos push
+
+Además de los avisos de piso nuevo/bajada de precio (`scraper/notify_push.py`),
+en cada pasada se comprueba también (`scraper/notify_inactivity.py`) si algún
+contacto **activo** (no la bolsa de "Importados" sin repartir) lleva 14 días o
+más sin que se le marque como contactado, y si es así se manda un push a su
+comercial (y siempre también a las administradoras) con el mensaje de
+WhatsApp ya escrito y un enlace que lo abre listo para tocar "Enviar". Se
+vuelve a avisar cada 14 días mientras el contacto siga sin moverse, nunca
+más seguido. Usa los mismos tres secretos de abajo.
+
 ## Configurar los secretos de Supabase
 
 En este repo de GitHub → **Settings** → **Secrets and variables** →
