@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-09-09T02:06:30.778436+00:00",
+  "fecha": "2026-09-09T15:40:00.318058+00:00",
   "total_pisos": 12,
   "listings": {
+    "2568": {
+      "referencia": "2568",
+      "precio": 209950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Alipark",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "75 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
+      "reservado": false
+    },
+    "2560": {
+      "referencia": "2560",
+      "precio": 199950,
+      "precio_anterior": 209950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "95 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30050672/es/",
+      "reservado": false
+    },
+    "2548": {
+      "referencia": "2548",
+      "precio": 249950,
+      "precio_anterior": 255000,
+      "bajada_pct": "- 2%",
+      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "102 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
+      "reservado": false
+    },
     "1705": {
       "referencia": "1705",
       "precio": 415000,
@@ -80,19 +119,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29771287/es/",
       "reservado": false
     },
-    "2548": {
-      "referencia": "2548",
-      "precio": 255000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "102 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
-      "reservado": false
-    },
     "2552": {
       "referencia": "2552",
       "precio": 169950,
@@ -130,32 +156,6 @@
       "banos": "2",
       "m2": "90 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/21912903/es/",
-      "reservado": false
-    },
-    "2564": {
-      "referencia": "2564",
-      "precio": 285000,
-      "precio_anterior": 289950,
-      "bajada_pct": "- 2%",
-      "zona": "Zona Pla del bon repos",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "110 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30130695/es/",
-      "reservado": false
-    },
-    "2330": {
-      "referencia": "2330",
-      "precio": 430000,
-      "precio_anterior": 450000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Vistahermosa",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "171 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28143126/es/",
       "reservado": false
     }
   }
