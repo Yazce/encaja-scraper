@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-09T15:40:00.318058+00:00",
+  "fecha": "2026-09-09T19:01:19.244278+00:00",
   "total_pisos": 12,
   "listings": {
+    "2569": {
+      "referencia": "2569",
+      "precio": 160000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 85m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "85 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30196283/es/",
+      "reservado": false
+    },
+    "2567": {
+      "referencia": "2567",
+      "precio": 379950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Playa de San Juan",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "88 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/playa-de-san-juan/10473/30171659/es/",
+      "reservado": false
+    },
     "2568": {
       "referencia": "2568",
       "precio": 209950,
@@ -130,32 +156,6 @@
       "banos": "1",
       "m2": "91 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29937917/es/",
-      "reservado": false
-    },
-    "2566": {
-      "referencia": "2566",
-      "precio": 168000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "88 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30143177/es/",
-      "reservado": false
-    },
-    "1555": {
-      "referencia": "1555",
-      "precio": 179950,
-      "precio_anterior": 185000,
-      "bajada_pct": "- 3%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Carolinas bajas, Superficie Construida 90m2, 4 Habitaciones, 2 Baños.",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "90 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/21912903/es/",
       "reservado": false
     }
   }
