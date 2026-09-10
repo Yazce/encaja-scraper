@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-10T02:03:45.718692+00:00",
+  "fecha": "2026-09-10T08:33:48.173384+00:00",
   "total_pisos": 12,
   "listings": {
+    "2537": {
+      "referencia": "2537",
+      "precio": 165000,
+      "precio_anterior": 175000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Juan XXIII",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/29856254/es/",
+      "reservado": false
+    },
     "2569": {
       "referencia": "2569",
       "precio": 160000,
@@ -143,19 +156,6 @@
       "banos": "2",
       "m2": "138 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29771287/es/",
-      "reservado": false
-    },
-    "2552": {
-      "referencia": "2552",
-      "precio": 169950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 91m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "91 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29937917/es/",
       "reservado": false
     }
   }
