@@ -1,33 +1,7 @@
 {
-  "fecha": "2026-09-10T08:33:48.173384+00:00",
+  "fecha": "2026-09-10T15:28:39.571588+00:00",
   "total_pisos": 12,
   "listings": {
-    "2537": {
-      "referencia": "2537",
-      "precio": 165000,
-      "precio_anterior": 175000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Juan XXIII",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "87 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/29856254/es/",
-      "reservado": false
-    },
-    "2569": {
-      "referencia": "2569",
-      "precio": 160000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 85m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "85 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30196283/es/",
-      "reservado": false
-    },
     "2567": {
       "referencia": "2567",
       "precio": 379950,
@@ -52,6 +26,32 @@
       "banos": "2",
       "m2": "75 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
+      "reservado": false
+    },
+    "2537": {
+      "referencia": "2537",
+      "precio": 165000,
+      "precio_anterior": 175000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Juan XXIII",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/29856254/es/",
+      "reservado": false
+    },
+    "2569": {
+      "referencia": "2569",
+      "precio": 160000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 85m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "85 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30196283/es/",
       "reservado": false
     },
     "2560": {
