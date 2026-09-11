@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-11T08:25:25.508964+00:00",
+  "fecha": "2026-09-11T15:37:16.254822+00:00",
   "total_pisos": 12,
   "listings": {
+    "2570": {
+      "referencia": "2570",
+      "precio": 99950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "1",
+      "banos": "1",
+      "m2": "59 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30210916/es/",
+      "reservado": false
+    },
+    "2555": {
+      "referencia": "2555",
+      "precio": 149000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona 400 viviendas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "97 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/400-viviendas/10473/29952646/es/",
+      "reservado": true
+    },
     "2567": {
       "referencia": "2567",
       "precio": 379950,
@@ -130,32 +156,6 @@
       "banos": "3",
       "m2": "250 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/el-moralet/10473/29467312/es/",
-      "reservado": false
-    },
-    "2522": {
-      "referencia": "2522",
-      "precio": 125000,
-      "precio_anterior": 129950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Altozano",
-      "tipo": "Planta baja en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "69 m2",
-      "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/altozano/10473/29763946/es/",
-      "reservado": false
-    },
-    "2525": {
-      "referencia": "2525",
-      "precio": 385000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "138 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29771287/es/",
       "reservado": false
     }
   }
