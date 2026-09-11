@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-11T15:37:16.254822+00:00",
+  "fecha": "2026-09-11T22:10:44.102167+00:00",
   "total_pisos": 12,
   "listings": {
+    "2572": {
+      "referencia": "2572",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Ático en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "46 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30212402/es/",
+      "reservado": false
+    },
+    "2568": {
+      "referencia": "2568",
+      "precio": 209950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Alipark",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "93 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
+      "reservado": false
+    },
     "2570": {
       "referencia": "2570",
       "precio": 99950,
@@ -39,19 +65,6 @@
       "banos": "2",
       "m2": "88 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/playa-de-san-juan/10473/30171659/es/",
-      "reservado": false
-    },
-    "2568": {
-      "referencia": "2568",
-      "precio": 209950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Alipark",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "75 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
       "reservado": false
     },
     "2537": {
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "89 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29323563/es/",
-      "reservado": false
-    },
-    "2497": {
-      "referencia": "2497",
-      "precio": 259950,
-      "precio_anterior": 266000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona El Moralet",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "5",
-      "banos": "3",
-      "m2": "250 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/el-moralet/10473/29467312/es/",
       "reservado": false
     }
   }
