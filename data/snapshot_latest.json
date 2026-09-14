@@ -1,7 +1,59 @@
 {
-  "fecha": "2026-09-14T09:28:35.606882+00:00",
+  "fecha": "2026-09-14T17:23:48.787132+00:00",
   "total_pisos": 12,
   "listings": {
+    "2455": {
+      "referencia": "2455",
+      "precio": 207500,
+      "precio_anterior": 219000,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "123 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29220888/es/",
+      "reservado": true
+    },
+    "2331": {
+      "referencia": "2331",
+      "precio": 199000,
+      "precio_anterior": 220000,
+      "bajada_pct": "- 10%",
+      "zona": "Zona San nicolas de bari - Benisaudet",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "105 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-nicolas-de-bari-benisaudet/10473/28165819/es/",
+      "reservado": false
+    },
+    "2571": {
+      "referencia": "2571",
+      "precio": 119950,
+      "precio_anterior": 125950,
+      "bajada_pct": "- 5%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 71m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "71 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30211158/es/",
+      "reservado": false
+    },
+    "2524": {
+      "referencia": "2524",
+      "precio": 199990,
+      "precio_anterior": 209950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona La Florida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "72 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/29769509/es/",
+      "reservado": false
+    },
     "2550": {
       "referencia": "2550",
       "precio": 95000,
@@ -104,58 +156,6 @@
       "banos": "1",
       "m2": "85 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30196283/es/",
-      "reservado": false
-    },
-    "2560": {
-      "referencia": "2560",
-      "precio": 199950,
-      "precio_anterior": 209950,
-      "bajada_pct": "- 5%",
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "95 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30050672/es/",
-      "reservado": false
-    },
-    "2548": {
-      "referencia": "2548",
-      "precio": 249950,
-      "precio_anterior": 255000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "102 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
-      "reservado": false
-    },
-    "1705": {
-      "referencia": "1705",
-      "precio": 415000,
-      "precio_anterior": 419000,
-      "bajada_pct": "- 1%",
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "104 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/22800279/es/",
-      "reservado": false
-    },
-    "2563": {
-      "referencia": "2563",
-      "precio": 117000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Colonia Santa Isabel",
-      "tipo": "Piso en San Vicente del Raspeig",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "61 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
       "reservado": false
     }
   }
