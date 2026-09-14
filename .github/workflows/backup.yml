@@ -1,0 +1,34 @@
+name: Copia de seguridad semanal de Encaja
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"   # todos los lunes a las 03:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Exportar todas las tablas
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scraper/backup_encaja.py
+
+      - name: Subir copia de seguridad (descargable desde esta ejecución)
+        uses: actions/upload-artifact@v4
+        with:
+          name: encaja-backup-${{ github.run_id }}
+          path: backup_output/*.json
+          retention-days: 90
