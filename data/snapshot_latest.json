@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-14T02:19:33.935419+00:00",
+  "fecha": "2026-09-14T09:28:35.606882+00:00",
   "total_pisos": 12,
   "listings": {
+    "2550": {
+      "referencia": "2550",
+      "precio": 95000,
+      "precio_anterior": 99950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Colonia Santa Isabel",
+      "tipo": "Piso en San Vicente del Raspeig",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "62 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/29935896/es/",
+      "reservado": false
+    },
     "2572": {
       "referencia": "2572",
       "precio": 149950,
@@ -11,7 +24,7 @@
       "tipo": "Ático en Alicante",
       "habitaciones": "2",
       "banos": "1",
-      "m2": "46 m2",
+      "m2": "74 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30212402/es/",
       "reservado": false
     },
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "61 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
-      "reservado": false
-    },
-    "2466": {
-      "referencia": "2466",
-      "precio": 179000,
-      "precio_anterior": 193000,
-      "bajada_pct": "- 7%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "89 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29323563/es/",
       "reservado": false
     }
   }
