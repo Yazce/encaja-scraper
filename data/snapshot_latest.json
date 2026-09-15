@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-15T16:24:43.879721+00:00",
+  "fecha": "2026-09-15T19:35:46.954426+00:00",
   "total_pisos": 12,
   "listings": {
+    "2577": {
+      "referencia": "2577",
+      "precio": 117000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "74 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30252353/es/",
+      "reservado": false
+    },
+    "2576": {
+      "referencia": "2576",
+      "precio": 125000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Lo Morant, Superficie Construida 77m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "77 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/lo-morant/10473/30251870/es/",
+      "reservado": false
+    },
     "2575": {
       "referencia": "2575",
       "precio": 136000,
@@ -28,19 +54,6 @@
       "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/pla-del-bon-repos-la-goteta/10473/30251145/es/",
       "reservado": false
     },
-    "2576": {
-      "referencia": "2576",
-      "precio": 125000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Lo Morant, Superficie Construida 77m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/lo-morant/10473/30251870/es/",
-      "reservado": false
-    },
     "2573": {
       "referencia": "2573",
       "precio": 99950,
@@ -54,17 +67,43 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
       "reservado": false
     },
-    "2577": {
-      "referencia": "2577",
-      "precio": 117000,
+    "2570": {
+      "referencia": "2570",
+      "precio": 99950,
       "precio_anterior": null,
       "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "zona": "Zona Carolinas bajas",
       "tipo": "Piso en Alicante",
+      "habitaciones": "1",
+      "banos": "1",
+      "m2": "59 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30210916/es/",
+      "reservado": false
+    },
+    "2571": {
+      "referencia": "2571",
+      "precio": 119950,
+      "precio_anterior": 125950,
+      "bajada_pct": "- 5%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 71m2, 3 Habitaciones, 1 Baño.",
       "habitaciones": "3",
       "banos": "1",
+      "m2": "71 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30211158/es/",
+      "reservado": false
+    },
+    "2572": {
+      "referencia": "2572",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Ático en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
       "m2": "74 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30252353/es/",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30212402/es/",
       "reservado": false
     },
     "2474": {
@@ -117,45 +156,6 @@
       "banos": "2",
       "m2": "244 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/mutxamel/almajada-ravel/10473/28723593/es/",
-      "reservado": false
-    },
-    "2519": {
-      "referencia": "2519",
-      "precio": 170000,
-      "precio_anterior": 175000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Ciudad de Asís",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/29734201/es/",
-      "reservado": false
-    },
-    "2455": {
-      "referencia": "2455",
-      "precio": 207500,
-      "precio_anterior": 219000,
-      "bajada_pct": "- 5%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "123 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29220888/es/",
-      "reservado": true
-    },
-    "2331": {
-      "referencia": "2331",
-      "precio": 199000,
-      "precio_anterior": 220000,
-      "bajada_pct": "- 10%",
-      "zona": "Zona San nicolas de bari - Benisaudet",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "105 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-nicolas-de-bari-benisaudet/10473/28165819/es/",
       "reservado": false
     }
   }
