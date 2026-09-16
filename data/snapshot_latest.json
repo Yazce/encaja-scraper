@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-16T15:58:26.214720+00:00",
+  "fecha": "2026-09-16T19:16:06.139429+00:00",
   "total_pisos": 12,
   "listings": {
+    "2579": {
+      "referencia": "2579",
+      "precio": 170000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Local comercial en Alicante situado en la zona de Altozano, Superficie Construida 117m2.",
+      "habitaciones": null,
+      "banos": null,
+      "m2": "117 m2",
+      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/altozano/10473/30270266/es/",
+      "reservado": false
+    },
     "2355": {
       "referencia": "2355",
       "precio": 149950,
@@ -143,19 +156,6 @@
       "banos": "1",
       "m2": "82 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
-      "reservado": false
-    },
-    "2570": {
-      "referencia": "2570",
-      "precio": 99950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "1",
-      "banos": "1",
-      "m2": "59 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30210916/es/",
       "reservado": false
     }
   }
