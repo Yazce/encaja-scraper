@@ -112,7 +112,7 @@ def notify_matching_compradores(events: list[dict]) -> None:
     try:
         compradores = _supabase_get(
             supa_url, supa_key, "compradores",
-            {"select": "id,nombre,zona,tipo,presupuesto,rol,owner_id", "rol": "neq.vendedor"},
+            {"select": "id,nombre,zona,tipo,presupuesto,rol,owner_id,estado", "rol": "neq.vendedor"},
         )
         subs = _supabase_get(
             supa_url, supa_key, "push_subscriptions",
@@ -136,6 +136,14 @@ def notify_matching_compradores(events: list[dict]) -> None:
         precio_evento = event.get("precio")
 
         for comprador in compradores:
+            # Cerrado (vendido/comprado) o descartado (ya no interesa): ya
+            # no se le avisa de mas coincidencias, es una decision tomada
+            # a proposito en la ficha, no un olvido. "sin_revisar" tampoco
+            # avisa todavia porque nadie del equipo lo ha repartido aun
+            # (misma exclusion que usa computeMatches() en index.html).
+            estado = comprador.get("estado") or "activo"
+            if estado in ("descartado", "cerrado", "sin_revisar"):
+                continue
             if not _zona_matches(event.get("zona"), comprador.get("zona")):
                 continue
             if comprador.get("tipo") and tipo_evento and comprador["tipo"] != tipo_evento:
