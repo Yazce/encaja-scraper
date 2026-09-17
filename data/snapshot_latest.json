@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-09-17T02:22:54.357344+00:00",
+  "fecha": "2026-09-17T09:09:36.221941+00:00",
   "total_pisos": 12,
   "listings": {
+    "2531": {
+      "referencia": "2531",
+      "precio": 229950,
+      "precio_anterior": 235000,
+      "bajada_pct": "- 2%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 122m2, 5 Habitaciones, 2 Baños.",
+      "habitaciones": "5",
+      "banos": "2",
+      "m2": "122 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29805975/es/",
+      "reservado": true
+    },
+    "2558": {
+      "referencia": "2558",
+      "precio": 250000,
+      "precio_anterior": 260000,
+      "bajada_pct": "- 4%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 79m2, 3 Habitaciones, 2 Baños.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "79 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30021750/es/",
+      "reservado": false
+    },
+    "2506": {
+      "referencia": "2506",
+      "precio": 186000,
+      "precio_anterior": 190000,
+      "bajada_pct": "- 2%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "107 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29627633/es/",
+      "reservado": false
+    },
     "2579": {
       "referencia": "2579",
       "precio": 170000,
@@ -117,45 +156,6 @@
       "banos": "1",
       "m2": "77 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/lo-morant/10473/30251870/es/",
-      "reservado": false
-    },
-    "2575": {
-      "referencia": "2575",
-      "precio": 136000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30251534/es/",
-      "reservado": false
-    },
-    "2574": {
-      "referencia": "2574",
-      "precio": 119950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Plà del Bon Repòs-La Goteta",
-      "tipo": "Local comercial en Alicante",
-      "habitaciones": null,
-      "banos": "1",
-      "m2": "100 m2",
-      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/pla-del-bon-repos-la-goteta/10473/30251145/es/",
-      "reservado": false
-    },
-    "2573": {
-      "referencia": "2573",
-      "precio": 99950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Juan XXIII, Superficie Construida 82m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "82 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
       "reservado": false
     }
   }
