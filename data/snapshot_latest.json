@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-21T09:26:08.362687+00:00",
+  "fecha": "2026-09-21T17:24:50.924795+00:00",
   "total_pisos": 12,
   "listings": {
+    "2581": {
+      "referencia": "2581",
+      "precio": 179950,
+      "precio_anterior": 189000,
+      "bajada_pct": "- 5%",
+      "zona": "",
+      "tipo": "Ático en Alicante situado en la zona de Carolinas bajas, Superficie Construida 74m2.",
+      "habitaciones": null,
+      "banos": null,
+      "m2": "74 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
+      "reservado": false
+    },
     "2578": {
       "referencia": "2578",
       "precio": 150000,
@@ -26,19 +39,6 @@
       "banos": "2",
       "m2": "103 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30291810/es/",
-      "reservado": false
-    },
-    "2581": {
-      "referencia": "2581",
-      "precio": 189000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Ático en Alicante situado en la zona de Carolinas bajas, Superficie Construida 74m2.",
-      "habitaciones": null,
-      "banos": null,
-      "m2": "74 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
       "reservado": false
     },
     "2580": {
