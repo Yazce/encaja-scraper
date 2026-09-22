@@ -1,7 +1,59 @@
 {
-  "fecha": "2026-09-22T08:54:51.969519+00:00",
+  "fecha": "2026-09-22T15:56:47.195404+00:00",
   "total_pisos": 12,
   "listings": {
+    "2584": {
+      "referencia": "2584",
+      "precio": 129950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "112 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30311709/es/",
+      "reservado": false
+    },
+    "2580": {
+      "referencia": "2580",
+      "precio": 299950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona La florida portazgo",
+      "tipo": "Ático Dúplex en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "86 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico-duplex/alicante/la-florida-portazgo/10473/30281378/es/",
+      "reservado": false
+    },
+    "2474": {
+      "referencia": "2474",
+      "precio": 115000,
+      "precio_anterior": 129950,
+      "bajada_pct": "- 12%",
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/29354603/es/",
+      "reservado": false
+    },
+    "1199": {
+      "referencia": "1199",
+      "precio": 129950,
+      "precio_anterior": 139950,
+      "bajada_pct": "- 7%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 56m2, 2 Habitaciones.",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "56 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/18929513/es/",
+      "reservado": false
+    },
     "2578": {
       "referencia": "2578",
       "precio": 150000,
@@ -67,19 +119,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30291810/es/",
       "reservado": false
     },
-    "2580": {
-      "referencia": "2580",
-      "precio": 299950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona La florida portazgo",
-      "tipo": "Ático Dúplex en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "86 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico-duplex/alicante/la-florida-portazgo/10473/30281378/es/",
-      "reservado": false
-    },
     "2531": {
       "referencia": "2531",
       "precio": 229950,
@@ -117,45 +156,6 @@
       "banos": "1",
       "m2": "107 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29627633/es/",
-      "reservado": false
-    },
-    "2579": {
-      "referencia": "2579",
-      "precio": 170000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Local comercial en Alicante situado en la zona de Altozano, Superficie Construida 117m2.",
-      "habitaciones": null,
-      "banos": null,
-      "m2": "117 m2",
-      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/altozano/10473/30270266/es/",
-      "reservado": false
-    },
-    "2386": {
-      "referencia": "2386",
-      "precio": 220000,
-      "precio_anterior": 230000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Mercado",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "123 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/mercado/10473/28756871/es/",
-      "reservado": false
-    },
-    "2567": {
-      "referencia": "2567",
-      "precio": 379950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Playa de San Juan",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "88 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/playa-de-san-juan/10473/30171659/es/",
       "reservado": false
     }
   }
