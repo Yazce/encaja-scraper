@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-23T15:46:53.665705+00:00",
+  "fecha": "2026-09-23T19:20:28.873834+00:00",
   "total_pisos": 108,
   "listings": {
+    "2583": {
+      "referencia": "2583",
+      "precio": 139950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Pla del bon repos",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "50 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30301655/es/",
+      "reservado": false
+    },
+    "2585": {
+      "referencia": "2585",
+      "precio": 295000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Mercado",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "78 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/mercado/10473/30320172/es/",
+      "reservado": false
+    },
     "2578": {
       "referencia": "2578",
       "precio": 150000,
@@ -364,19 +390,6 @@
       "banos": "1",
       "m2": "74 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30212402/es/",
-      "reservado": false
-    },
-    "2445": {
-      "referencia": "2445",
-      "precio": 119000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/29167573/es/",
       "reservado": false
     },
     "2381": {
@@ -832,19 +845,6 @@
       "banos": "1",
       "m2": "93 m2",
       "url": "https://www.inmoparadise.com/ficha/duplex/torrevieja/centro/10473/29377021/es/",
-      "reservado": false
-    },
-    "2473": {
-      "referencia": "2473",
-      "precio": 325000,
-      "precio_anterior": 335000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Los Ángeles",
-      "tipo": "Adosado en Alicante",
-      "habitaciones": "4",
-      "banos": "3",
-      "m2": "281 m2",
-      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/los-angeles/10473/29354492/es/",
       "reservado": false
     },
     "2427": {
