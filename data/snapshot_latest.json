@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-09-24T16:08:01.572506+00:00",
+  "fecha": "2026-09-24T22:50:28.046977+00:00",
   "total_pisos": 108,
   "listings": {
+    "2582": {
+      "referencia": "2582",
+      "precio": 165000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de La Florida, Superficie Construida 103m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "103 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30291810/es/",
+      "reservado": false
+    },
+    "2472": {
+      "referencia": "2472",
+      "precio": 313990,
+      "precio_anterior": 319900,
+      "bajada_pct": "- 2%",
+      "zona": "Zona Sur",
+      "tipo": "Piso en San Vicente del Raspeig",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "188 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/sur/10473/29354345/es/",
+      "reservado": false
+    },
     "2583": {
       "referencia": "2583",
       "precio": 139950,
@@ -169,19 +195,6 @@
       "banos": "1",
       "m2": "76 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/28908239/es/",
-      "reservado": false
-    },
-    "2582": {
-      "referencia": "2582",
-      "precio": 165000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de La Florida, Superficie Construida 103m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "103 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30291810/es/",
       "reservado": false
     },
     "2531": {
@@ -858,19 +871,6 @@
       "banos": "1",
       "m2": "93 m2",
       "url": "https://www.inmoparadise.com/ficha/duplex/torrevieja/centro/10473/29377021/es/",
-      "reservado": false
-    },
-    "2427": {
-      "referencia": "2427",
-      "precio": 247000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "5",
-      "banos": "2",
-      "m2": "130 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29005783/es/",
       "reservado": false
     },
     "2396": {
