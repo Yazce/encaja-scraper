@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-09-24T08:52:09.689918+00:00",
+  "fecha": "2026-09-24T16:08:01.572506+00:00",
   "total_pisos": 108,
   "listings": {
     "2583": {
@@ -13,6 +13,32 @@
       "banos": "1",
       "m2": "50 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30301655/es/",
+      "reservado": false
+    },
+    "2511": {
+      "referencia": "2511",
+      "precio": 179950,
+      "precio_anterior": 185000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "100 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/29646574/es/",
+      "reservado": false
+    },
+    "2580": {
+      "referencia": "2580",
+      "precio": 299950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Paus",
+      "tipo": "Ático Dúplex en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "86 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico-duplex/alicante/paus/10473/30281378/es/",
       "reservado": false
     },
     "2585": {
@@ -52,19 +78,6 @@
       "banos": "2",
       "m2": "146 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29638178/es/",
-      "reservado": false
-    },
-    "2580": {
-      "referencia": "2580",
-      "precio": 299950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona La florida portazgo",
-      "tipo": "Ático Dúplex en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "86 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico-duplex/alicante/la-florida-portazgo/10473/30281378/es/",
       "reservado": false
     },
     "2581": {
@@ -988,19 +1001,6 @@
       "banos": "3",
       "m2": "2762 m2",
       "url": "https://www.inmoparadise.com/ficha/chalet/san-vicente-del-raspeig/villamontes-boqueres/10473/29348436/es/",
-      "reservado": false
-    },
-    "2511": {
-      "referencia": "2511",
-      "precio": 185000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "100 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/29646574/es/",
       "reservado": false
     },
     "2540": {
