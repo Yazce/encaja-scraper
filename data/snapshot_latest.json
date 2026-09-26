@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-26T08:56:23.986879+00:00",
+  "fecha": "2026-09-26T15:21:58.710597+00:00",
   "total_pisos": 108,
   "listings": {
+    "2589": {
+      "referencia": "2589",
+      "precio": 196000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "84 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30355192/es/",
+      "reservado": false
+    },
     "2588": {
       "referencia": "2588",
       "precio": 219950,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28479454/es/",
-      "reservado": false
-    },
-    "2498": {
-      "referencia": "2498",
-      "precio": 195000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Plà del Bon Repòs-La Goteta",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "115 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos-la-goteta/10473/29522116/es/",
       "reservado": false
     }
   }
