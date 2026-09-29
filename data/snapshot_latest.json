@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-09-29T10:15:04.784128+00:00",
+  "fecha": "2026-09-29T17:15:44.325680+00:00",
   "total_pisos": 108,
   "listings": {
+    "2593": {
+      "referencia": "2593",
+      "precio": 186000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Altozano",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "110 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30369140/es/",
+      "reservado": false
+    },
+    "2594": {
+      "referencia": "2594",
+      "precio": 249950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Babel",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "105 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/babel/10473/30370078/es/",
+      "reservado": false
+    },
+    "2548": {
+      "referencia": "2548",
+      "precio": 228000,
+      "precio_anterior": 255000,
+      "bajada_pct": "- 11%",
+      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "102 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
+      "reservado": false
+    },
     "2534": {
       "referencia": "2534",
       "precio": 222000,
@@ -143,19 +182,6 @@
       "banos": "1",
       "m2": "100 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30361158/es/",
-      "reservado": false
-    },
-    "2548": {
-      "referencia": "2548",
-      "precio": 219950,
-      "precio_anterior": 255000,
-      "bajada_pct": "- 14%",
-      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "102 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
       "reservado": false
     },
     "2586": {
@@ -1378,32 +1404,6 @@
       "banos": "2",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28479454/es/",
-      "reservado": false
-    },
-    "2498": {
-      "referencia": "2498",
-      "precio": 195000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Plà del Bon Repòs-La Goteta",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "115 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos-la-goteta/10473/29522116/es/",
-      "reservado": false
-    },
-    "2501": {
-      "referencia": "2501",
-      "precio": 140000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Local comercial en Alicante situado en la zona de Carolinas bajas, Superficie Construida 72m2, 1 Baño.",
-      "habitaciones": null,
-      "banos": "1",
-      "m2": "72 m2",
-      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/carolinas-bajas/10473/29555161/es/",
       "reservado": false
     }
   }
