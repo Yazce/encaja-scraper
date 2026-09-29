@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-09-29T00:03:58.270726+00:00",
+  "fecha": "2026-09-29T10:15:04.784128+00:00",
   "total_pisos": 108,
   "listings": {
+    "2534": {
+      "referencia": "2534",
+      "precio": 222000,
+      "precio_anterior": 239950,
+      "bajada_pct": "- 7%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "139 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29845291/es/",
+      "reservado": false
+    },
+    "2371": {
+      "referencia": "2371",
+      "precio": 218000,
+      "precio_anterior": 255000,
+      "bajada_pct": "- 15%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "115 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/28596412/es/",
+      "reservado": false
+    },
+    "2568": {
+      "referencia": "2568",
+      "precio": 199950,
+      "precio_anterior": 209950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Alipark",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "93 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
+      "reservado": false
+    },
     "2592": {
       "referencia": "2592",
       "precio": 249000,
@@ -574,19 +613,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/29935896/es/",
       "reservado": false
     },
-    "2568": {
-      "referencia": "2568",
-      "precio": 209950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Alipark",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "93 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
-      "reservado": false
-    },
     "2555": {
       "referencia": "2555",
       "precio": 149000,
@@ -834,19 +860,6 @@
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/altozano/10473/25997581/es/",
       "reservado": false
     },
-    "2534": {
-      "referencia": "2534",
-      "precio": 229950,
-      "precio_anterior": 239950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "139 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29845291/es/",
-      "reservado": false
-    },
     "2420": {
       "referencia": "2420",
       "precio": 299950,
@@ -1001,19 +1014,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30022170/es/",
-      "reservado": false
-    },
-    "2371": {
-      "referencia": "2371",
-      "precio": 236000,
-      "precio_anterior": 255000,
-      "bajada_pct": "- 7%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "115 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/28596412/es/",
       "reservado": false
     },
     "2515": {
