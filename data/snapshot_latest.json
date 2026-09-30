@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-09-30T17:13:46.146691+00:00",
+  "fecha": "2026-09-30T23:20:28.702517+00:00",
   "total_pisos": 108,
   "listings": {
+    "2592": {
+      "referencia": "2592",
+      "precio": 249000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Campello",
+      "tipo": "Piso en El Campello",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "112 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello/10473/30364513/es/",
+      "reservado": false
+    },
     "2593": {
       "referencia": "2593",
       "precio": 186000,
@@ -91,19 +104,6 @@
       "banos": "2",
       "m2": "93 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
-      "reservado": false
-    },
-    "2592": {
-      "referencia": "2592",
-      "precio": 249000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Campello",
-      "tipo": "Piso en El Campello",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "112 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello/10473/30364513/es/",
       "reservado": false
     },
     "2580": {
