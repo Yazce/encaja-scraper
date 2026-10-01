@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-10-01T03:03:51.148670+00:00",
+  "fecha": "2026-10-01T10:34:42.249292+00:00",
   "total_pisos": 108,
   "listings": {
     "2592": {
@@ -977,19 +977,6 @@
       "url": "https://www.inmoparadise.com/ficha/duplex/torrevieja/centro/10473/29377021/es/",
       "reservado": false
     },
-    "2396": {
-      "referencia": "2396",
-      "precio": 189950,
-      "precio_anterior": 199950,
-      "bajada_pct": "- 5%",
-      "zona": "Zona La Albufereta",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "1",
-      "banos": "1",
-      "m2": "40 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-albufereta/10473/28828305/es/",
-      "reservado": false
-    },
     "2482": {
       "referencia": "2482",
       "precio": 239950,
@@ -1404,6 +1391,19 @@
       "banos": "1",
       "m2": "115 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos-la-goteta/10473/29522116/es/",
+      "reservado": false
+    },
+    "2501": {
+      "referencia": "2501",
+      "precio": 140000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Local comercial en Alicante situado en la zona de Carolinas bajas, Superficie Construida 72m2, 1 Baño.",
+      "habitaciones": null,
+      "banos": "1",
+      "m2": "72 m2",
+      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/carolinas-bajas/10473/29555161/es/",
       "reservado": false
     }
   }
