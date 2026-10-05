@@ -1,18 +1,18 @@
 {
-  "fecha": "2026-10-05T02:59:35.746603+00:00",
+  "fecha": "2026-10-05T10:59:22.206799+00:00",
   "total_pisos": 108,
   "listings": {
-    "2495": {
-      "referencia": "2495",
-      "precio": 129950,
-      "precio_anterior": 139950,
-      "bajada_pct": "- 7%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 66m2, 3 Habitaciones, 1 Baño.",
+    "2592": {
+      "referencia": "2592",
+      "precio": 249000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Campello",
+      "tipo": "Piso en El Campello",
       "habitaciones": "3",
-      "banos": "1",
-      "m2": "66 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29456179/es/",
+      "banos": "2",
+      "m2": "112 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello/10473/30364513/es/",
       "reservado": false
     },
     "2597": {
@@ -28,6 +28,19 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30404500/es/",
       "reservado": false
     },
+    "2495": {
+      "referencia": "2495",
+      "precio": 129950,
+      "precio_anterior": 139950,
+      "bajada_pct": "- 7%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 66m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "66 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29456179/es/",
+      "reservado": false
+    },
     "2596": {
       "referencia": "2596",
       "precio": 245000,
@@ -39,19 +52,6 @@
       "banos": "2",
       "m2": "88 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello-playa/10473/30403021/es/",
-      "reservado": false
-    },
-    "2592": {
-      "referencia": "2592",
-      "precio": 249000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Campello",
-      "tipo": "Piso en El Campello",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "112 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello/10473/30364513/es/",
       "reservado": false
     },
     "2593": {
