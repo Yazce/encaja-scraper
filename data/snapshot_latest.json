@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-06T17:36:20.234765+00:00",
+  "fecha": "2026-10-06T23:27:53.484478+00:00",
   "total_pisos": 108,
   "listings": {
+    "2601": {
+      "referencia": "2601",
+      "precio": 933000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Edificio en Alicante",
+      "habitaciones": "8",
+      "banos": "4",
+      "m2": "406 m2",
+      "url": "https://www.inmoparadise.com/ficha/edificio/alicante/carolinas-altas/10473/30437596/es/",
+      "reservado": false
+    },
+    "2597": {
+      "referencia": "2597",
+      "precio": 230000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "86 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30404500/es/",
+      "reservado": false
+    },
     "2599": {
       "referencia": "2599",
       "precio": 299950,
@@ -13,6 +39,19 @@
       "banos": null,
       "m2": "163 m2",
       "url": "https://www.inmoparadise.com/ficha/casa/alicante/carolinas-altas/10473/30430702/es/",
+      "reservado": false
+    },
+    "2600": {
+      "referencia": "2600",
+      "precio": 249950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad de Asís",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "134 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/30431639/es/",
       "reservado": false
     },
     "2598": {
@@ -169,19 +208,6 @@
       "banos": "2",
       "m2": "112 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello/10473/30364513/es/",
-      "reservado": false
-    },
-    "2597": {
-      "referencia": "2597",
-      "precio": 230000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "86 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30404500/es/",
       "reservado": false
     },
     "2593": {
@@ -1379,32 +1405,6 @@
       "m2": "78 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/27940772/es/",
       "reservado": true
-    },
-    "2477": {
-      "referencia": "2477",
-      "precio": 285000,
-      "precio_anterior": 298000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Tómbola - Rabasa",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "129 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/tombola-rabasa/10473/29368174/es/",
-      "reservado": false
-    },
-    "2313": {
-      "referencia": "2313",
-      "precio": 169950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de La Florida, Superficie Construida 103m2, 3 Habitaciones, 2 Baños.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "103 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/27911129/es/",
-      "reservado": false
     }
   }
 }
