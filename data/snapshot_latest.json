@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-08T03:34:45.101477+00:00",
+  "fecha": "2026-10-08T11:02:37.557941+00:00",
   "total_pisos": 108,
   "listings": {
+    "2466": {
+      "referencia": "2466",
+      "precio": 173000,
+      "precio_anterior": 193000,
+      "bajada_pct": "- 10%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "89 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29323563/es/",
+      "reservado": false
+    },
+    "2509": {
+      "referencia": "2509",
+      "precio": 189900,
+      "precio_anterior": 196000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "85 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29643484/es/",
+      "reservado": false
+    },
     "2598": {
       "referencia": "2598",
       "precio": 209950,
@@ -652,32 +678,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/27820669/es/",
       "reservado": false
     },
-    "2576": {
-      "referencia": "2576",
-      "precio": 125000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Lo Morant, Superficie Construida 77m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/lo-morant/10473/30251870/es/",
-      "reservado": false
-    },
-    "2575": {
-      "referencia": "2575",
-      "precio": 136000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30251534/es/",
-      "reservado": false
-    },
     "2574": {
       "referencia": "2574",
       "precio": 119950,
@@ -702,19 +702,6 @@
       "banos": "1",
       "m2": "82 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
-      "reservado": false
-    },
-    "2570": {
-      "referencia": "2570",
-      "precio": 99950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "1",
-      "banos": "1",
-      "m2": "59 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30210916/es/",
       "reservado": false
     },
     "2571": {
@@ -832,19 +819,6 @@
       "banos": "1",
       "m2": "61 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
-      "reservado": false
-    },
-    "2466": {
-      "referencia": "2466",
-      "precio": 179000,
-      "precio_anterior": 193000,
-      "bajada_pct": "- 7%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "89 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29323563/es/",
       "reservado": false
     },
     "2497": {
@@ -1066,19 +1040,6 @@
       "banos": "2",
       "m2": "77 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
-      "reservado": false
-    },
-    "2509": {
-      "referencia": "2509",
-      "precio": 196000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "85 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29643484/es/",
       "reservado": false
     },
     "2502": {
@@ -1404,6 +1365,45 @@
       "banos": "1",
       "m2": "95 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29017648/es/",
+      "reservado": false
+    },
+    "2316": {
+      "referencia": "2316",
+      "precio": 188000,
+      "precio_anterior": 195000,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Benalua",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "78 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/27940772/es/",
+      "reservado": true
+    },
+    "2477": {
+      "referencia": "2477",
+      "precio": 285000,
+      "precio_anterior": 298000,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Tómbola - Rabasa",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "129 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/tombola-rabasa/10473/29368174/es/",
+      "reservado": false
+    },
+    "2409": {
+      "referencia": "2409",
+      "precio": 123000,
+      "precio_anterior": 135000,
+      "bajada_pct": "- 9%",
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "78 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/28864030/es/",
       "reservado": false
     }
   }
