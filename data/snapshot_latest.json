@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-14T09:08:44.237857+00:00",
+  "fecha": "2026-10-14T16:10:46.726317+00:00",
   "total_pisos": 108,
   "listings": {
+    "2443": {
+      "referencia": "2443",
+      "precio": 182000,
+      "precio_anterior": 189950,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29157608/es/",
+      "reservado": false
+    },
     "2568": {
       "referencia": "2568",
       "precio": 199950,
@@ -1313,19 +1326,6 @@
       "banos": "2",
       "m2": "167 m2",
       "url": "https://www.inmoparadise.com/ficha/casa/san-vicente-del-raspeig/vicente-savall/10473/28843320/es/",
-      "reservado": false
-    },
-    "2443": {
-      "referencia": "2443",
-      "precio": 184900,
-      "precio_anterior": 189950,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29157608/es/",
       "reservado": false
     },
     "2378": {
