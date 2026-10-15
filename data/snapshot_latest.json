@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-15T15:58:12.329971+00:00",
+  "fecha": "2026-10-15T19:39:42.968307+00:00",
   "total_pisos": 108,
   "listings": {
+    "2608": {
+      "referencia": "2608",
+      "precio": 109950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Los Ángeles",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "50 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30504770/es/",
+      "reservado": false
+    },
+    "2559": {
+      "referencia": "2559",
+      "precio": 119950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30022170/es/",
+      "reservado": true
+    },
     "2584": {
       "referencia": "2584",
       "precio": 119950,
@@ -1146,19 +1172,6 @@
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
       "reservado": false
     },
-    "2559": {
-      "referencia": "2559",
-      "precio": 119950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Ciudad Elegida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30022170/es/",
-      "reservado": false
-    },
     "2515": {
       "referencia": "2515",
       "precio": 280000,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "88 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29377627/es/",
-      "reservado": false
-    },
-    "2431": {
-      "referencia": "2431",
-      "precio": 194950,
-      "precio_anterior": 199950,
-      "bajada_pct": "- 3%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 95m2, 4 Habitaciones, 1 Baño.",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "95 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29017648/es/",
       "reservado": false
     }
   }
