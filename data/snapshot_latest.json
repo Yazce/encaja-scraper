@@ -1,7 +1,59 @@
 {
-  "fecha": "2026-10-15T08:42:03.454931+00:00",
+  "fecha": "2026-10-15T15:58:12.329971+00:00",
   "total_pisos": 108,
   "listings": {
+    "2584": {
+      "referencia": "2584",
+      "precio": 119950,
+      "precio_anterior": 129950,
+      "bajada_pct": "- 8%",
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "112 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30311709/es/",
+      "reservado": false
+    },
+    "2601": {
+      "referencia": "2601",
+      "precio": 933000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Edificio en Alicante",
+      "habitaciones": "8",
+      "banos": "4",
+      "m2": "327 m2",
+      "url": "https://www.inmoparadise.com/ficha/edificio/alicante/carolinas-altas/10473/30437596/es/",
+      "reservado": false
+    },
+    "2573": {
+      "referencia": "2573",
+      "precio": 99950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Juan XXIII, Superficie Construida 82m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "82 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
+      "reservado": true
+    },
+    "2519": {
+      "referencia": "2519",
+      "precio": 170000,
+      "precio_anterior": 175000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Ciudad de Asís",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/29734201/es/",
+      "reservado": false
+    },
     "2582": {
       "referencia": "2582",
       "precio": 165000,
@@ -156,19 +208,6 @@
       "banos": "2",
       "m2": "60 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30455200/es/",
-      "reservado": false
-    },
-    "2601": {
-      "referencia": "2601",
-      "precio": 933000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Edificio en Alicante",
-      "habitaciones": "8",
-      "banos": "4",
-      "m2": "327 m2",
-      "url": "https://www.inmoparadise.com/ficha/edificio/alicante/carolinas-altas/10473/30437596/es/",
       "reservado": false
     },
     "2588": {
@@ -600,19 +639,6 @@
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/carolinas-altas/10473/30254653/es/",
       "reservado": false
     },
-    "2584": {
-      "referencia": "2584",
-      "precio": 129950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "112 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30311709/es/",
-      "reservado": false
-    },
     "2566": {
       "referencia": "2566",
       "precio": 168000,
@@ -741,19 +767,6 @@
       "banos": "1",
       "m2": "100 m2",
       "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/pla-del-bon-repos-la-goteta/10473/30251145/es/",
-      "reservado": false
-    },
-    "2573": {
-      "referencia": "2573",
-      "precio": 99950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Juan XXIII, Superficie Construida 82m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "82 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30250775/es/",
       "reservado": false
     },
     "2571": {
@@ -1392,19 +1405,6 @@
       "m2": "95 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29017648/es/",
       "reservado": false
-    },
-    "2316": {
-      "referencia": "2316",
-      "precio": 188000,
-      "precio_anterior": 195000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Benalua",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/27940772/es/",
-      "reservado": true
     }
   }
 }
