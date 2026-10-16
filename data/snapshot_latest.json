@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-16T15:46:20.666735+00:00",
+  "fecha": "2026-10-16T19:09:15.663332+00:00",
   "total_pisos": 108,
   "listings": {
+    "2609": {
+      "referencia": "2609",
+      "precio": 200000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "90 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30510649/es/",
+      "reservado": false
+    },
     "1199": {
       "referencia": "1199",
       "precio": 119950,
@@ -1391,19 +1404,6 @@
       "banos": "1",
       "m2": "71 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/29725093/es/",
-      "reservado": false
-    },
-    "2481": {
-      "referencia": "2481",
-      "precio": 305000,
-      "precio_anterior": 319000,
-      "bajada_pct": "- 4%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Centro, Superficie Construida 88m2, 3 Habitaciones, 2 Baños, Ascensor.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "88 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29377627/es/",
       "reservado": false
     }
   }
