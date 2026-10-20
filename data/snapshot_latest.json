@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-20T02:35:29.240509+00:00",
+  "fecha": "2026-10-20T09:01:15.522712+00:00",
   "total_pisos": 108,
   "listings": {
+    "2558": {
+      "referencia": "2558",
+      "precio": 239000,
+      "precio_anterior": 260000,
+      "bajada_pct": "- 8%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 79m2, 3 Habitaciones, 2 Baños.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "79 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30021750/es/",
+      "reservado": false
+    },
+    "2218": {
+      "referencia": "2218",
+      "precio": 314950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "103 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27086859/es/",
+      "reservado": false
+    },
     "2606": {
       "referencia": "2606",
       "precio": 149950,
@@ -470,19 +496,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/29769509/es/",
       "reservado": false
     },
-    "2218": {
-      "referencia": "2218",
-      "precio": 314950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "103 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27086859/es/",
-      "reservado": false
-    },
     "2592": {
       "referencia": "2592",
       "precio": 249000,
@@ -729,19 +742,6 @@
       "m2": "122 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29805975/es/",
       "reservado": true
-    },
-    "2558": {
-      "referencia": "2558",
-      "precio": 250000,
-      "precio_anterior": 260000,
-      "bajada_pct": "- 4%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 79m2, 3 Habitaciones, 2 Baños.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "79 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30021750/es/",
-      "reservado": false
     },
     "2506": {
       "referencia": "2506",
