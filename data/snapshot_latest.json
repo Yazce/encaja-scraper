@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-22T09:01:57.897102+00:00",
+  "fecha": "2026-10-22T16:17:08.934922+00:00",
   "total_pisos": 108,
   "listings": {
+    "2611": {
+      "referencia": "2611",
+      "precio": 315000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Centro",
+      "tipo": "Planta baja en San Juan Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "260 m2",
+      "url": "https://www.inmoparadise.com/ficha/planta-baja/san-juan-alicante/centro/10473/30560982/es/",
+      "reservado": false
+    },
     "2218": {
       "referencia": "2218",
       "precio": 314950,
@@ -1391,19 +1404,6 @@
       "banos": "1",
       "m2": "71 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/29725093/es/",
-      "reservado": false
-    },
-    "2481": {
-      "referencia": "2481",
-      "precio": 305000,
-      "precio_anterior": 319000,
-      "bajada_pct": "- 4%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Centro, Superficie Construida 88m2, 3 Habitaciones, 2 Baños, Ascensor.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "88 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/29377627/es/",
       "reservado": false
     }
   }
