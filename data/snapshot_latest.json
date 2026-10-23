@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-23T02:31:04.503892+00:00",
+  "fecha": "2026-10-23T08:56:55.151104+00:00",
   "total_pisos": 108,
   "listings": {
+    "2613": {
+      "referencia": "2613",
+      "precio": 215000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "95 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30565959/es/",
+      "reservado": false
+    },
     "2588": {
       "referencia": "2588",
       "precio": 185000,
@@ -26,19 +39,6 @@
       "banos": "1",
       "m2": "74 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
-      "reservado": false
-    },
-    "2611": {
-      "referencia": "2611",
-      "precio": 315000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Centro",
-      "tipo": "Planta baja en San Juan Alicante",
-      "habitaciones": "6",
-      "banos": "1",
-      "m2": "260 m2",
-      "url": "https://www.inmoparadise.com/ficha/planta-baja/san-juan-alicante/centro/10473/30560982/es/",
       "reservado": false
     },
     "2612": {
