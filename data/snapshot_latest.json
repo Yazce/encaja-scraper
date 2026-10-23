@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-23T08:56:55.151104+00:00",
+  "fecha": "2026-10-23T16:07:12.007822+00:00",
   "total_pisos": 108,
   "listings": {
+    "2581": {
+      "referencia": "2581",
+      "precio": 159950,
+      "precio_anterior": 189000,
+      "bajada_pct": "- 15%",
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Ático en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "74 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
+      "reservado": false
+    },
+    "2614": {
+      "referencia": "2614",
+      "precio": 235000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Benalua, Superficie Construida 83m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "83 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30574603/es/",
+      "reservado": false
+    },
     "2613": {
       "referencia": "2613",
       "precio": 215000,
@@ -26,19 +52,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/altozano/10473/30353048/es/",
-      "reservado": false
-    },
-    "2581": {
-      "referencia": "2581",
-      "precio": 169000,
-      "precio_anterior": 189000,
-      "bajada_pct": "- 11%",
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Ático en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "74 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
       "reservado": false
     },
     "2612": {
@@ -1157,19 +1170,6 @@
       "banos": "2",
       "m2": "118 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29566023/es/",
-      "reservado": false
-    },
-    "2480": {
-      "referencia": "2480",
-      "precio": 172000,
-      "precio_anterior": 179950,
-      "bajada_pct": "- 4%",
-      "zona": "",
-      "tipo": "Dúplex en Torrevieja situado en la zona de Centro, Superficie Construida 93m2, 4 Habitaciones, 1 Baño.",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "93 m2",
-      "url": "https://www.inmoparadise.com/ficha/duplex/torrevieja/centro/10473/29377021/es/",
       "reservado": false
     },
     "2482": {
