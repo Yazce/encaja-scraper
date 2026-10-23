@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-23T16:07:12.007822+00:00",
+  "fecha": "2026-10-23T22:45:53.413576+00:00",
   "total_pisos": 108,
   "listings": {
+    "2615": {
+      "referencia": "2615",
+      "precio": 189950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Benalua",
+      "tipo": "Ático en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "56 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/benalua/10473/30576748/es/",
+      "reservado": false
+    },
     "2581": {
       "referencia": "2581",
       "precio": 159950,
@@ -1391,19 +1404,6 @@
       "banos": "1",
       "m2": "120 m2",
       "url": "https://www.inmoparadise.com/ficha/casa-de-campo/el-rebolledo/santa-ana/10473/18696105/es/",
-      "reservado": false
-    },
-    "2516": {
-      "referencia": "2516",
-      "precio": 115000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "71 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/29725093/es/",
       "reservado": false
     }
   }
