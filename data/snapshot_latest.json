@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-27T02:52:41.987333+00:00",
+  "fecha": "2026-10-27T09:27:24.776286+00:00",
   "total_pisos": 108,
   "listings": {
+    "2597": {
+      "referencia": "2597",
+      "precio": 230000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "66 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30404500/es/",
+      "reservado": false
+    },
+    "2604": {
+      "referencia": "2604",
+      "precio": 223000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "60 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30455200/es/",
+      "reservado": false
+    },
     "2617": {
       "referencia": "2617",
       "precio": 179950,
@@ -301,19 +327,6 @@
       "url": "https://www.inmoparadise.com/ficha/casa/alicante/carolinas-altas/10473/30430702/es/",
       "reservado": false
     },
-    "2604": {
-      "referencia": "2604",
-      "precio": 223000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "60 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30455200/es/",
-      "reservado": false
-    },
     "2558": {
       "referencia": "2558",
       "precio": 239000,
@@ -520,19 +533,6 @@
       "banos": "1",
       "m2": "143 m2",
       "url": "https://www.inmoparadise.com/ficha/duplex/alicante/carolinas-altas/10473/30454588/es/",
-      "reservado": false
-    },
-    "2597": {
-      "referencia": "2597",
-      "precio": 230000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "66 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30404500/es/",
       "reservado": false
     },
     "2466": {
