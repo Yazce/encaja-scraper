@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-27T17:02:00.499817+00:00",
+  "fecha": "2026-10-27T23:21:05.133172+00:00",
   "total_pisos": 108,
   "listings": {
+    "2623": {
+      "referencia": "2623",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 75m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "75 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30602401/es/",
+      "reservado": false
+    },
     "2594": {
       "referencia": "2594",
       "precio": 242000,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "167 m2",
       "url": "https://www.inmoparadise.com/ficha/casa/san-vicente-del-raspeig/vicente-savall/10473/28843320/es/",
-      "reservado": false
-    },
-    "2378": {
-      "referencia": "2378",
-      "precio": 179950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Nou Alacant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "85 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/nou-alacant/10473/28629239/es/",
       "reservado": false
     }
   }
