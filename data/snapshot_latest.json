@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-29T03:27:07.396172+00:00",
+  "fecha": "2026-10-29T10:34:46.505147+00:00",
   "total_pisos": 108,
   "listings": {
+    "2652": {
+      "referencia": "2652",
+      "precio": 365000,
+      "precio_anterior": 459000,
+      "bajada_pct": "- 20%",
+      "zona": "Zona Playa de San Juan",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "117 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/playa-de-san-juan/10473/30630023/es/",
+      "reservado": false
+    },
     "2651": {
       "referencia": "2651",
       "precio": 425000,
@@ -975,19 +988,6 @@
       "banos": "1",
       "m2": "96 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/28453230/es/",
-      "reservado": false
-    },
-    "1727": {
-      "referencia": "1727",
-      "precio": 365000,
-      "precio_anterior": 459000,
-      "bajada_pct": "- 20%",
-      "zona": "Zona Playa de San Juan",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "117 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/playa-de-san-juan/10473/23006399/es/",
       "reservado": false
     },
     "2572": {
