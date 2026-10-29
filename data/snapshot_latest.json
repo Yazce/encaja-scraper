@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-10-29T10:34:46.505147+00:00",
+  "fecha": "2026-10-29T17:46:53.801629+00:00",
   "total_pisos": 108,
   "listings": {
+    "2608": {
+      "referencia": "2608",
+      "precio": 109950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Los Ángeles",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "50 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30504770/es/",
+      "reservado": true
+    },
+    "2654": {
+      "referencia": "2654",
+      "precio": 145000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "75 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30630991/es/",
+      "reservado": false
+    },
+    "2653": {
+      "referencia": "2653",
+      "precio": 148900,
+      "precio_anterior": 173000,
+      "bajada_pct": "- 14%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de La Florida, Superficie Construida 89m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "89 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30630519/es/",
+      "reservado": false
+    },
     "2652": {
       "referencia": "2652",
       "precio": 365000,
@@ -652,19 +691,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28917842/es/",
       "reservado": false
     },
-    "2608": {
-      "referencia": "2608",
-      "precio": 109950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Los Ángeles",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "50 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30504770/es/",
-      "reservado": false
-    },
     "2218": {
       "referencia": "2218",
       "precio": 299950,
@@ -1185,19 +1211,6 @@
       "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/altozano/10473/30270266/es/",
       "reservado": false
     },
-    "2290": {
-      "referencia": "2290",
-      "precio": 148900,
-      "precio_anterior": 173000,
-      "bajada_pct": "- 14%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de La Florida, Superficie Construida 89m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "89 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/27820669/es/",
-      "reservado": false
-    },
     "2574": {
       "referencia": "2574",
       "precio": 119950,
@@ -1392,19 +1405,6 @@
       "m2": "77 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
       "reservado": false
-    },
-    "2482": {
-      "referencia": "2482",
-      "precio": 239950,
-      "precio_anterior": 249000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Altozano",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "5",
-      "banos": "2",
-      "m2": "125 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29393007/es/",
-      "reservado": true
     }
   }
 }
