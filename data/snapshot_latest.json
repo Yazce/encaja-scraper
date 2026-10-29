@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-10-29T17:46:53.801629+00:00",
+  "fecha": "2026-10-29T23:43:43.167820+00:00",
   "total_pisos": 108,
   "listings": {
+    "2655": {
+      "referencia": "2655",
+      "precio": 125000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Colonia Santa Isabel",
+      "tipo": "Piso en San Vicente del Raspeig",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "68 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30634854/es/",
+      "reservado": false
+    },
     "2608": {
       "referencia": "2608",
       "precio": 109950,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "94 m2",
       "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
-      "reservado": false
-    },
-    "2252": {
-      "referencia": "2252",
-      "precio": 305000,
-      "precio_anterior": 325000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
       "reservado": false
     }
   }
