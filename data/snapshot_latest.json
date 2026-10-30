@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-10-30T10:34:28.194000+00:00",
+  "fecha": "2026-10-30T17:27:15.344424+00:00",
   "total_pisos": 108,
   "listings": {
+    "2638": {
+      "referencia": "2638",
+      "precio": 229950,
+      "precio_anterior": 266000,
+      "bajada_pct": "- 14%",
+      "zona": "Zona El Moralet",
+      "tipo": "Adosado en Alicante",
+      "habitaciones": "5",
+      "banos": "3",
+      "m2": "250 m2",
+      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/el-moralet/10473/30619471/es/",
+      "reservado": false
+    },
+    "2656": {
+      "referencia": "2656",
+      "precio": 169950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "61 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30642733/es/",
+      "reservado": false
+    },
     "2655": {
       "referencia": "2655",
       "precio": 125000,
@@ -158,19 +184,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30620418/es/",
       "reservado": false
     },
-    "2645": {
-      "referencia": "2645",
-      "precio": 194950,
-      "precio_anterior": 199950,
-      "bajada_pct": "- 3%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 95m2, 4 Habitaciones, 1 Baño.",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "95 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30620356/es/",
-      "reservado": false
-    },
     "2644": {
       "referencia": "2644",
       "precio": 182000,
@@ -247,19 +260,6 @@
       "banos": "1",
       "m2": "109 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30619726/es/",
-      "reservado": false
-    },
-    "2638": {
-      "referencia": "2638",
-      "precio": 259950,
-      "precio_anterior": 266000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona El Moralet",
-      "tipo": "Adosado en Alicante",
-      "habitaciones": "5",
-      "banos": "3",
-      "m2": "250 m2",
-      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/el-moralet/10473/30619471/es/",
       "reservado": false
     },
     "2637": {
