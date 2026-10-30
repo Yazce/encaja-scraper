@@ -1,18 +1,83 @@
 {
-  "fecha": "2026-10-30T17:27:15.344424+00:00",
+  "fecha": "2026-10-30T23:22:48.955751+00:00",
   "total_pisos": 108,
   "listings": {
-    "2638": {
-      "referencia": "2638",
-      "precio": 229950,
-      "precio_anterior": 266000,
-      "bajada_pct": "- 14%",
-      "zona": "Zona El Moralet",
-      "tipo": "Adosado en Alicante",
+    "2658": {
+      "referencia": "2658",
+      "precio": 183000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "81 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30648571/es/",
+      "reservado": false
+    },
+    "2659": {
+      "referencia": "2659",
+      "precio": 239950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en la localidad de El Campello, Superficie Construida 119m2, 3 Habitaciones, 2 Baños, Ascensor.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "119 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/el-campello/el-campello/10473/30649386/es/",
+      "reservado": false
+    },
+    "2623": {
+      "referencia": "2623",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 75m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "75 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30602401/es/",
+      "reservado": false
+    },
+    "2657": {
+      "referencia": "2657",
+      "precio": 480000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Babel",
+      "tipo": "Bungalow en Alicante",
       "habitaciones": "5",
-      "banos": "3",
+      "banos": "4",
       "m2": "250 m2",
-      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/el-moralet/10473/30619471/es/",
+      "url": "https://www.inmoparadise.com/ficha/bungalow/alicante/babel/10473/30646612/es/",
+      "reservado": false
+    },
+    "2606": {
+      "referencia": "2606",
+      "precio": 144950,
+      "precio_anterior": 149950,
+      "bajada_pct": "- 3%",
+      "zona": "Zona San Fernando-Princesa Mercedes",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "67 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-fernando-princesa-mercedes/10473/30457770/es/",
+      "reservado": false
+    },
+    "2598": {
+      "referencia": "2598",
+      "precio": 209000,
+      "precio_anterior": 215000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona La Florida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "79 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30424615/es/",
       "reservado": false
     },
     "2656": {
@@ -26,6 +91,19 @@
       "banos": "1",
       "m2": "61 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30642733/es/",
+      "reservado": false
+    },
+    "2638": {
+      "referencia": "2638",
+      "precio": 229950,
+      "precio_anterior": 266000,
+      "bajada_pct": "- 14%",
+      "zona": "Zona El Moralet",
+      "tipo": "Adosado en Alicante",
+      "habitaciones": "5",
+      "banos": "3",
+      "m2": "250 m2",
+      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/el-moralet/10473/30619471/es/",
       "reservado": false
     },
     "2655": {
@@ -418,19 +496,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/juan-xxiii/10473/30612067/es/",
       "reservado": false
     },
-    "2623": {
-      "referencia": "2623",
-      "precio": 149950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 75m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "75 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30602401/es/",
-      "reservado": false
-    },
     "2601": {
       "referencia": "2601",
       "precio": 899950,
@@ -782,19 +847,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/el-campello/campello-playa/10473/30403021/es/",
       "reservado": true
     },
-    "2606": {
-      "referencia": "2606",
-      "precio": 149950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona San Fernando-Princesa Mercedes",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "67 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-fernando-princesa-mercedes/10473/30457770/es/",
-      "reservado": false
-    },
     "2592": {
       "referencia": "2592",
       "precio": 249000,
@@ -976,19 +1028,6 @@
       "m2": "93 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
       "reservado": true
-    },
-    "2598": {
-      "referencia": "2598",
-      "precio": 209950,
-      "precio_anterior": 215000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona La Florida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "79 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30424615/es/",
-      "reservado": false
     },
     "2466": {
       "referencia": "2466",
@@ -1328,19 +1367,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28143126/es/",
       "reservado": false
     },
-    "2562": {
-      "referencia": "2562",
-      "precio": 174900,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "76 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30106470/es/",
-      "reservado": false
-    },
     "2123": {
       "referencia": "2123",
       "precio": 145000,
@@ -1378,32 +1404,6 @@
       "banos": "1",
       "m2": "60 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/29935833/es/",
-      "reservado": false
-    },
-    "2561": {
-      "referencia": "2561",
-      "precio": 143000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Nou Alacant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "97 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/nou-alacant/10473/30067265/es/",
-      "reservado": false
-    },
-    "2543": {
-      "referencia": "2543",
-      "precio": 318000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona - Sant Vicent del Raspeig - Sol y Luz",
-      "tipo": "Ático Dúplex en San Vicente del Raspeig",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "94 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
       "reservado": false
     }
   }
