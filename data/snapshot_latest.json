@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-11-02T03:21:02.575241+00:00",
+  "fecha": "2026-11-02T11:50:23.249330+00:00",
   "total_pisos": 108,
   "listings": {
+    "2598": {
+      "referencia": "2598",
+      "precio": 190000,
+      "precio_anterior": 215000,
+      "bajada_pct": "- 12%",
+      "zona": "Zona La Florida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "79 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30424615/es/",
+      "reservado": false
+    },
     "2658": {
       "referencia": "2658",
       "precio": 183000,
@@ -65,19 +78,6 @@
       "banos": "1",
       "m2": "67 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-fernando-princesa-mercedes/10473/30457770/es/",
-      "reservado": false
-    },
-    "2598": {
-      "referencia": "2598",
-      "precio": 209000,
-      "precio_anterior": 215000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona La Florida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "79 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30424615/es/",
       "reservado": false
     },
     "2656": {
