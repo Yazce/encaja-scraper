@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-11-04T03:53:03.590041+00:00",
+  "fecha": "2026-11-04T11:45:07.979553+00:00",
   "total_pisos": 108,
   "listings": {
+    "2637": {
+      "referencia": "2637",
+      "precio": 244950,
+      "precio_anterior": 259950,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Altozano",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "118 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30619282/es/",
+      "reservado": false
+    },
     "2661": {
       "referencia": "2661",
       "precio": 149950,
@@ -377,19 +390,6 @@
       "banos": "1",
       "m2": "109 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30619726/es/",
-      "reservado": false
-    },
-    "2637": {
-      "referencia": "2637",
-      "precio": 249950,
-      "precio_anterior": 259950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Altozano",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "118 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30619282/es/",
       "reservado": false
     },
     "2636": {
