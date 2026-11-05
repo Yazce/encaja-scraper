@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-11-05T00:38:30.861559+00:00",
+  "fecha": "2026-11-05T11:44:01.021089+00:00",
   "total_pisos": 108,
   "listings": {
+    "2664": {
+      "referencia": "2664",
+      "precio": 173000,
+      "precio_anterior": 193000,
+      "bajada_pct": "- 10%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "88.99 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30728760/es/",
+      "reservado": false
+    },
+    "2663": {
+      "referencia": "2663",
+      "precio": 186000,
+      "precio_anterior": 190000,
+      "bajada_pct": "- 2%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "107 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30728617/es/",
+      "reservado": false
+    },
     "2662": {
       "referencia": "2662",
       "precio": 244950,
@@ -13,6 +39,19 @@
       "banos": "2",
       "m2": "120 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30704218/es/",
+      "reservado": false
+    },
+    "2661": {
+      "referencia": "2661",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Garbinet-Parque de las Avenidas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "75 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30659934/es/",
       "reservado": false
     },
     "2651": {
@@ -52,19 +91,6 @@
       "banos": "2",
       "m2": "118 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30619282/es/",
-      "reservado": false
-    },
-    "2661": {
-      "referencia": "2661",
-      "precio": 149950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Garbinet-Parque de las Avenidas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "75 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30659934/es/",
       "reservado": false
     },
     "2660": {
@@ -1016,19 +1042,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
       "reservado": true
     },
-    "2466": {
-      "referencia": "2466",
-      "precio": 173000,
-      "precio_anterior": 193000,
-      "bajada_pct": "- 10%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "89 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29323563/es/",
-      "reservado": false
-    },
     "2602": {
       "referencia": "2602",
       "precio": 189950,
@@ -1079,19 +1092,6 @@
       "banos": "1",
       "m2": "66 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29456179/es/",
-      "reservado": false
-    },
-    "2173": {
-      "referencia": "2173",
-      "precio": 176000,
-      "precio_anterior": 199950,
-      "bajada_pct": "- 12%",
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "91 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/26667761/es/",
       "reservado": false
     },
     "2548": {
@@ -1210,19 +1210,6 @@
       "m2": "122 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29805975/es/",
       "reservado": true
-    },
-    "2506": {
-      "referencia": "2506",
-      "precio": 186000,
-      "precio_anterior": 190000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "107 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29627633/es/",
-      "reservado": false
     },
     "2579": {
       "referencia": "2579",
@@ -1404,6 +1391,19 @@
       "banos": "2",
       "m2": "94 m2",
       "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
+      "reservado": false
+    },
+    "2252": {
+      "referencia": "2252",
+      "precio": 305000,
+      "precio_anterior": 325000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "77 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
       "reservado": false
     }
   }
