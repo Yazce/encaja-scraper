@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-11-05T11:44:01.021089+00:00",
+  "fecha": "2026-11-05T19:14:50.334136+00:00",
   "total_pisos": 108,
   "listings": {
+    "2665": {
+      "referencia": "2665",
+      "precio": 185000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de San anton, Superficie Construida 77m2, 3 Habitaciones, 2 Baños.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "77 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-anton/10473/30729828/es/",
+      "reservado": false
+    },
     "2664": {
       "referencia": "2664",
       "precio": 173000,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "94 m2",
       "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
-      "reservado": false
-    },
-    "2252": {
-      "referencia": "2252",
-      "precio": 305000,
-      "precio_anterior": 325000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/27412466/es/",
       "reservado": false
     }
   }
