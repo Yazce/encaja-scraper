@@ -1,7 +1,20 @@
 {
-  "fecha": "2026-11-05T19:14:50.334136+00:00",
+  "fecha": "2026-11-06T00:38:26.830547+00:00",
   "total_pisos": 108,
   "listings": {
+    "2666": {
+      "referencia": "2666",
+      "precio": 129950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Vistahermosa",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/30736535/es/",
+      "reservado": false
+    },
     "2665": {
       "referencia": "2665",
       "precio": 185000,
@@ -1391,19 +1404,6 @@
       "banos": "2",
       "m2": "97 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/nou-alacant/10473/30067265/es/",
-      "reservado": false
-    },
-    "2543": {
-      "referencia": "2543",
-      "precio": 318000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona - Sant Vicent del Raspeig - Sol y Luz",
-      "tipo": "Ático Dúplex en San Vicente del Raspeig",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "94 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico-duplex/san-vicente-del-raspeig/sant-vicent-del-raspeig-sol-y-luz/10473/29902275/es/",
       "reservado": false
     }
   }
