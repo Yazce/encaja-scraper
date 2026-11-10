@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-11-10T05:11:18.732744+00:00",
+  "fecha": "2026-11-10T21:36:06.393868+00:00",
   "total_pisos": 108,
   "listings": {
+    "2678": {
+      "referencia": "2678",
+      "precio": 305000,
+      "precio_anterior": 325000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "77 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/30771407/es/",
+      "reservado": false
+    },
+    "2677": {
+      "referencia": "2677",
+      "precio": 430000,
+      "precio_anterior": 450000,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Vistahermosa",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "171 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/30771210/es/",
+      "reservado": false
+    },
+    "2675": {
+      "referencia": "2675",
+      "precio": 145000,
+      "precio_anterior": 159950,
+      "bajada_pct": "- 9%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 96m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "96 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30770449/es/",
+      "reservado": false
+    },
     "1949": {
       "referencia": "1949",
       "precio": 179950,
@@ -1224,19 +1263,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30301655/es/",
       "reservado": false
     },
-    "2511": {
-      "referencia": "2511",
-      "precio": 179950,
-      "precio_anterior": 185000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "100 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/29646574/es/",
-      "reservado": false
-    },
     "2585": {
       "referencia": "2585",
       "precio": 295000,
@@ -1378,32 +1404,6 @@
       "banos": "1",
       "m2": "91 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29937917/es/",
-      "reservado": false
-    },
-    "2330": {
-      "referencia": "2330",
-      "precio": 430000,
-      "precio_anterior": 450000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Vistahermosa",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "171 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/28143126/es/",
-      "reservado": false
-    },
-    "2123": {
-      "referencia": "2123",
-      "precio": 145000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Ciudad Elegida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/26299538/es/",
       "reservado": false
     }
   }
