@@ -1,7 +1,46 @@
 {
-  "fecha": "2026-11-12T01:45:28.103464+00:00",
+  "fecha": "2026-11-12T11:59:53.355633+00:00",
   "total_pisos": 108,
   "listings": {
+    "2658": {
+      "referencia": "2658",
+      "precio": 183000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "81 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30648571/es/",
+      "reservado": false
+    },
+    "2680": {
+      "referencia": "2680",
+      "precio": 129950,
+      "precio_anterior": 139000,
+      "bajada_pct": "- 7%",
+      "zona": "Zona Colonia requena",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/colonia-requena/10473/30796975/es/",
+      "reservado": false
+    },
+    "2679": {
+      "referencia": "2679",
+      "precio": 115000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Planta baja en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "66 m2",
+      "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/virgen-del-remedio-parque-lo-morant/10473/30793956/es/",
+      "reservado": false
+    },
     "2644": {
       "referencia": "2644",
       "precio": 179900,
@@ -404,19 +443,6 @@
       "m2": "74 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30288735/es/",
       "reservado": true
-    },
-    "2658": {
-      "referencia": "2658",
-      "precio": 183000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "81 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30648571/es/",
-      "reservado": false
     },
     "2558": {
       "referencia": "2558",
@@ -1378,32 +1404,6 @@
       "banos": "1",
       "m2": "62 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/29935896/es/",
-      "reservado": false
-    },
-    "2555": {
-      "referencia": "2555",
-      "precio": 149000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona 400 viviendas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "97 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/400-viviendas/10473/29952646/es/",
-      "reservado": true
-    },
-    "2563": {
-      "referencia": "2563",
-      "precio": 117000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Colonia Santa Isabel",
-      "tipo": "Piso en San Vicente del Raspeig",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "61 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
       "reservado": false
     }
   }
