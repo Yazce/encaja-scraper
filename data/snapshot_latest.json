@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-11-11T19:00:32.979347+00:00",
+  "fecha": "2026-11-12T01:45:28.103464+00:00",
   "total_pisos": 108,
   "listings": {
+    "2644": {
+      "referencia": "2644",
+      "precio": 179900,
+      "precio_anterior": 189950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30620194/es/",
+      "reservado": false
+    },
+    "2678": {
+      "referencia": "2678",
+      "precio": 305000,
+      "precio_anterior": 325000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Centro",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "2",
+      "m2": "77 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/30771407/es/",
+      "reservado": false
+    },
     "2561": {
       "referencia": "2561",
       "precio": 139950,
@@ -78,19 +104,6 @@
       "banos": "1",
       "m2": "104 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30770650/es/",
-      "reservado": false
-    },
-    "2678": {
-      "referencia": "2678",
-      "precio": 305000,
-      "precio_anterior": 325000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Centro",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/30771407/es/",
       "reservado": false
     },
     "2677": {
@@ -587,19 +600,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30620418/es/",
       "reservado": false
     },
-    "2644": {
-      "referencia": "2644",
-      "precio": 182000,
-      "precio_anterior": 189950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30620194/es/",
-      "reservado": false
-    },
     "2643": {
       "referencia": "2643",
       "precio": 359950,
@@ -858,19 +858,6 @@
       "banos": "1",
       "m2": "76 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/benalua/10473/30576748/es/",
-      "reservado": false
-    },
-    "2621": {
-      "referencia": "2621",
-      "precio": 117000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Dúplex en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "77 m2",
-      "url": "https://www.inmoparadise.com/ficha/duplex/alicante/virgen-del-remedio-parque-lo-morant/10473/30601457/es/",
       "reservado": false
     },
     "2619": {
@@ -1405,6 +1392,19 @@
       "m2": "97 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/400-viviendas/10473/29952646/es/",
       "reservado": true
+    },
+    "2563": {
+      "referencia": "2563",
+      "precio": 117000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Colonia Santa Isabel",
+      "tipo": "Piso en San Vicente del Raspeig",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "61 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/30117313/es/",
+      "reservado": false
     }
   }
 }
