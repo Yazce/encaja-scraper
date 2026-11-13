@@ -1,8 +1,34 @@
 {
-  "fecha": "2026-11-13T17:13:14.422044+00:00",
+  "fecha": "2026-11-13T18:57:07.294174+00:00",
   "total_pisos": 132,
   "recuento_completo": true,
   "listings": {
+    "2602": {
+      "referencia": "2602",
+      "precio": 185000,
+      "precio_anterior": 189950,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Los Ángeles",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "114 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30445986/es/",
+      "reservado": false
+    },
+    "2681": {
+      "referencia": "2681",
+      "precio": 349000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Garbinet-Parque de las Avenidas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "109 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30802479/es/",
+      "reservado": false
+    },
     "2650": {
       "referencia": "2650",
       "precio": 264000,
@@ -40,19 +66,6 @@
       "banos": "1",
       "m2": "81 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30648571/es/",
-      "reservado": false
-    },
-    "2681": {
-      "referencia": "2681",
-      "precio": 349000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Garbinet-Parque de las Avenidas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "109 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30802479/es/",
       "reservado": false
     },
     "2571": {
@@ -1211,19 +1224,6 @@
       "m2": "93 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/alipark/10473/30184684/es/",
       "reservado": true
-    },
-    "2602": {
-      "referencia": "2602",
-      "precio": 189950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Los Ángeles",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "114 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30445986/es/",
-      "reservado": false
     },
     "2572": {
       "referencia": "2572",
