@@ -1,7 +1,33 @@
 {
-  "fecha": "2026-11-13T00:49:16.550670+00:00",
+  "fecha": "2026-11-13T11:42:57.268394+00:00",
   "total_pisos": 108,
   "listings": {
+    "2681": {
+      "referencia": "2681",
+      "precio": 349000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Garbinet-Parque de las Avenidas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "109 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30802479/es/",
+      "reservado": false
+    },
+    "2571": {
+      "referencia": "2571",
+      "precio": 114950,
+      "precio_anterior": 125950,
+      "bajada_pct": "- 9%",
+      "zona": "",
+      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 71m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "71 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30211158/es/",
+      "reservado": false
+    },
     "2627": {
       "referencia": "2627",
       "precio": 279950,
@@ -1354,19 +1380,6 @@
       "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/pla-del-bon-repos-la-goteta/10473/30251145/es/",
       "reservado": false
     },
-    "2571": {
-      "referencia": "2571",
-      "precio": 119950,
-      "precio_anterior": 125950,
-      "bajada_pct": "- 5%",
-      "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Altozano, Superficie Construida 71m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "71 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30211158/es/",
-      "reservado": false
-    },
     "2455": {
       "referencia": "2455",
       "precio": 207500,
@@ -1392,19 +1405,6 @@
       "m2": "62 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/colonia-santa-isabel/10473/29935896/es/",
       "reservado": false
-    },
-    "2555": {
-      "referencia": "2555",
-      "precio": 149000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona 400 viviendas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "97 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/400-viviendas/10473/29952646/es/",
-      "reservado": true
     }
   }
 }
