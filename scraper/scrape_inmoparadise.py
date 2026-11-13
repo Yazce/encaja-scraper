@@ -157,26 +157,31 @@ def parse_card(card) -> Listing | None:
     )
 
 
+# Tope de seguridad de paginas por si el sitio cambiara y nunca devolviera una
+# pagina vacia (hoy hay unas 11 paginas de 12 pisos).
+MAX_PAGINAS = 40
+
+
 def scrape_all() -> dict[str, Listing]:
-    first_html = fetch_page(1)
-    soup = BeautifulSoup(first_html, "html.parser")
-    total_pages = get_total_pages(soup)
-
+    # OJO: NO nos fiamos del paginador de la web (#paginacion-numPaginas): solo
+    # ensena 9 numeros aunque haya mas paginas, y con eso el scraper se dejaba
+    # sin leer los pisos de las paginas 10 en adelante. En su lugar se pide
+    # pagina a pagina hasta que una no traiga fichas nuevas.
     listings: dict[str, Listing] = {}
-    for card in soup.select("article.paginacion-ficha.propiedad"):
-        item = parse_card(card)
-        if item:
-            listings[item.referencia] = item
-
-    for pag in range(2, total_pages + 1):
-        time.sleep(CRAWL_DELAY_SECONDS)
-        html = fetch_page(pag)
-        page_soup = BeautifulSoup(html, "html.parser")
-        for card in page_soup.select("article.paginacion-ficha.propiedad"):
+    for pag in range(1, MAX_PAGINAS + 1):
+        if pag > 1:
+            time.sleep(CRAWL_DELAY_SECONDS)
+        soup = BeautifulSoup(fetch_page(pag), "html.parser")
+        cards = soup.select("article.paginacion-ficha.propiedad")
+        nuevos = 0
+        for card in cards:
             item = parse_card(card)
-            if item:
+            if item and item.referencia not in listings:
                 listings[item.referencia] = item
-
+                nuevos += 1
+        if not cards or nuevos == 0:
+            break
+    print(f"Leidas {pag} pagina(s): {len(listings)} pisos en la web.")
     return listings
 
 
@@ -358,11 +363,45 @@ def detect_changes(
     return events, reservado_updates
 
 
+def referencias_en_supabase() -> set[str] | None:
+    """Referencias que ya hay en la tabla pisos (None si no hay credenciales)."""
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        return None
+    refs: set[str] = set()
+    offset = 0
+    while True:
+        resp = requests.get(
+            f"{url.rstrip('/')}/rest/v1/pisos",
+            headers={
+                "apikey": key,
+                "Authorization": f"Bearer {key}",
+                "Range-Unit": "items",
+                "Range": f"{offset}-{offset + 999}",
+            },
+            params={"select": "referencia"},
+            timeout=REQUEST_TIMEOUT,
+        )
+        resp.raise_for_status()
+        rows = resp.json()
+        refs.update(r["referencia"] for r in rows if r.get("referencia"))
+        if len(rows) < 1000:
+            break
+        offset += 1000
+    return refs
+
+
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
     snapshot = load_snapshot()
     previous_listings: dict[str, dict] = snapshot.get("listings", {})
+    # Los snapshots anteriores se hicieron leyendo solo 9 paginas (ver
+    # scrape_all). La primera vez con el recuento completo es un "punto de
+    # partida": los pisos que faltaban se guardan en Supabase si no estaban,
+    # pero SIN avisos push ni issues, porque no son novedades de verdad.
+    es_punto_de_partida = not snapshot.get("recuento_completo")
 
     current_listings = scrape_all()
 
@@ -375,6 +414,24 @@ def main() -> None:
         return
 
     events, reservado_updates = detect_changes(previous_listings, current_listings)
+
+    if es_punto_de_partida:
+        print(f"Primer recuento completo: {len(events)} evento(s) se tratan como punto "
+              "de partida (sin avisos ni issues).")
+        try:
+            existentes = referencias_en_supabase()
+        except requests.RequestException as e:
+            existentes = None
+            print(f"No se pudo leer la tabla pisos de Supabase: {e}")
+        if existentes is not None:
+            faltan = [e for e in events if e["origen"] == "nuevo" and e["referencia"] not in existentes]
+            for event in faltan:
+                try:
+                    insert_piso_supabase(event)
+                except requests.RequestException as e:
+                    print(f"Error guardando en Supabase {event['referencia']}: {e}")
+            print(f"{len(faltan)} piso(s) que faltaban se han guardado en Supabase.")
+        events = []
 
     if events:
         print(f"{len(events)} cambio(s) detectado(s): "
@@ -417,6 +474,7 @@ def main() -> None:
     new_snapshot = {
         "fecha": datetime.now(timezone.utc).isoformat(),
         "total_pisos": len(current_listings),
+        "recuento_completo": True,
         "listings": {ref: asdict(item) for ref, item in current_listings.items()},
     }
     with SNAPSHOT_PATH.open("w", encoding="utf-8") as f:
