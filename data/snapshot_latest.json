@@ -1,8 +1,21 @@
 {
-  "fecha": "2026-11-14T11:05:52.803423+00:00",
+  "fecha": "2026-11-14T17:29:30.245342+00:00",
   "total_pisos": 132,
   "recuento_completo": true,
   "listings": {
+    "2604": {
+      "referencia": "2604",
+      "precio": 209950,
+      "precio_anterior": 223000,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "60 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30455200/es/",
+      "reservado": false
+    },
     "2602": {
       "referencia": "2602",
       "precio": 185000,
@@ -989,19 +1002,6 @@
       "banos": "1",
       "m2": "77 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/30546966/es/",
-      "reservado": false
-    },
-    "2604": {
-      "referencia": "2604",
-      "precio": 223000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "60 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30455200/es/",
       "reservado": false
     },
     "2616": {
