@@ -1,25 +1,35 @@
 """
 Avisa por push a la comercial (y siempre también a las administradoras)
-cuando lleva UMBRAL_DIAS sin contactar con uno de sus clientes activos, con
-un mensaje de WhatsApp ya redactado y listo para tocar "Enviar" (nunca se
-manda solo, hace falta que la persona lo confirme desde su móvil).
+cuando lleva demasiados días sin contactar con uno de sus contactos activos.
+Al tocar el aviso se abre Encaja, y desde ahí el botón "WhatsApp" deja el
+mensaje ya redactado (nunca se manda solo, hace falta que la persona lo
+confirme desde su móvil).
 
-El mensaje avisa de que hace tiempo que no se habla con el cliente y, si
-sigue buscando piso, le ofrece ya las viviendas activas que encajen con lo
-que pedía (misma idea que el aviso de coincidencia de notify_push.py, pero
-aquí agrupadas en un único mensaje de seguimiento). Si no hay ninguna que
-encaje ahora mismo, el mensaje se queda solo en la pregunta de si sigue
-interesado.
+Cada cuánto se avisa depende de quién sea el contacto (umbral_dias):
+
+- Clientes nuestros (compradores, "compra y vende", y vendedores marcados
+  como "cliente nuestro" en su ficha): cada UMBRAL_DIAS_CLIENTE (5) días.
+- Vendedores que todavía NO son clientes nuestros (propietarios a los que
+  se está intentando captar): cada UMBRAL_DIAS_VENDEDOR_NO_CLIENTE (14)
+  días, para no agobiarles.
+
+Si en la ficha se puso a mano una "próxima fecha de contacto" que aún no ha
+llegado, no se avisa hasta ese día (igual que la pestaña "Sin contacto" de
+la web).
 
 Solo mira los contactos con estado = 'activo': la bolsa de contactos
 "Importados" (estado sin_revisar, sin repartir aún entre el equipo) queda
 fuera a propósito, para no generar miles de avisos de golpe.
 
-Para no repetir el mismo aviso cada 6 horas (esta comprobación se ejecuta
-en cada pasada del scraper), se guarda ultimo_aviso_inactividad y solo se
-vuelve a avisar cuando ya han pasado otros UMBRAL_DIAS desde el aviso
-anterior — es decir, un recordatorio cada 14 días mientras el contacto
-siga sin moverse, no un aviso único.
+Para no repetir el mismo aviso en cada pasada del scraper, se guarda
+ultimo_aviso_inactividad y solo se vuelve a avisar cuando ha pasado otra
+vez el umbral de ese contacto desde el aviso anterior. Los recordatorios
+solo salen entre las 9:00 y las 21:00 (hora de España).
+
+Para no llenar el móvil de avisos, si a una misma persona le tocan más de
+MAX_AVISOS_INDIVIDUALES contactos en la misma pasada, recibe UN solo aviso
+resumen ("Tienes 12 contactos por contactar") que abre la pestaña "Sin
+contacto", en vez de uno por cada contacto.
 
 Depende de las mismas piezas que notify_push.py (SUPABASE_URL,
 SUPABASE_SERVICE_ROLE_KEY, VAPID_PRIVATE_KEY); si falta alguna, no hace
@@ -31,6 +41,7 @@ from __future__ import annotations
 import json
 import os
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -43,7 +54,19 @@ except ImportError:
 import notify_push as np  # reutiliza _supabase_get, _delete_subscription, _zona_matches, _fmt_money, ADMIN_OWNER_IDS, VAPID_CLAIMS_SUB
 
 REQUEST_TIMEOUT = 20
-UMBRAL_DIAS = 14
+# Mismos valores que UMBRAL_DIAS_CLIENTE / UMBRAL_DIAS_VENDEDOR_NO_CLIENTE
+# en index.html (pestaña "Sin contacto"): si se cambian, cambiarlos en los
+# dos sitios.
+UMBRAL_DIAS_CLIENTE = 5
+UMBRAL_DIAS_VENDEDOR_NO_CLIENTE = 14
+# A partir de cuántos contactos pendientes para una misma persona se manda
+# un único aviso resumen en vez de uno por contacto.
+MAX_AVISOS_INDIVIDUALES = 3
+# Los recordatorios solo salen en horario de trabajo (hora de España): el
+# scraper pasa también de madrugada y no tiene sentido que suene el móvil
+# a las 5 de la mañana por algo que puede esperar a las 9.
+HORA_INICIO_AVISOS = 9
+HORA_FIN_AVISOS = 21
 # Mismo tope que MAX_PISOS_POR_MENSAJE en index.html (el botón WhatsApp de
 # la ficha usa esa constante en el cliente): así el mensaje de este script
 # y el que de verdad se manda al tocar el botón coinciden en cuántos pisos
@@ -104,6 +127,94 @@ def _mensaje_vendedor(nombre: str, dias: int, zona: str | None) -> str:
     )
 
 
+def umbral_dias(c: dict) -> int:
+    """Cada cuántos días toca avisar de este contacto (ver cabecera)."""
+    if c.get("rol") == "vendedor" and not c.get("cliente_nuestro"):
+        return UMBRAL_DIAS_VENDEDOR_NO_CLIENTE
+    return UMBRAL_DIAS_CLIENTE
+
+
+def dias_pendiente(c: dict, ahora: datetime) -> int | None:
+    """Devuelve los días que lleva sin contacto si YA toca avisar de este
+    contacto, o None si todavía no toca."""
+    umbral = umbral_dias(c)
+    dias_desde_aviso = _dias_desde(c.get("ultimo_aviso_inactividad"), ahora)
+    if dias_desde_aviso is not None and dias_desde_aviso < umbral:
+        return None  # ya se avisó hace poco, no repetir en cada pasada
+
+    dias_sin_contacto = _dias_desde(c.get("ultimo_contacto") or c.get("fecha"), ahora)
+    if dias_sin_contacto is None:
+        return None
+
+    proxima = c.get("proxima_contacto")  # fecha puesta a mano, "YYYY-MM-DD"
+    if proxima:
+        # Con fecha a mano manda esa fecha, no el umbral (igual que la web).
+        if str(proxima)[:10] > ahora.date().isoformat():
+            return None
+        return max(int(dias_sin_contacto), 0)
+
+    if dias_sin_contacto < umbral:
+        return None
+    return int(dias_sin_contacto)
+
+
+def _enviar(sub: dict, payload: str, vapid_private: str, supa_url: str, supa_key: str) -> bool:
+    try:
+        webpush(
+            subscription_info={
+                "endpoint": sub["endpoint"],
+                "keys": {"p256dh": sub["p256dh"], "auth": sub["auth"]},
+            },
+            data=payload,
+            vapid_private_key=vapid_private,
+            vapid_claims={"sub": np.VAPID_CLAIMS_SUB},
+            headers={"Urgency": "normal"},
+            ttl=60 * 60 * 24,
+        )
+        return True
+    except WebPushException as e:
+        status = getattr(getattr(e, "response", None), "status_code", None)
+        if status in (404, 410):
+            # La suscripción ya no existe: se borra para no reintentar.
+            try:
+                np._delete_subscription(supa_url, supa_key, sub["id"])
+            except requests.RequestException:
+                pass
+        else:
+            print(f"No se pudo mandar el aviso de inactividad: {e}")
+        return False
+
+
+def _payload_individual(c: dict, dias: int) -> str:
+    # El aviso lleva a la ficha del contacto dentro de Encaja, no directo a
+    # un enlace de WhatsApp: un enlace de WhatsApp abierto automáticamente
+    # al pinchar el aviso no abre la app en Android. Dentro de la ficha hay
+    # un botón "WhatsApp" que genera el mensaje (pregunta + pisos que
+    # encajen si los hay) y, al tocarlo la persona, sí abre la app.
+    if c.get("rol") == "vendedor" and not c.get("cliente_nuestro"):
+        quien = f"{c['nombre']} (vendedor, aún no es cliente)"
+    else:
+        quien = c["nombre"]
+    return json.dumps({
+        "title": "Encaja — recordatorio",
+        "body": f"Hace {dias} días que no contactas con {quien}. Toca para abrir su ficha y mandarle WhatsApp.",
+        "tag": f"encaja-inactividad-{c['id']}",
+        "url": f"/?comprador={c['id']}",
+    }, ensure_ascii=False)
+
+
+def _payload_resumen(pendientes: list[tuple[dict, int]]) -> str:
+    nombres = [c["nombre"] for c, _ in pendientes[:3]]
+    resto = len(pendientes) - len(nombres)
+    lista = ", ".join(nombres) + (f" y {resto} más" if resto > 0 else "")
+    return json.dumps({
+        "title": f"Encaja — {len(pendientes)} contactos por contactar",
+        "body": f"Llevan días sin noticias tuyas: {lista}. Toca para ver la lista.",
+        "tag": "encaja-inactividad-resumen",
+        "url": "/?tab=sincontacto",
+    }, ensure_ascii=False)
+
+
 def notify_stale_contacts() -> None:
     supa_url = os.environ.get("SUPABASE_URL")
     supa_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
@@ -112,14 +223,20 @@ def notify_stale_contacts() -> None:
         return
 
     ahora = datetime.now(timezone.utc)
+    try:
+        hora_local = ahora.astimezone(ZoneInfo("Europe/Madrid")).hour
+    except Exception:
+        hora_local = (ahora.hour + 1) % 24  # sin base de zonas horarias: aproximación
+    if not (HORA_INICIO_AVISOS <= hora_local < HORA_FIN_AVISOS):
+        return  # fuera de horario: se avisará en la siguiente pasada de día
 
     try:
+        # select=* a propósito: así, si alguna columna opcional
+        # (cliente_nuestro, proxima_contacto) aún no existe en la base, la
+        # consulta no falla — simplemente no viene y se trata como vacía.
         contactos = np._supabase_get(
             supa_url, supa_key, "compradores",
-            {
-                "select": "id,nombre,telefono,zona,tipo,presupuesto,rol,owner_id,fecha,ultimo_contacto,ultimo_aviso_inactividad",
-                "estado": "eq.activo",
-            },
+            {"select": "*", "estado": "eq.activo"},
         )
         subs = np._supabase_get(
             supa_url, supa_key, "push_subscriptions",
@@ -132,99 +249,50 @@ def notify_stale_contacts() -> None:
     if not contactos or not subs:
         return
 
+    # Contactos de los que ya toca avisar, los que más tiempo llevan primero.
+    pendientes: list[tuple[dict, int]] = []
+    for c in contactos:
+        dias = dias_pendiente(c, ahora)
+        if dias is not None:
+            pendientes.append((c, dias))
+    if not pendientes:
+        return
+    pendientes.sort(key=lambda x: x[1], reverse=True)
+
     subs_por_owner: dict[str, list[dict]] = {}
     for s in subs:
         subs_por_owner.setdefault(s["owner_id"], []).append(s)
 
-    # Pisos activos (no reservados), para poder ofrecer coincidencias a
-    # quien busca comprar — misma idea que notify_push.py.
-    try:
-        pisos = np._supabase_get(
-            supa_url, supa_key, "pisos",
-            {"select": "id,zona,tipo,precio,caract,url,reservado", "reservado": "eq.false"},
-        )
-    except requests.RequestException:
-        pisos = []
-
-    avisados = 0
-    for c in contactos:
-        referencia = c.get("ultimo_contacto") or c.get("fecha")
-        dias_sin_contacto = _dias_desde(referencia, ahora)
-        if dias_sin_contacto is None or dias_sin_contacto < UMBRAL_DIAS:
-            continue
-        dias_desde_aviso = _dias_desde(c.get("ultimo_aviso_inactividad"), ahora)
-        if dias_desde_aviso is not None and dias_desde_aviso < UMBRAL_DIAS:
-            continue  # ya se avisó hace poco, no repetir cada 6 horas
-
-        owner_ids = {c.get("owner_id"), *np.ADMIN_OWNER_IDS} - {None}
-        destinatarios: dict[str, dict] = {}
-        for oid in owner_ids:
-            for sub in subs_por_owner.get(oid) or []:
-                destinatarios[sub["id"]] = sub
-        if not destinatarios:
+    avisados: set[str] = set()
+    for owner_id, subs_owner in subs_por_owner.items():
+        # Cada persona recibe lo suyo; las administradoras, lo de todos.
+        es_admin = owner_id in np.ADMIN_OWNER_IDS
+        suyos = [(c, d) for c, d in pendientes if es_admin or c.get("owner_id") == owner_id]
+        if not suyos:
             continue
 
-        dias = int(dias_sin_contacto)
-        if c.get("rol") == "vendedor":
-            texto = _mensaje_vendedor(c["nombre"], dias, c.get("zona"))
+        if len(suyos) > MAX_AVISOS_INDIVIDUALES:
+            payloads = [_payload_resumen(suyos)]
         else:
-            candidatos = [p for p in pisos if np._zona_matches(p.get("zona"), c.get("zona"))]
-            if c.get("tipo"):
-                candidatos = [p for p in candidatos if not p.get("tipo") or p["tipo"] == c["tipo"]]
-            if c.get("presupuesto"):
-                candidatos = [p for p in candidatos if not p.get("precio") or p["precio"] <= c["presupuesto"]]
-            texto = _mensaje_comprador(c["nombre"], dias, c.get("zona"), candidatos)
+            payloads = [_payload_individual(c, d) for c, d in suyos]
 
-        # El aviso lleva a la ficha del contacto dentro de Encaja (igual que
-        # el aviso de coincidencia de piso), no directo a un enlace de
-        # WhatsApp: un enlace de WhatsApp abierto automáticamente al pinchar
-        # el aviso (sin que la persona lo toque ella misma dentro de una
-        # página) no abre la app en Android, se queda en la web. Dentro de
-        # la ficha hay un botón "WhatsApp" que genera el mismo tipo de
-        # mensaje que "texto" (pregunta + pisos que encajen si los hay) — al
-        # tocarlo ella misma sí abre la app de verdad.
-        payload = json.dumps({
-            "title": "Encaja — recordatorio",
-            "body": f"Hace {dias} días que no contactas con {c['nombre']}. Toca para abrir su ficha y mandarle WhatsApp.",
-            "tag": f"encaja-inactividad-{c['id']}",
-            "url": f"/?comprador={c['id']}",
-        }, ensure_ascii=False)
+        llego = False
+        for sub in subs_owner:
+            for payload in payloads:
+                if _enviar(sub, payload, vapid_private, supa_url, supa_key):
+                    llego = True
+        if llego:
+            avisados.update(c["id"] for c, _ in suyos)
 
-        enviado_a_alguien = False
-        for sub in destinatarios.values():
-            subscription_info = {
-                "endpoint": sub["endpoint"],
-                "keys": {"p256dh": sub["p256dh"], "auth": sub["auth"]},
-            }
-            try:
-                webpush(
-                    subscription_info=subscription_info,
-                    data=payload,
-                    vapid_private_key=vapid_private,
-                    vapid_claims={"sub": np.VAPID_CLAIMS_SUB},
-                    headers={"Urgency": "normal"},
-                    ttl=60 * 60 * 24,
-                )
-                enviado_a_alguien = True
-            except WebPushException as e:
-                status = getattr(getattr(e, "response", None), "status_code", None)
-                if status in (404, 410):
-                    try:
-                        np._delete_subscription(supa_url, supa_key, sub["id"])
-                    except requests.RequestException:
-                        pass
-                else:
-                    print(f"No se pudo mandar el aviso de inactividad a {c['nombre']}: {e}")
-
-        if enviado_a_alguien:
-            avisados += 1
-            try:
-                _supabase_patch(
-                    supa_url, supa_key, "compradores",
-                    {"id": c["id"]}, {"ultimo_aviso_inactividad": ahora.isoformat()},
-                )
-            except requests.RequestException as e:
-                print(f"No se pudo guardar ultimo_aviso_inactividad de {c['nombre']}: {e}")
+    marca = ahora.isoformat()
+    for cid in avisados:
+        try:
+            _supabase_patch(
+                supa_url, supa_key, "compradores",
+                {"id": cid}, {"ultimo_aviso_inactividad": marca},
+            )
+        except requests.RequestException as e:
+            print(f"No se pudo guardar ultimo_aviso_inactividad de {cid}: {e}")
 
     if avisados:
-        print(f"{avisados} aviso(s) de inactividad enviado(s).")
+        print(f"Aviso de inactividad enviado para {len(avisados)} contacto(s).")

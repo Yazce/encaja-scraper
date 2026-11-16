@@ -49,12 +49,26 @@ en español, sin necesidad de traducir nada a mano.
 
 Además de los avisos de piso nuevo/bajada de precio (`scraper/notify_push.py`),
 en cada pasada se comprueba también (`scraper/notify_inactivity.py`) si algún
-contacto **activo** (no la bolsa de "Importados" sin repartir) lleva 14 días o
-más sin que se le marque como contactado, y si es así se manda un push a su
-comercial (y siempre también a las administradoras) con el mensaje de
-WhatsApp ya escrito y un enlace que lo abre listo para tocar "Enviar". Se
-vuelve a avisar cada 14 días mientras el contacto siga sin moverse, nunca
-más seguido. Usa los mismos tres secretos de abajo.
+contacto **activo** (no la bolsa de "Importados" sin repartir) lleva demasiados
+días sin que se le marque como contactado:
+
+- **Clientes** (compradores, "compra y vende" y vendedores marcados como
+  "cliente nuestro" en su ficha): aviso cada **5 días**.
+- **Vendedores que todavía no son clientes nuestros**: aviso cada **14 días**.
+
+El aviso llega a su comercial (y siempre también a las administradoras) y abre
+la ficha en Encaja, donde el botón "WhatsApp" deja el mensaje ya escrito. Si a
+una persona le tocan más de 3 contactos a la vez, recibe un único aviso resumen
+que abre la pestaña "Sin contacto". Los recordatorios solo salen entre las 9:00
+y las 21:00 (hora de España) y respetan la "próxima fecha de contacto" puesta a
+mano en la ficha.
+
+Cuando lo detectado es una **bajada de precio**, el aviso lo dice expresamente
+("baja de X a Y") y en Encaja el piso vuelve a aparecer en Coincidencias para
+todos los clientes a los que les encaja —también los que ya lo habían recibido
+al precio anterior—, con el WhatsApp ya redactado mencionando la bajada.
+
+Usa los mismos tres secretos de abajo.
 
 ## Configurar los secretos de Supabase
 

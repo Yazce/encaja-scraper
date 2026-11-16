@@ -162,12 +162,27 @@ def notify_matching_compradores(events: list[dict]) -> None:
             if not destinatarios:
                 continue
 
-            payload = json.dumps({
-                "title": "Encaja — nueva coincidencia",
-                "body": (
+            # Bajada de precio: se dice claramente, con el precio de antes y
+            # el de ahora, para que la comercial sepa que puede volver a
+            # escribir a un cliente que ya conocía ese piso.
+            if event.get("origen") == "bajada_precio" and event.get("precio_anterior"):
+                pct = f" (-{event['bajada_pct']}%)" if event.get("bajada_pct") else ""
+                titulo = "Encaja — bajada de precio"
+                cuerpo = (
+                    f"{zona_evento}{(' · ' + tipo_evento) if tipo_evento else ''} baja de "
+                    f"{_fmt_money(event['precio_anterior'])} a {_fmt_money(precio_evento)}{pct}. "
+                    f"Avisa a {comprador['nombre']}."
+                )
+            else:
+                titulo = "Encaja — nueva coincidencia"
+                cuerpo = (
                     f"{comprador['nombre']} encaja con {zona_evento}"
                     f"{(' · ' + tipo_evento) if tipo_evento else ''} · {_fmt_money(precio_evento)}"
-                ),
+                )
+
+            payload = json.dumps({
+                "title": titulo,
+                "body": cuerpo,
                 "tag": f"encaja-match-{comprador['id']}-{event['id']}",
                 # Al pinchar el aviso, que lleve directo a ese comprador en
                 # vez de abrir la portada de la app.
