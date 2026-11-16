@@ -17,6 +17,9 @@ Si en la ficha se puso a mano una "próxima fecha de contacto" que aún no ha
 llegado, no se avisa hasta ese día (igual que la pestaña "Sin contacto" de
 la web).
 
+Los clientes de alquiler (tabla alquiler_clientes) se avisan también cada
+UMBRAL_DIAS_CLIENTE días.
+
 Solo mira los contactos con estado = 'activo': la bolsa de contactos
 "Importados" (estado sin_revisar, sin repartir aún entre el equipo) queda
 fuera a propósito, para no generar miles de avisos de golpe.
@@ -191,7 +194,10 @@ def _payload_individual(c: dict, dias: int) -> str:
     # al pinchar el aviso no abre la app en Android. Dentro de la ficha hay
     # un botón "WhatsApp" que genera el mensaje (pregunta + pisos que
     # encajen si los hay) y, al tocarlo la persona, sí abre la app.
-    if c.get("rol") == "vendedor" and not c.get("cliente_nuestro"):
+    es_alquiler = c.get("_tabla") == "alquiler_clientes"
+    if es_alquiler:
+        quien = f"{c['nombre']} (alquiler)"
+    elif c.get("rol") == "vendedor" and not c.get("cliente_nuestro"):
         quien = f"{c['nombre']} (vendedor, aún no es cliente)"
     else:
         quien = c["nombre"]
@@ -199,7 +205,9 @@ def _payload_individual(c: dict, dias: int) -> str:
         "title": "Encaja — recordatorio",
         "body": f"Hace {dias} días que no contactas con {quien}. Toca para abrir su ficha y mandarle WhatsApp.",
         "tag": f"encaja-inactividad-{c['id']}",
-        "url": f"/?comprador={c['id']}",
+        # Los de alquiler no tienen ficha en Compradores: se abre la lista
+        # "Sin contacto", donde salen con su botón de WhatsApp.
+        "url": "/?tab=sincontacto" if es_alquiler else f"/?comprador={c['id']}",
     }, ensure_ascii=False)
 
 
@@ -246,6 +254,21 @@ def notify_stale_contacts() -> None:
         print(f"No se pudieron leer los contactos activos para el aviso de inactividad: {e}")
         return
 
+    # Clientes de alquiler: tabla aparte, mismo aviso. Si la tabla no existe
+    # o falla, se sigue solo con compra/venta.
+    try:
+        alquiler = np._supabase_get(
+            supa_url, supa_key, "alquiler_clientes",
+            {"select": "*", "estado": "eq.activo"},
+        )
+    except requests.RequestException:
+        alquiler = []
+    for c in contactos:
+        c["_tabla"] = "compradores"
+    for c in alquiler:
+        c["_tabla"] = "alquiler_clientes"
+    contactos = contactos + alquiler
+
     if not contactos or not subs:
         return
 
@@ -263,7 +286,7 @@ def notify_stale_contacts() -> None:
     for s in subs:
         subs_por_owner.setdefault(s["owner_id"], []).append(s)
 
-    avisados: set[str] = set()
+    avisados: set[tuple[str, str]] = set()
     for owner_id, subs_owner in subs_por_owner.items():
         # Cada persona recibe lo suyo; las administradoras, lo de todos.
         es_admin = owner_id in np.ADMIN_OWNER_IDS
@@ -282,13 +305,13 @@ def notify_stale_contacts() -> None:
                 if _enviar(sub, payload, vapid_private, supa_url, supa_key):
                     llego = True
         if llego:
-            avisados.update(c["id"] for c, _ in suyos)
+            avisados.update((c["_tabla"], c["id"]) for c, _ in suyos)
 
     marca = ahora.isoformat()
-    for cid in avisados:
+    for tabla, cid in avisados:
         try:
             _supabase_patch(
-                supa_url, supa_key, "compradores",
+                supa_url, supa_key, tabla,
                 {"id": cid}, {"ultimo_aviso_inactividad": marca},
             )
         except requests.RequestException as e:

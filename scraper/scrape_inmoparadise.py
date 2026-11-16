@@ -32,8 +32,9 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
-from notify_push import notify_matching_compradores
+from notify_push import notify_matching_compradores, notify_reservados
 from notify_inactivity import notify_stale_contacts
+from notify_daily import notify_daily_summary
 
 SITE_ROOT = "https://www.inmoparadise.com/"
 BASE_URL = SITE_ROOT + "for-sale/es"  # version en español (tipo/caract. salen ya traducidos)
@@ -465,6 +466,21 @@ def main() -> None:
                 update_reservado_supabase(referencia, reservado)
             except requests.RequestException as e:
                 print(f"Error actualizando 'reservado' para {referencia}: {e}")
+        # En el primer recuento completo no se avisa (no son novedades reales).
+        if not es_punto_de_partida:
+            try:
+                notify_reservados([ref for ref, r in reservado_updates if r])
+            except Exception as e:
+                print(f"Error mandando avisos de pisos reservados: {e}")
+
+    # Resumen de la mañana (una vez al día). Va antes del recordatorio de
+    # inactividad a propósito: marca como avisados los contactos que ya
+    # incluye, para que no llegue lo mismo dos veces seguidas.
+    resumen_diario = snapshot.get("resumen_diario")
+    try:
+        resumen_diario = notify_daily_summary(resumen_diario) or resumen_diario
+    except Exception as e:
+        print(f"Error mandando el resumen de la mañana: {e}")
 
     try:
         notify_stale_contacts()
@@ -475,6 +491,7 @@ def main() -> None:
         "fecha": datetime.now(timezone.utc).isoformat(),
         "total_pisos": len(current_listings),
         "recuento_completo": True,
+        "resumen_diario": resumen_diario,
         "listings": {ref: asdict(item) for ref, item in current_listings.items()},
     }
     with SNAPSHOT_PATH.open("w", encoding="utf-8") as f:

@@ -112,3 +112,16 @@ workflow está habilitado (a veces hay que activarlo con un clic la
 primera vez en repos nuevos). A partir de ahí se ejecuta solo cada
 6 horas; también se puede lanzar a mano desde Actions → Scrape
 Inmoparadise → Run workflow.
+
+## Otros avisos
+
+- **Resumen de la mañana** (`scraper/notify_daily.py`): un único aviso al
+  día por persona, en la primera pasada entre las 9:00 y las 14:00 (hora de
+  España), con lo que tiene pendiente: contactos por contactar,
+  clientes con coincidencias sin enviar, visitas de hoy y visitas hechas
+  sin apuntar. La fecha del último resumen se guarda en
+  `data/snapshot_latest.json` (`resumen_diario`).
+- **Alquiler**: los clientes de alquiler activos entran en el recordatorio
+  de inactividad con el mismo umbral de 5 días.
+- **Piso reservado**: cuando un piso pasa a reservado, se avisa a quien ya
+  se lo había enviado a algún cliente (y a las administradoras).

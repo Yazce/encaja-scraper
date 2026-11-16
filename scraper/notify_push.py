@@ -222,3 +222,106 @@ def notify_matching_compradores(events: list[dict]) -> None:
 
     if enviados:
         print(f"{enviados} aviso(s) push enviado(s).")
+
+
+def notify_reservados(referencias: list[str]) -> None:
+    """Avisa cuando un piso pasa a RESERVADO a quien ya se lo había enviado a
+    algún cliente (según la tabla contactados), para que no lo siga
+    ofreciendo y pueda avisar al cliente. Como siempre, las administradoras
+    reciben también el aviso."""
+    if not referencias or webpush is None:
+        return
+    supa_url = os.environ.get("SUPABASE_URL")
+    supa_key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    vapid_private = os.environ.get("VAPID_PRIVATE_KEY")
+    if not supa_url or not supa_key or not vapid_private:
+        return
+
+    try:
+        subs = _supabase_get(
+            supa_url, supa_key, "push_subscriptions",
+            {"select": "id,owner_id,endpoint,p256dh,auth"},
+        )
+    except requests.RequestException as e:
+        print(f"No se pudieron leer las suscripciones para el aviso de reservados: {e}")
+        return
+    if not subs:
+        return
+    subs_por_owner: dict[str, list[dict]] = {}
+    for s in subs:
+        subs_por_owner.setdefault(s["owner_id"], []).append(s)
+
+    enviados = 0
+    for referencia in referencias:
+        try:
+            pisos = _supabase_get(
+                supa_url, supa_key, "pisos",
+                {"select": "id,zona,tipo,precio,fecha", "referencia": f"eq.{referencia}", "order": "fecha.desc"},
+            )
+            if not pisos:
+                continue
+            comprador_ids: set[str] = set()
+            for p in pisos:
+                filas = _supabase_get(
+                    supa_url, supa_key, "contactados",
+                    {"select": "match_key", "match_key": f"like.*::{p['id']}"},
+                )
+                comprador_ids.update(f["match_key"].split("::")[0] for f in filas)
+            if not comprador_ids:
+                continue  # no se le había enviado a nadie: nada que avisar
+            lista = ",".join('"' + c.replace('"', "") + '"' for c in sorted(comprador_ids))
+            compradores = _supabase_get(
+                supa_url, supa_key, "compradores",
+                {"select": "id,nombre,owner_id,estado", "id": f"in.({lista})"},
+            )
+        except requests.RequestException as e:
+            print(f"No se pudo preparar el aviso de reservado para {referencia}: {e}")
+            continue
+
+        compradores = [c for c in compradores if (c.get("estado") or "activo") not in ("descartado", "cerrado")]
+        if not compradores:
+            continue
+
+        piso = pisos[0]  # la fila más reciente = el precio actual
+        descripcion = f"{piso.get('zona') or 'Sin zona'}{(' · ' + piso['tipo']) if piso.get('tipo') else ''} · {_fmt_money(piso.get('precio'))}"
+
+        for owner_id, subs_owner in subs_por_owner.items():
+            es_admin = owner_id in ADMIN_OWNER_IDS
+            suyos = [c for c in compradores if es_admin or c.get("owner_id") == owner_id]
+            if not suyos:
+                continue
+            nombres = [c["nombre"] for c in suyos[:4]]
+            resto = len(suyos) - len(nombres)
+            quienes = ", ".join(nombres) + (f" y {resto} más" if resto > 0 else "")
+            payload = json.dumps({
+                "title": "Encaja — piso reservado",
+                "body": f"{descripcion} ya está reservado. Se le había enviado a {quienes}.",
+                "tag": f"encaja-reservado-{referencia}",
+                "url": f"/?comprador={suyos[0]['id']}",
+            }, ensure_ascii=False)
+            for sub in subs_owner:
+                try:
+                    webpush(
+                        subscription_info={
+                            "endpoint": sub["endpoint"],
+                            "keys": {"p256dh": sub["p256dh"], "auth": sub["auth"]},
+                        },
+                        data=payload,
+                        vapid_private_key=vapid_private,
+                        vapid_claims={"sub": VAPID_CLAIMS_SUB},
+                        headers={"Urgency": "normal"},
+                        ttl=60 * 60 * 24,
+                    )
+                    enviados += 1
+                except WebPushException as e:
+                    status = getattr(getattr(e, "response", None), "status_code", None)
+                    if status in (404, 410):
+                        try:
+                            _delete_subscription(supa_url, supa_key, sub["id"])
+                        except requests.RequestException:
+                            pass
+                    else:
+                        print(f"No se pudo mandar el aviso de reservado ({referencia}): {e}")
+
+    if enviados:
+        print(f"{enviados} aviso(s) de piso reservado enviado(s).")
