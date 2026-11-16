@@ -1,9 +1,35 @@
 {
-  "fecha": "2026-11-16T12:15:59.080615+00:00",
-  "total_pisos": 130,
+  "fecha": "2026-11-16T23:55:54.216878+00:00",
+  "total_pisos": 132,
   "recuento_completo": true,
   "resumen_diario": "2026-11-16",
   "listings": {
+    "2682": {
+      "referencia": "2682",
+      "precio": 169950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en la localidad de San Vicente del Raspeig, Superficie Construida 115m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "115 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30832334/es/",
+      "reservado": false
+    },
+    "1590": {
+      "referencia": "1590",
+      "precio": 215000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad Jardín",
+      "tipo": "Planta baja en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "113 m2",
+      "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/ciudad-jardin/10473/22131863/es/",
+      "reservado": false
+    },
     "2678": {
       "referencia": "2678",
       "precio": 305000,
