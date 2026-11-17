@@ -1,9 +1,48 @@
 {
-  "fecha": "2026-11-17T05:41:55.156820+00:00",
-  "total_pisos": 132,
+  "fecha": "2026-11-17T17:14:16.638182+00:00",
+  "total_pisos": 133,
   "recuento_completo": true,
   "resumen_diario": "2026-11-16",
   "listings": {
+    "2683": {
+      "referencia": "2683",
+      "precio": 339950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Garbinet-Parque de las Avenidas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "132 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30833730/es/",
+      "reservado": false
+    },
+    "2660": {
+      "referencia": "2660",
+      "precio": 139950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "73 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30658301/es/",
+      "reservado": true
+    },
+    "2666": {
+      "referencia": "2666",
+      "precio": 125000,
+      "precio_anterior": 129950,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30736535/es/",
+      "reservado": false
+    },
     "2682": {
       "referencia": "2682",
       "precio": 169950,
@@ -197,19 +236,6 @@
       "banos": "2",
       "m2": "97 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/nou-alacant/10473/30067265/es/",
-      "reservado": false
-    },
-    "2666": {
-      "referencia": "2666",
-      "precio": 125000,
-      "precio_anterior": 129950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Ciudad Elegida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "87 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30736535/es/",
       "reservado": false
     },
     "2667": {
@@ -496,19 +522,6 @@
       "banos": "2",
       "m2": "118 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30619282/es/",
-      "reservado": false
-    },
-    "2660": {
-      "referencia": "2660",
-      "precio": 139950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "73 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30658301/es/",
       "reservado": false
     },
     "2654": {
