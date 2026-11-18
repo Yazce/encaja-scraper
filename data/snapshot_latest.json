@@ -1,14 +1,40 @@
 {
-  "fecha": "2026-11-18T01:58:15.218702+00:00",
+  "fecha": "2026-11-18T12:29:29.436159+00:00",
   "total_pisos": 132,
   "recuento_completo": true,
-  "resumen_diario": "2026-11-16",
+  "resumen_diario": "2026-11-18",
   "listings": {
+    "2622": {
+      "referencia": "2622",
+      "precio": 379950,
+      "precio_anterior": 390000,
+      "bajada_pct": "- 3%",
+      "zona": "Zona Paus",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "119 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/30602023/es/",
+      "reservado": false
+    },
+    "2676": {
+      "referencia": "2676",
+      "precio": 225000,
+      "precio_anterior": 239950,
+      "bajada_pct": "- 6%",
+      "zona": "Zona Benalua",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "104 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30770650/es/",
+      "reservado": false
+    },
     "2684": {
       "referencia": "2684",
-      "precio": 199950,
-      "precio_anterior": null,
-      "bajada_pct": null,
+      "precio": 189900,
+      "precio_anterior": 199950,
+      "bajada_pct": "- 5%",
       "zona": "Zona Carolinas Altas",
       "tipo": "Piso en Alicante",
       "habitaciones": "2",
@@ -275,19 +301,6 @@
       "banos": "1",
       "m2": "75 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30740632/es/",
-      "reservado": false
-    },
-    "2676": {
-      "referencia": "2676",
-      "precio": 225000,
-      "precio_anterior": 239950,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Benalua",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "104 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/30770650/es/",
       "reservado": false
     },
     "2677": {
@@ -912,19 +925,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
-      "reservado": false
-    },
-    "2622": {
-      "referencia": "2622",
-      "precio": 379950,
-      "precio_anterior": 390000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Paus",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "119 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/paus/10473/30602023/es/",
       "reservado": false
     },
     "2615": {
