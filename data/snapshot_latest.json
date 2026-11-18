@@ -1,9 +1,48 @@
 {
-  "fecha": "2026-11-17T17:14:16.638182+00:00",
-  "total_pisos": 133,
+  "fecha": "2026-11-18T01:58:15.218702+00:00",
+  "total_pisos": 132,
   "recuento_completo": true,
   "resumen_diario": "2026-11-16",
   "listings": {
+    "2684": {
+      "referencia": "2684",
+      "precio": 199950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "72 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30846065/es/",
+      "reservado": false
+    },
+    "2679": {
+      "referencia": "2679",
+      "precio": 110000,
+      "precio_anterior": 115000,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Planta baja en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "66 m2",
+      "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/virgen-del-remedio-parque-lo-morant/10473/30793956/es/",
+      "reservado": false
+    },
+    "2682": {
+      "referencia": "2682",
+      "precio": 169950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "",
+      "tipo": "Piso en la localidad de San Vicente del Raspeig, Superficie Construida 115m2, 3 Habitaciones, 1 Baño.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "115 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30832334/es/",
+      "reservado": false
+    },
     "2683": {
       "referencia": "2683",
       "precio": 339950,
@@ -43,19 +82,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30736535/es/",
       "reservado": false
     },
-    "2682": {
-      "referencia": "2682",
-      "precio": 169950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Piso en la localidad de San Vicente del Raspeig, Superficie Construida 115m2, 3 Habitaciones, 1 Baño.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "115 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30832334/es/",
-      "reservado": false
-    },
     "1590": {
       "referencia": "1590",
       "precio": 215000,
@@ -80,19 +106,6 @@
       "banos": "2",
       "m2": "77 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/centro/10473/30771407/es/",
-      "reservado": false
-    },
-    "2679": {
-      "referencia": "2679",
-      "precio": 115000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Planta baja en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "66 m2",
-      "url": "https://www.inmoparadise.com/ficha/planta-baja/alicante/virgen-del-remedio-parque-lo-morant/10473/30793956/es/",
       "reservado": false
     },
     "2681": {
@@ -602,19 +615,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30602401/es/",
       "reservado": false
     },
-    "2606": {
-      "referencia": "2606",
-      "precio": 144950,
-      "precio_anterior": 149950,
-      "bajada_pct": "- 3%",
-      "zona": "Zona San Fernando-Princesa Mercedes",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "67 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-fernando-princesa-mercedes/10473/30457770/es/",
-      "reservado": false
-    },
     "2608": {
       "referencia": "2608",
       "precio": 109950,
@@ -678,19 +678,6 @@
       "banos": "2",
       "m2": "105 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-nicolas-de-bari-benisaudet/10473/30620675/es/",
-      "reservado": false
-    },
-    "2646": {
-      "referencia": "2646",
-      "precio": 123000,
-      "precio_anterior": 135000,
-      "bajada_pct": "- 9%",
-      "zona": "Zona Ciudad Elegida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30620418/es/",
       "reservado": false
     },
     "2643": {
