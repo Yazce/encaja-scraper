@@ -1,9 +1,35 @@
 {
-  "fecha": "2026-11-19T05:00:27.085906+00:00",
-  "total_pisos": 134,
+  "fecha": "2026-11-19T16:57:15.427525+00:00",
+  "total_pisos": 135,
   "recuento_completo": true,
   "resumen_diario": "2026-11-18",
   "listings": {
+    "2685": {
+      "referencia": "2685",
+      "precio": 139950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "67 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30860902/es/",
+      "reservado": false
+    },
+    "2628": {
+      "referencia": "2628",
+      "precio": 204000,
+      "precio_anterior": 239950,
+      "bajada_pct": "- 15%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "139 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30612941/es/",
+      "reservado": false
+    },
     "2686": {
       "referencia": "2686",
       "precio": 225000,
@@ -17,17 +43,17 @@
       "url": "https://www.inmoparadise.com/ficha/entresuelo/alicante/santo-domingo/10473/30866157/es/",
       "reservado": false
     },
-    "2685": {
-      "referencia": "2685",
-      "precio": 139950,
+    "2687": {
+      "referencia": "2687",
+      "precio": 79950,
       "precio_anterior": null,
       "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
+      "zona": "Zona Los Ángeles",
+      "tipo": "Local comercial en Alicante",
+      "habitaciones": "1",
       "banos": "1",
-      "m2": "67 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30860902/es/",
+      "m2": "28 m2",
+      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/los-angeles/10473/30867579/es/",
       "reservado": false
     },
     "2622": {
@@ -847,19 +873,6 @@
       "banos": "1",
       "m2": "120 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/el-rebolledo/santa-ana/10473/30616661/es/",
-      "reservado": false
-    },
-    "2628": {
-      "referencia": "2628",
-      "precio": 208000,
-      "precio_anterior": 239950,
-      "bajada_pct": "- 13%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "139 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30612941/es/",
       "reservado": false
     },
     "2625": {
