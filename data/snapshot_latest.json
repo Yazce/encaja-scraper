@@ -1,9 +1,61 @@
 {
-  "fecha": "2026-11-20T01:32:01.187540+00:00",
-  "total_pisos": 136,
+  "fecha": "2026-11-20T12:21:04.831395+00:00",
+  "total_pisos": 120,
   "recuento_completo": true,
-  "resumen_diario": "2026-11-18",
+  "resumen_diario": "2026-11-20",
   "listings": {
+    "2651": {
+      "referencia": "2651",
+      "precio": 425000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Ciudad Jardín",
+      "tipo": "Chalet en Alicante",
+      "habitaciones": "6",
+      "banos": "3",
+      "m2": "296 m2",
+      "url": "https://www.inmoparadise.com/ficha/chalet/alicante/ciudad-jardin/10473/30620831/es/",
+      "reservado": true
+    },
+    "2664": {
+      "referencia": "2664",
+      "precio": 173000,
+      "precio_anterior": 193000,
+      "bajada_pct": "- 10%",
+      "zona": "Zona Campoamor",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "88.99 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30728760/es/",
+      "reservado": true
+    },
+    "2548": {
+      "referencia": "2548",
+      "precio": 228000,
+      "precio_anterior": 255000,
+      "bajada_pct": "- 11%",
+      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "102 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
+      "reservado": true
+    },
+    "2662": {
+      "referencia": "2662",
+      "precio": 239950,
+      "precio_anterior": 244950,
+      "bajada_pct": "- 2%",
+      "zona": "",
+      "tipo": "Ático en San Vicente del Raspeig, Superficie Construida 120m2, 3 Habitaciones, 2 Baños, Ascensor.",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "120 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30704218/es/",
+      "reservado": false
+    },
     "2431": {
       "referencia": "2431",
       "precio": 179950,
@@ -15,6 +67,19 @@
       "banos": "1",
       "m2": "95 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29017648/es/",
+      "reservado": false
+    },
+    "2663": {
+      "referencia": "2663",
+      "precio": 174950,
+      "precio_anterior": 190000,
+      "bajada_pct": "- 8%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "107 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30728617/es/",
       "reservado": false
     },
     "2685": {
@@ -524,45 +589,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/san-anton/10473/30729828/es/",
       "reservado": false
     },
-    "2664": {
-      "referencia": "2664",
-      "precio": 173000,
-      "precio_anterior": 193000,
-      "bajada_pct": "- 10%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "88.99 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30728760/es/",
-      "reservado": false
-    },
-    "2663": {
-      "referencia": "2663",
-      "precio": 186000,
-      "precio_anterior": 190000,
-      "bajada_pct": "- 2%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "107 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30728617/es/",
-      "reservado": false
-    },
-    "2662": {
-      "referencia": "2662",
-      "precio": 244950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "",
-      "tipo": "Ático en San Vicente del Raspeig, Superficie Construida 120m2, 3 Habitaciones, 2 Baños, Ascensor.",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "120 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/san-vicente-del-raspeig/san-vicente-del-raspeig/10473/30704218/es/",
-      "reservado": false
-    },
     "2661": {
       "referencia": "2661",
       "precio": 149950,
@@ -574,19 +600,6 @@
       "banos": "1",
       "m2": "75 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/30659934/es/",
-      "reservado": false
-    },
-    "2651": {
-      "referencia": "2651",
-      "precio": 425000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Ciudad Jardín",
-      "tipo": "Chalet en Alicante",
-      "habitaciones": "6",
-      "banos": "3",
-      "m2": "296 m2",
-      "url": "https://www.inmoparadise.com/ficha/chalet/alicante/ciudad-jardin/10473/30620831/es/",
       "reservado": false
     },
     "2656": {
@@ -782,19 +795,6 @@
       "banos": "2",
       "m2": "188 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/san-vicente-del-raspeig/sur/10473/30620048/es/",
-      "reservado": false
-    },
-    "2641": {
-      "referencia": "2641",
-      "precio": 115000,
-      "precio_anterior": 129950,
-      "bajada_pct": "- 12%",
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30619938/es/",
       "reservado": false
     },
     "2639": {
@@ -1187,19 +1187,6 @@
       "url": "https://www.inmoparadise.com/ficha/casa/alicante/carolinas-altas/10473/30430702/es/",
       "reservado": false
     },
-    "2609": {
-      "referencia": "2609",
-      "precio": 200000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "90 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30510649/es/",
-      "reservado": false
-    },
     "2587": {
       "referencia": "2587",
       "precio": 177950,
@@ -1304,32 +1291,6 @@
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/carolinas-bajas/10473/30212402/es/",
       "reservado": false
     },
-    "2548": {
-      "referencia": "2548",
-      "precio": 228000,
-      "precio_anterior": 255000,
-      "bajada_pct": "- 11%",
-      "zona": "Zona Los Ángeles-Tómbola-San Nicolás",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "102 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles-tombola-san-nicolas/10473/29926164/es/",
-      "reservado": false
-    },
-    "2554": {
-      "referencia": "2554",
-      "precio": 229950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona La florida portazgo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "75 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida-portazgo/10473/29941067/es/",
-      "reservado": true
-    },
     "2591": {
       "referencia": "2591",
       "precio": 210000,
@@ -1367,32 +1328,6 @@
       "banos": "1",
       "m2": "50 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30301655/es/",
-      "reservado": false
-    },
-    "2585": {
-      "referencia": "2585",
-      "precio": 295000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Mercado",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/mercado/10473/30320172/es/",
-      "reservado": false
-    },
-    "2417": {
-      "referencia": "2417",
-      "precio": 129950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Virgen del Remedio-Parque lo Morant",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "76 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/28908239/es/",
       "reservado": false
     },
     "2531": {
@@ -1499,45 +1434,6 @@
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/26299538/es/",
       "reservado": false
     },
-    "2536": {
-      "referencia": "2536",
-      "precio": 189950,
-      "precio_anterior": 195000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "90 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/29855557/es/",
-      "reservado": false
-    },
-    "2482": {
-      "referencia": "2482",
-      "precio": 239950,
-      "precio_anterior": 249000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Altozano",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "5",
-      "banos": "2",
-      "m2": "125 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/29393007/es/",
-      "reservado": true
-    },
-    "2515": {
-      "referencia": "2515",
-      "precio": 280000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Garbinet-Parque de las Avenidas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "3",
-      "m2": "121 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/garbinet-parque-de-las-avenidas/10473/29718682/es/",
-      "reservado": true
-    },
     "2544": {
       "referencia": "2544",
       "precio": 399000,
@@ -1551,19 +1447,6 @@
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/raval-roig-virgen-del-socorro/10473/29908729/es/",
       "reservado": false
     },
-    "2456": {
-      "referencia": "2456",
-      "precio": 207000,
-      "precio_anterior": 215000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Campoamor",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "111 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/29224856/es/",
-      "reservado": true
-    },
     "2546": {
       "referencia": "2546",
       "precio": 296000,
@@ -1576,71 +1459,6 @@
       "m2": "130 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/carolinas-bajas/10473/29916342/es/",
       "reservado": false
-    },
-    "2490": {
-      "referencia": "2490",
-      "precio": 228000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Campoamor",
-      "tipo": "Entresuelo en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "132 m2",
-      "url": "https://www.inmoparadise.com/ficha/entresuelo/alicante/campoamor/10473/29433326/es/",
-      "reservado": true
-    },
-    "2447": {
-      "referencia": "2447",
-      "precio": 85000,
-      "precio_anterior": 89950,
-      "bajada_pct": "- 6%",
-      "zona": "",
-      "tipo": "Local comercial en Alicante situado en la zona de Babel, Superficie Construida 33m2, 1 Baño.",
-      "habitaciones": null,
-      "banos": "1",
-      "m2": "33 m2",
-      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/babel/10473/29184724/es/",
-      "reservado": true
-    },
-    "2518": {
-      "referencia": "2518",
-      "precio": 199950,
-      "precio_anterior": 209950,
-      "bajada_pct": "- 5%",
-      "zona": "Zona Pla del bon repos",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "74 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/29728275/es/",
-      "reservado": true
-    },
-    "2316": {
-      "referencia": "2316",
-      "precio": 188000,
-      "precio_anterior": 195000,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Benalua",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "78 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/benalua/10473/27940772/es/",
-      "reservado": true
-    },
-    "2416": {
-      "referencia": "2416",
-      "precio": 259950,
-      "precio_anterior": 299950,
-      "bajada_pct": "- 13%",
-      "zona": "Zona Babel",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "2",
-      "m2": "134 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/babel/10473/28900977/es/",
-      "reservado": true
     },
     "2501": {
       "referencia": "2501",
@@ -1719,32 +1537,6 @@
       "m2": "471 m2",
       "url": "https://www.inmoparadise.com/ficha/garaje/alicante/campoamor/10473/29237771/es/",
       "reservado": false
-    },
-    "2304": {
-      "referencia": "2304",
-      "precio": 310000,
-      "precio_anterior": 330000,
-      "bajada_pct": "- 6%",
-      "zona": "Zona Babel",
-      "tipo": "Ático en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "118 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/alicante/babel/10473/27875733/es/",
-      "reservado": true
-    },
-    "2424": {
-      "referencia": "2424",
-      "precio": 169950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Centro Tradicional",
-      "tipo": "Ático en Alicante",
-      "habitaciones": "1",
-      "banos": "1",
-      "m2": "46 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/alicante/centro-tradicional/10473/28979865/es/",
-      "reservado": true
     },
     "2344": {
       "referencia": "2344",
