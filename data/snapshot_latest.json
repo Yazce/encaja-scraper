@@ -1,20 +1,59 @@
 {
-  "fecha": "2026-11-23T04:43:07.488276+00:00",
-  "total_pisos": 122,
+  "fecha": "2026-11-23T19:39:35.780965+00:00",
+  "total_pisos": 124,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
+    "2666": {
+      "referencia": "2666",
+      "precio": 125000,
+      "precio_anterior": 129950,
+      "bajada_pct": "- 4%",
+      "zona": "Zona Ciudad Elegida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "4",
+      "banos": "1",
+      "m2": "87 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30736535/es/",
+      "reservado": false
+    },
+    "2693": {
+      "referencia": "2693",
+      "precio": 169000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "72 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30917868/es/",
+      "reservado": false
+    },
     "2691": {
       "referencia": "2691",
       "precio": 199950,
       "precio_anterior": null,
       "bajada_pct": null,
       "zona": "",
-      "tipo": "Piso en Alicante situado en la zona de Carolinas bajas, Superficie Construida 131m2, 5 Habitaciones, 2 Baños.",
+      "tipo": "Piso en Alicante situado en la zona de Campoamor, Superficie Construida 131m2, 5 Habitaciones, 2 Baños.",
       "habitaciones": "5",
       "banos": "2",
       "m2": "131 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30890549/es/",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/campoamor/10473/30890549/es/",
+      "reservado": false
+    },
+    "2692": {
+      "referencia": "2692",
+      "precio": 324950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Divina Pastora",
+      "tipo": "Adosado en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "160 m2",
+      "url": "https://www.inmoparadise.com/ficha/adosado/alicante/divina-pastora/10473/30913845/es/",
       "reservado": false
     },
     "2668": {
@@ -276,19 +315,6 @@
       "m2": "73 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30658301/es/",
       "reservado": true
-    },
-    "2666": {
-      "referencia": "2666",
-      "precio": 125000,
-      "precio_anterior": 129950,
-      "bajada_pct": "- 4%",
-      "zona": "Zona Ciudad Elegida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "87 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-elegida/10473/30736535/es/",
-      "reservado": false
     },
     "1590": {
       "referencia": "1590",
