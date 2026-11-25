@@ -1,35 +1,9 @@
 {
-  "fecha": "2026-11-25T03:15:32.781807+00:00",
-  "total_pisos": 125,
+  "fecha": "2026-11-25T13:44:00.151314+00:00",
+  "total_pisos": 124,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
-    "2326": {
-      "referencia": "2326",
-      "precio": 142000,
-      "precio_anterior": 155000,
-      "bajada_pct": "- 8%",
-      "zona": "",
-      "tipo": "Local comercial en Alicante situado en la zona de Campoamor, Superficie Construida 222m2.",
-      "habitaciones": null,
-      "banos": null,
-      "m2": "222 m2",
-      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/campoamor/10473/28136162/es/",
-      "reservado": false
-    },
-    "2639": {
-      "referencia": "2639",
-      "precio": 235000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas bajas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "109 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30619726/es/",
-      "reservado": false
-    },
     "2694": {
       "referencia": "2694",
       "precio": 169000,
@@ -54,6 +28,32 @@
       "banos": "2",
       "m2": "140 m2",
       "url": "https://www.inmoparadise.com/ficha/atico/alicante/san-nicolas-de-bari-benisaudet/10473/30923320/es/",
+      "reservado": false
+    },
+    "2326": {
+      "referencia": "2326",
+      "precio": 142000,
+      "precio_anterior": 155000,
+      "bajada_pct": "- 8%",
+      "zona": "",
+      "tipo": "Local comercial en Alicante situado en la zona de Campoamor, Superficie Construida 222m2.",
+      "habitaciones": null,
+      "banos": null,
+      "m2": "222 m2",
+      "url": "https://www.inmoparadise.com/ficha/local-comercial/alicante/campoamor/10473/28136162/es/",
+      "reservado": false
+    },
+    "2639": {
+      "referencia": "2639",
+      "precio": 235000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas bajas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "109 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-bajas/10473/30619726/es/",
       "reservado": false
     },
     "2693": {
@@ -1185,19 +1185,6 @@
       "banos": "1",
       "m2": "86 m2",
       "url": "https://www.inmoparadise.com/ficha/atico-duplex/alicante/paus/10473/30281378/es/",
-      "reservado": false
-    },
-    "2586": {
-      "referencia": "2586",
-      "precio": 139950,
-      "precio_anterior": 145000,
-      "bajada_pct": "- 3%",
-      "zona": "Zona Pla del bon repos",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "50 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/pla-del-bon-repos/10473/30336613/es/",
       "reservado": false
     },
     "2588": {
