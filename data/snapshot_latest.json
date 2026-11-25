@@ -1,9 +1,22 @@
 {
-  "fecha": "2026-11-25T13:44:00.151314+00:00",
-  "total_pisos": 124,
+  "fecha": "2026-11-25T23:54:14.786462+00:00",
+  "total_pisos": 123,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
+    "2593": {
+      "referencia": "2593",
+      "precio": 186000,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Carolinas Altas",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "2",
+      "m2": "110 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30369140/es/",
+      "reservado": false
+    },
     "2694": {
       "referencia": "2694",
       "precio": 169000,
@@ -626,19 +639,6 @@
       "banos": "1",
       "m2": "85 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/altozano/10473/30759287/es/",
-      "reservado": false
-    },
-    "2670": {
-      "referencia": "2670",
-      "precio": 299950,
-      "precio_anterior": 342000,
-      "bajada_pct": "- 12%",
-      "zona": "Zona Vistahermosa",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "4",
-      "banos": "1",
-      "m2": "169 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/vistahermosa/10473/30758994/es/",
       "reservado": false
     },
     "2669": {
@@ -1328,19 +1328,6 @@
       "banos": "2",
       "m2": "103 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/30291810/es/",
-      "reservado": false
-    },
-    "2593": {
-      "referencia": "2593",
-      "precio": 186000,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Carolinas Altas",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "2",
-      "m2": "110 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/carolinas-altas/10473/30369140/es/",
       "reservado": false
     },
     "2568": {
