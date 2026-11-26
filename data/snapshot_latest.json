@@ -1,9 +1,35 @@
 {
-  "fecha": "2026-11-26T05:56:03.278840+00:00",
+  "fecha": "2026-11-26T17:59:24.338644+00:00",
   "total_pisos": 123,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
+    "2644": {
+      "referencia": "2644",
+      "precio": 175000,
+      "precio_anterior": 189950,
+      "bajada_pct": "- 8%",
+      "zona": "Zona Santo Domingo",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "80 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30620194/es/",
+      "reservado": false
+    },
+    "2632": {
+      "referencia": "2632",
+      "precio": 199950,
+      "precio_anterior": 209950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona La Florida",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "2",
+      "m2": "72 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30617025/es/",
+      "reservado": true
+    },
     "2593": {
       "referencia": "2593",
       "precio": 186000,
@@ -524,19 +550,6 @@
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/el-moralet/10473/30619471/es/",
       "reservado": false
     },
-    "2644": {
-      "referencia": "2644",
-      "precio": 179900,
-      "precio_anterior": 189950,
-      "bajada_pct": "- 5%",
-      "zona": "Zona Santo Domingo",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "3",
-      "banos": "1",
-      "m2": "80 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/santo-domingo/10473/30620194/es/",
-      "reservado": false
-    },
     "2561": {
       "referencia": "2561",
       "precio": 139950,
@@ -938,19 +951,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/ciudad-de-asis/10473/30617293/es/",
-      "reservado": false
-    },
-    "2632": {
-      "referencia": "2632",
-      "precio": 199950,
-      "precio_anterior": 209950,
-      "bajada_pct": "- 5%",
-      "zona": "Zona La Florida",
-      "tipo": "Piso en Alicante",
-      "habitaciones": "2",
-      "banos": "2",
-      "m2": "72 m2",
-      "url": "https://www.inmoparadise.com/ficha/piso/alicante/la-florida/10473/30617025/es/",
       "reservado": false
     },
     "2631": {
