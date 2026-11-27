@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-11-27T02:33:17.067776+00:00",
-  "total_pisos": 124,
+  "fecha": "2026-11-27T13:20:05.405826+00:00",
+  "total_pisos": 125,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
@@ -15,6 +15,19 @@
       "banos": "1",
       "m2": "84 m2",
       "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30978951/es/",
+      "reservado": false
+    },
+    "2697": {
+      "referencia": "2697",
+      "precio": 119950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Virgen del Remedio-Parque lo Morant",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "83 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/virgen-del-remedio-parque-lo-morant/10473/30969998/es/",
       "reservado": false
     },
     "2644": {
