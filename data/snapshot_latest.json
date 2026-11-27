@@ -1,9 +1,22 @@
 {
-  "fecha": "2026-11-26T17:59:24.338644+00:00",
-  "total_pisos": 123,
+  "fecha": "2026-11-27T02:33:17.067776+00:00",
+  "total_pisos": 124,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
+    "2698": {
+      "referencia": "2698",
+      "precio": 149950,
+      "precio_anterior": null,
+      "bajada_pct": null,
+      "zona": "Zona Los Ángeles",
+      "tipo": "Piso en Alicante",
+      "habitaciones": "3",
+      "banos": "1",
+      "m2": "84 m2",
+      "url": "https://www.inmoparadise.com/ficha/piso/alicante/los-angeles/10473/30978951/es/",
+      "reservado": false
+    },
     "2644": {
       "referencia": "2644",
       "precio": 175000,
