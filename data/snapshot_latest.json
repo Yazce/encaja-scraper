@@ -1,9 +1,22 @@
 {
-  "fecha": "2026-11-28T05:29:43.785644+00:00",
+  "fecha": "2026-11-28T16:30:24.538323+00:00",
   "total_pisos": 125,
   "recuento_completo": true,
   "resumen_diario": "2026-11-22",
   "listings": {
+    "2615": {
+      "referencia": "2615",
+      "precio": 179950,
+      "precio_anterior": 189950,
+      "bajada_pct": "- 5%",
+      "zona": "Zona Benalua",
+      "tipo": "Ático en Alicante",
+      "habitaciones": "2",
+      "banos": "1",
+      "m2": "76 m2",
+      "url": "https://www.inmoparadise.com/ficha/atico/alicante/benalua/10473/30576748/es/",
+      "reservado": false
+    },
     "2588": {
       "referencia": "2588",
       "precio": 179950,
@@ -1107,19 +1120,6 @@
       "banos": "1",
       "m2": "80 m2",
       "url": "https://www.inmoparadise.com/ficha/adosado/alicante/san-gabriel/10473/29987890/es/",
-      "reservado": false
-    },
-    "2615": {
-      "referencia": "2615",
-      "precio": 189950,
-      "precio_anterior": null,
-      "bajada_pct": null,
-      "zona": "Zona Benalua",
-      "tipo": "Ático en Alicante",
-      "habitaciones": "2",
-      "banos": "1",
-      "m2": "76 m2",
-      "url": "https://www.inmoparadise.com/ficha/atico/alicante/benalua/10473/30576748/es/",
       "reservado": false
     },
     "2619": {
